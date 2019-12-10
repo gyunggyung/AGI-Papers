@@ -1,6 +1,6 @@
 # NLP-Papers
 
-🚀 I will continue to update the content!! 🚀
+Papers and Book to look at when starting NLP. I will continue to update the content!! 🚀
 
 ## Basic knowledge
 

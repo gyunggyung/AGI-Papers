@@ -2,8 +2,8 @@
 
 ## Basic knowledge
 
-- [mathematics for machine learning](https://mml-book.github.io/book/mml-book.pdf)
-- [Pattern Recognition and Machine Learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)
+- **[mathematics for machine learning](https://mml-book.github.io/book/mml-book.pdf)**
+- **[Pattern Recognition and Machine Learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)**
 
 ## Papers
 
@@ -45,6 +45,6 @@
 - [2019/04] **[Publicly Available Clinical BERT Embeddings](https://arxiv.org/abs/1904.03323.pdf)** 
 - [2019/08] **[Pre-Training with Whole Word Masking for Chinese BERT](https://arxiv.org/pdf/1906.08101.pdf)** 
 
-- [2019/07] **[R-Transformer: Recurrent Neural Network Enhanced Transformer](https://arxiv.org/abs/1907.05572)**
+- [2019/07] **[R-Transformer: Recurrent Neural Network Enhanced Transformer](https://arxiv.org/abs/1907.05572)** : *R-Transformer*
 
 - [2018/07] **[Subword-level Word Vector Representations for Korean](https://www.aclweb.org/anthology/P18-1226.pdf)**

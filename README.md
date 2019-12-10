@@ -41,6 +41,7 @@
 - [2019/03] **[SciBERT: A Pretrained Language Model for Scientific Text](https://arxiv.org/abs/1903.10676.pdf)** : *SciBERT*
 - [2019/04] **[ClinicalBERT: Modeling Clinical Notes and Predicting Hospital Readmission](https://arxiv.org/abs/1904.05342.pdf)** : *ClinicalBERT* 
 - [2019/06] **[HIBERT: Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization](https://arxiv.org/pdf/1905.06566.pdf)** : *HIBERT* 
+- [2019/07] **[SpanBERT: Improving Pre-training by Representing and Predicting Spans](https://arxiv.org/abs/1907.10529)** : *SpanBERT*
 - [2019/04] **[Publicly Available Clinical BERT Embeddings](https://arxiv.org/abs/1904.03323.pdf)** 
 - [2019/08] **[Pre-Training with Whole Word Masking for Chinese BERT](https://arxiv.org/pdf/1906.08101.pdf)** 
 

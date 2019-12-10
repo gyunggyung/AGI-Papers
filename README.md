@@ -15,7 +15,7 @@
 
 ## Transformer
 
-- [https://arxiv.org/pdf/1706.03762.pdf](https://arxiv.org/pdf/1706.03762.pdf), Transformer
+- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf), Transformer
 - [Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf), GPT-1
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
 - [Language Models are Unsupervised Multitask Learners

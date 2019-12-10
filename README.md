@@ -7,10 +7,10 @@
 
 ## Start NLP
 
-- [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf), 2013/01	
-- [Dependency-Based Word Embeddings](https://www.aclweb.org/anthology/P14-2050.pdf), 2014/12	
-- [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf), GloVe, 2014/04?
-- [Siamese CBOW: Optimizing Word Embeddings for Sentence Representations](https://arxiv.org/pdf/1606.04640.pdf), Siamese CBOW, 2016/06
+- [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**	
+- [2014/12] **[Dependency-Based Word Embeddings](https://www.aclweb.org/anthology/P14-2050.pdf)**
+- [2014/04?] **[GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf)** : GloVe
+- [2016/06] **[Siamese CBOW: Optimizing Word Embeddings for Sentence Representations](https://arxiv.org/pdf/1606.04640.pdf)** : Siamese CBOW
 - [Neural Machine Translation of Rare Words with Subword Units](https://www.aclweb.org/anthology/P16-1162.pdf), 2016/??
 - [Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606.pdf), fastText, 2016/07
 

@@ -22,7 +22,7 @@
 - [2018/01]**[Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf)** : *ULMFIT*
 - [2018/02] **[Deep contextualized word representations](https://arxiv.org/pdf/1802.05365.pdf)** : *ELMo* 
 
-- [2018/??] **[Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)** : *GPT-1* 
+- [2018/06] **[Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)** : *GPT-1* 
 - [2018/10] **[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)** : *BERT* 	
 - [2019/02] **[Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)** : *GPT-2* 
 

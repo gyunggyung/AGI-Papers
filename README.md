@@ -9,9 +9,10 @@
 
 - [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**	
 - [2014/12] **[Dependency-Based Word Embeddings](https://www.aclweb.org/anthology/P14-2050.pdf)**
+- [2015/07] **[Neural Machine Translation of Rare Words with Subword Units](https://www.aclweb.org/anthology/P16-1162.pdf)**
+
 - [2014/07] **[GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf)** : *GloVe*
 - [2016/06] **[Siamese CBOW: Optimizing Word Embeddings for Sentence Representations](https://arxiv.org/pdf/1606.04640.pdf)** : *Siamese CBOW*
-- [2016/??] **[Neural Machine Translation of Rare Words with Subword Units](https://www.aclweb.org/anthology/P16-1162.pdf)**
 - [2016/07] **[Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606.pdf)** : *fastText*
 
 - [2014/09] **[Sequence to Sequence Learningwith Neural Networks](https://arxiv.org/pdf/1409.3215.pdf)** : *seq2seq*

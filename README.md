@@ -1,4 +1,6 @@
 # NLP-Papers
+- [Basic Knowledge](https://github.com/newhiwoong/NLP-Papers#basic-knowledge)
+
 
 ## Basic knowledge
 

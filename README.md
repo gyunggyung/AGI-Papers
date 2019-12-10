@@ -12,11 +12,14 @@
 - [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf), GloVe, 2014/04?
 - [Siamese CBOW: Optimizing Word Embeddings for Sentence Representations](https://arxiv.org/pdf/1606.04640.pdf), Siamese CBOW, 2016/06
 - [Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606.pdf), fastText, 2016/07
+
+- [Sequence to Sequence Learningwith Neural Networks](https://arxiv.org/pdf/1409.3215.pdf), seq2seq, 2014/09
+
 - [Learned in Translation: Contextualized Word Vectors](http://papers.nips.cc/paper/7209-learned-in-translation-contextualized-word-vectors.pdf), CoVe, 2017/08	
-- [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf), ULMFIT, 2018/01
 
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf), Transformer ,2017/??
 
+- [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf), ULMFIT, 2018/01
 - [Deep contextualized word representations](https://arxiv.org/pdf/1802.05365.pdf), ELMo, 2018/02
 - [Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf), GPT-1, 2018/??	
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf), 2018/10	

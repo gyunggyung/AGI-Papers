@@ -69,6 +69,14 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 
 - [2019/08] **[Pre-Training with Whole Word Masking for Chinese BERT](https://arxiv.org/pdf/1906.08101.pdf)** 
 
+- [2019/07] **[Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment](https://arxiv.org/pdf/1907.11932.pdf)**
+
+
 - [2019/07] **[R-Transformer: Recurrent Neural Network Enhanced Transformer](https://arxiv.org/abs/1907.05572)** : *R-Transformer*
+
+
+- [2019/09] **[FREELB: ENHANCED ADVERSARIAL TRAINING FOR LANGUAGE UNDERSTANDING](https://arxiv.org/pdf/1909.11764.pdf)** : *FREELB*
+
+- [2019/09] **[Mixup Inference: Better Exploiting Mixup to Defend Adversarial Attacks](https://arxiv.org/pdf/1909.11515.pdf)**
 
 - [2018/07] **[Subword-level Word Vector Representations for Korean](https://www.aclweb.org/anthology/P18-1226.pdf)**

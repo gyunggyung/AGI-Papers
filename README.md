@@ -27,7 +27,7 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 
 - [2017/07] **[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)** : *Transformer*
 
-- [2017/08] **[Learned in Translation: Contextualized Word Vectors](http://papers.nips.cc/paper/7209-learned-in-translation-contextualized-word-vectors.pdf)** : CoVe
+- [2017/08] **[Learned in Translation: Contextualized Word Vectors](http://papers.nips.cc/paper/7209-learned-in-translation-contextualized-word-vectors.pdf)** : *CoVe*
 
 - [2018/01]**[Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf)** : *ULMFIT*
 
@@ -47,7 +47,7 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 
 - [2019/01] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://arxiv.org/pdf/1901.11504.pdf)** : *MT-DNN*    
 
-- [2019/01] **[Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context](https://arxiv.org/abs/1901.02860)** : `Transformer-XL`     
+- [2019/01] **[Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context](https://arxiv.org/abs/1901.02860)** : *Transformer-XL*    
 
 - [2019/06] **[XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237)**
 

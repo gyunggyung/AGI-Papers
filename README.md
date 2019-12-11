@@ -49,7 +49,7 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 
 - [2019/01] **[Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context](https://arxiv.org/abs/1901.02860)** : *Transformer-XL*    
 
-- [2019/06] **[XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237)**
+- [2019/06] **[XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237)** : *XLNet*
 
 - [2019/04] **[The Curious Case of Neural Text Degeneration](https://arxiv.org/pdf/1904.09751.pdf)**
 

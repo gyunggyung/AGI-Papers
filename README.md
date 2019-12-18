@@ -79,4 +79,7 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 
 - [2019/09] **[Mixup Inference: Better Exploiting Mixup to Defend Adversarial Attacks](https://arxiv.org/pdf/1909.11515.pdf)**
 
+
+- [2019/10] **[Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf)** : *
+
 - [2018/07] **[Subword-level Word Vector Representations for Korean](https://www.aclweb.org/anthology/P18-1226.pdf)**

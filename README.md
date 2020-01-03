@@ -83,3 +83,19 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 - [2019/10] **[Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf)** : *T5*
 
 - [2018/07] **[Subword-level Word Vector Representations for Korean](https://www.aclweb.org/anthology/P18-1226.pdf)**
+
+- [2019/08] **[
+
+- [2019/08] **[Zero-shot Word Sense Disambiguation using Sense Definition Embeddings](https://malllabiisc.github.io/publications/papers/EWISE_ACL19.pdf)**
+
+- [2019/06] **[Bridging the Gap between Training and Inference for Neural Machine Translation](https://arxiv.org/pdf/1906.02448.pdf)**
+
+
+- [2019/06] **[Emotion-Cause Pair Extraction: A New Task to Emotion Analysis in Texts](https://arxiv.org/pdf/1906.01267.pdf)**
+
+
+- [2019/07] **[A Simple Theoretical Model of Importance for Summarization](https://www.aclweb.org/anthology/P19-1101.pdf)**
+
+- [2019/05] **[Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems](https://arxiv.org/pdf/1905.08743.pdf)**
+
+- [2019/07] **[We need to talk about standard splits](http://wellformedness.com/papers/gorman-bedrick-2019.pdf)**

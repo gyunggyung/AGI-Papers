@@ -99,3 +99,5 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 - [2019/05] **[Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems](https://arxiv.org/pdf/1905.08743.pdf)**
 
 - [2019/07] **[We need to talk about standard splits](http://wellformedness.com/papers/gorman-bedrick-2019.pdf)**
+
+- [2019/07] **[ERNIE 2.0: A Continual Pre-training Framework for Language Understanding](https://arxiv.org/abs/1907.12412v1.pdf)** / *ERNIE 2.0*

@@ -101,3 +101,5 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 - [2019/07] **[We need to talk about standard splits](http://wellformedness.com/papers/gorman-bedrick-2019.pdf)**
 
 - [2019/07] **[ERNIE 2.0: A Continual Pre-training Framework for Language Understanding](https://arxiv.org/abs/1907.12412v1.pdf)** : *ERNIE 2.0*
+
+- [2019/7] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://www.aclweb.org/anthology/P19-1441.pdf)** : *mt-dnn*

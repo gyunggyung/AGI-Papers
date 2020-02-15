@@ -103,3 +103,5 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 - [2019/07] **[ERNIE 2.0: A Continual Pre-training Framework for Language Understanding](https://arxiv.org/abs/1907.12412v1.pdf)** : *ERNIE 2.0*
 
 - [2019/07] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://www.aclweb.org/anthology/P19-1441.pdf)** : *mt-dnn*
+
+- [2019/05] **[SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems](https://arxiv.org/pdf/1905.00537.pdf)** : *SuperGLUE*

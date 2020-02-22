@@ -1,5 +1,34 @@
 <h1 align="center"> 🌟 NLP-Papers 🌟 </h1>
 
+<p align="center">
+  </a> 
+    </a>
+  <em>
+    NLP
+    · NLU
+    · NLG
+  </em>
+  <br />
+  <em>
+    Summarization
+    · Sentiment analysis
+  </em>
+  <br />
+  <em>
+    NER
+    · POS
+    · MNT
+    · QA
+  </em>
+  <br />
+  <em>
+    Text categorization 
+    · Semantic parsing
+  </em>
+  <br />
+</p>
+
+
 - [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**    
 
 - [2014/12] **[Dependency-Based Word Embeddings](https://www.aclweb.org/anthology/P14-2050.pdf)**

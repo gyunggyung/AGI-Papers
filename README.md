@@ -1,9 +1,5 @@
 # NLP-Papers
 
-Papers and Book to look at when starting NLP. I will continue to update the content!! 🚀
-
-## Papers
-
 - [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**    
 
 - [2014/12] **[Dependency-Based Word Embeddings](https://www.aclweb.org/anthology/P14-2050.pdf)**

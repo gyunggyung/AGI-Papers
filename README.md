@@ -2,13 +2,6 @@
 
 Papers and Book to look at when starting NLP. I will continue to update the content!! 🚀
 
-## Basic knowledge
-
-| mathematics                                                                          | machine learning                                                                                                                                                                            |
-|:------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [![](image/ml.PNG)](https://mml-book.github.io/) | [![](image/pr.PNG)](http://users.isr.ist.utl.pt/~wurmd/Livros/school/) |
-| **[mathematics for machine learning](https://mml-book.github.io/)** | **[Pattern Recognition and Machine Learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/)** |
-
 ## Papers
 
 - [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**    
@@ -105,3 +98,10 @@ Papers and Book to look at when starting NLP. I will continue to update the cont
 - [2019/07] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://www.aclweb.org/anthology/P19-1441.pdf)** : *mt-dnn*
 
 - [2019/05] **[SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems](https://arxiv.org/pdf/1905.00537.pdf)** : *SuperGLUE*
+
+## Basic knowledge
+
+| mathematics                                                                          | machine learning                                                                                                                                                                            |
+|:------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [![](image/ml.PNG)](https://mml-book.github.io/) | [![](image/pr.PNG)](http://users.isr.ist.utl.pt/~wurmd/Livros/school/) |
+| **[mathematics for machine learning](https://mml-book.github.io/)** | **[Pattern Recognition and Machine Learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/)** |

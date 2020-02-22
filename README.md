@@ -34,6 +34,14 @@
   </em>
 </p>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="licenses" src="https://img.shields.io/github/license/newhiwoong/NLP-Papers?style=flat-square"></a>
+  <a href="https://github.com/newhiwoong/NLP-Papers/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/newhiwoong/NLP-Papers?style=flat-square&color=yellow"></a>
+  <a href="https://github.com/newhiwoong/NLP-Papers/network/members">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/newhiwoong/NLP-Papers?style=flat-square&color=informational"></a>
+</p>
 
 - [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**    
 

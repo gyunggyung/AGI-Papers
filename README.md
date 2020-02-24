@@ -41,9 +41,9 @@
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/newhiwoong/NLP-Papers?style=flat-square&color=yellow"></a>
   <a href="https://github.com/newhiwoong/NLP-Papers/network/members">
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/newhiwoong/NLP-Papers?style=flat-square&color=informational"></a>
-  <a href="https://github.com/newhiwoong/PyTorch/blob/master/watchers">
+  <a href="https://github.com/newhiwoong/NLP-Papers/blob/master/watchers">
     <img alt="GitHub watching" src="https://img.shields.io/github/watchers/newhiwoong/PyTorch?style=flat-square&color=ff69b4"></a>
-  <a href="https://github.com/newhiwoong/PyTorch/issues">
+  <a href="https://github.com/newhiwoong/NLP-Papers/issues">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/newhiwoong/PyTorch?style=flat-square&color=red"></a>
   <a href="https://github.com/newhiwoong/PyTorch/graphs/contributors">
     <img alt="contributors" src="https://img.shields.io/badge/contributors-welcome-yellowgreen?style=flat-square"></a>

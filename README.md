@@ -142,7 +142,7 @@
 
 - [2019/05] **[SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems](https://arxiv.org/pdf/1905.00537.pdf)** : *SuperGLUE*
 
-- [2020/01] **[Towards a Human-like Open-Domain Chatbot](https://arxiv.org/pdf/2001.09977.pdf)** + *[blog](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)*
+- [2020/01] **[Towards a Human-like Open-Domain Chatbot](https://arxiv.org/pdf/2001.09977.pdf)** + *[Google AI Blog](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)*
 
 ## Basic knowledge
 

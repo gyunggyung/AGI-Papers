@@ -142,6 +142,8 @@
 
 - [2019/05] **[SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems](https://arxiv.org/pdf/1905.00537.pdf)** : *SuperGLUE*
 
+- [2020/01] **[Towards a Human-like Open-Domain Chatbot](https://arxiv.org/pdf/2001.09977.pdf)**
+
 ## Basic knowledge
 
 | mathematics                                                                          | machine learning                                                                                                                                                                            |

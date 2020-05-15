@@ -45,6 +45,11 @@
     <img alt="contributors" src="https://img.shields.io/badge/contributors-welcome-yellowgreen?style=flat-square"></a>
 </p>
 
+<div align="center">
+    <sub> Read the various NLP papers. 🙇‍♂️🙇‍♀️ by <a href="https://github.com/gyunggyung/NLP-Papers/stargazers">Stargazers</a>  </sub>
+</div>
+
+
 ## Papers
 
 - [2013/01] **[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)**    

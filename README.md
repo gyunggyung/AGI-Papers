@@ -46,7 +46,7 @@
 </p>
 
 <div align="center">
-    <sub> Let's find out the latest and various NLP-related papers. Knowing trends is a great help. 🙇‍♂️🙇‍♀️ by <a href="https://github.com/gyunggyung/NLP-Papers/stargazers">Stargazers</a>  </sub>
+    <sub> Let's find out the latest and various NLP-related papers. 🙇‍♂️🙇‍♀️ by <a href="https://github.com/gyunggyung/NLP-Papers/stargazers">Stargazers</a>  </sub>
 </div>
 
 

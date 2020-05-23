@@ -161,6 +161,17 @@
 - [2020/04] **[SOLOIST: Few-shot Task-Oriented Dialog with A Single Pre-trained Auto-regressive Model](https://arxiv.org/abs/2005.05298.pdf)** : *SOLOIST*
 - [2020/05] **[A Simple Language Model for Task-Oriented Dialogue](https://arxiv.org/abs/2005.00796.pdf)**
 - [2019/07] **[ReCoSa: Detecting the Relevant Contexts with Self-Attention for Multi-turn Dialogue Generation](https://arxiv.org/abs/1907.05339.pdf)** : *ReCoSa*
+- [2020/04] **[FastBERT: a Self-distilling BERT with Adaptive Inference Time](https://arxiv.org/abs/2004.02178)** : *FastBERT*
+- [2020/01] **[PoWER-BERT: Accelerating BERT inference for Classification Tasks](https://arxiv.org/abs/2001.08950)** : *PoWER-BERT*
+- [2019/10] **[DistillBERT, a distilled version of BERT: smaller, faster, cheaper and lighter](https://arxiv.org/abs/1910.01108)** : *DistillBERT*
+- [2019/10] **[TinyBERT: Distilling BERT for Natural Language Understanding](https://arxiv.org/abs/1909.10351)** : *TinyBERT*
+- [2019/11] **[Not Enough Data? Deep Learning to the Rescue!](https://arxiv.org/abs/1911.03118)**
+- [2018/12] **[Conditional BERT Contextual Augmentation](https://arxiv.org/abs/1812.06705)**
+- [2020/03] **[Data Augmentation using Pre-trained Transformer Models](https://arxiv.org/abs/2003.02245)**
+
+- [] **[]()** : **
+
+
 
 
 ## Basic knowledge

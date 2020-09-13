@@ -70,7 +70,7 @@
 
 - [2017/08] **[Learned in Translation: Contextualized Word Vectors](http://papers.nips.cc/paper/7209-learned-in-translation-contextualized-word-vectors.pdf)** : *CoVe*
 
-- [2018/01]**[Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf)** : *ULMFIT*
+- [2018/01] **[Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/pdf/1801.06146.pdf)** : *ULMFIT*
 
 - [2018/02] **[Deep contextualized word representations](https://arxiv.org/pdf/1802.05365.pdf)** : *ELMo* 
 

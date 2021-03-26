@@ -28,7 +28,7 @@
   <br />
   
   <em>
-    <a href="https://github.com/newhiwoong/PyTorch">
+    <a href="https://github.com/gyunggyung/PyTorch">
       GOTO PyTorch!
     </a>
   </em>
@@ -36,11 +36,11 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
-    <img alt="licenses" src="https://img.shields.io/github/license/newhiwoong/NLP-Papers?style=flat-square"></a>
+    <img alt="licenses" src="https://img.shields.io/github/license/gyunggyung/NLP-Papers?style=flat-square"></a>
   <a href="https://github.com/gyunggyung/NLP-Papers/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/newhiwoong/NLP-Papers?style=flat-square&color=yellow"></a>
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/gyunggyung/NLP-Papers?style=flat-square&color=yellow"></a>
   <a href="https://github.com/gyunggyung/NLP-Papers/blob/master/watchers">
-    <img alt="GitHub watching" src="https://img.shields.io/github/watchers/newhiwoong/NLP-Papers?style=flat-square&color=ff69b4"></a>
+    <img alt="GitHub watching" src="https://img.shields.io/github/watchers/gyunggyung/NLP-Papers?style=flat-square&color=ff69b4"></a>
   <a href="https://github.com/gyunggyung/NLP-Papers/graphs/contributors">
     <img alt="contributors" src="https://img.shields.io/badge/contributors-welcome-yellowgreen?style=flat-square"></a>
 </p>

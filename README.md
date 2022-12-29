@@ -143,8 +143,6 @@
 
 - [2019/07] **[ERNIE 2.0: A Continual Pre-training Framework for Language Understanding](https://arxiv.org/abs/1907.12412v1.pdf)** : *ERNIE 2.0*
 
-- [2019/07] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://www.aclweb.org/anthology/P19-1441.pdf)** : *mt-dnn*
-
 - [2019/05] **[SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems](https://arxiv.org/pdf/1905.00537.pdf)** : *SuperGLUE*
 
 - [2020/01] **[Towards a Human-like Open-Domain Chatbot](https://arxiv.org/pdf/2001.09977.pdf)** + *[Google AI Blog](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)*
@@ -198,8 +196,7 @@
 
 - [2020/06] **[ERNIE-ViL: Knowledge Enhanced Vision-Language Representations Through Scene Graph](https://arxiv.org/abs/2006.16934)** : *ERNIE-ViL*
 
-- [2020/12] **[ERNIE-Doc: A Retrospective Long-Document Modeling Transformer](https://arxiv.org/abs/20
-12.15688)** : *ERNIE-Doc*
+- [2020/12] **[ERNIE-Doc: A Retrospective Long-Document Modeling Transformer](https://arxiv.org/abs/2012.15688)** : *ERNIE-Doc*
 
 - [2021/07] **[ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation](https://arxiv.org/abs/2107.02137)** : *ERNIE 3.0*
 
@@ -220,8 +217,6 @@
 - [2019/12] **[StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding](https://arxiv.org/abs/1908.04577)** : *StructBERT*
 
 - [2019/04] **[Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding](https://arxiv.org/abs/1904.09482)** : *MT-DNN*
-
-- [2019/05] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://arxiv.org/abs/1901.11504)** : *MT-DNN*
 
 - [] **[]()** : **
 

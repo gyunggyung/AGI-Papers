@@ -192,8 +192,38 @@
 
 - [2019/12] **[Big Transfer (BiT): General Visual Representation Learning](https://arxiv.org/abs/1912.11370)** : *BiT*
 
-- [] **[]()** : **
+- [2019/04] **[ERNIE: Enhanced Representation through Knowledge Integration](https://arxiv.org/abs/1904.09223)** : *ERNIE*
 
+- [2019/07] **[ERNIE 2.0: A Continual Pre-training Framework for Language Understanding](https://arxiv.org/abs/1907.12412)** : *ERNIE 2.0*
+
+- [2020/06] **[ERNIE-ViL: Knowledge Enhanced Vision-Language Representations Through Scene Graph](https://arxiv.org/abs/2006.16934)** : *ERNIE-ViL*
+
+- [2020/12] **[ERNIE-Doc: A Retrospective Long-Document Modeling Transformer](https://arxiv.org/abs/20
+12.15688)** : *ERNIE-Doc*
+
+- [2021/07] **[ERNIE 3.0: Large-scale Knowledge Enhanced Pre-training for Language Understanding and Generation](https://arxiv.org/abs/2107.02137)** : *ERNIE 3.0*
+
+- [2022/10] **[Beyond English-Centric Bitexts for Better Multilingual Language Representation Learning](https://arxiv.org/abs/2210.14867)**
+
+- [2017/03] **[Distilling Task-Specific Knowledge from BERT into Simple Neural Networks](https://arxiv.org/abs/1903.12136)**
+
+- [2020/10] **[DiPair: Fast and Accurate Distillation for Trillion-Scale Text Matching and Pair Modeling](https://arxiv.org/abs/2010.03099)** : *DiPair*
+
+- [2021/08] **[Distilling Transformers for Neural Cross-Domain Search](https://arxiv.org/abs/2108.03322)**
+
+- [2020/06] **[DeBERTa: Decoding-enhanced BERT with Disentangled Attention](https://arxiv.org/abs/2006.03654)** : *DeBERTa*
+
+- [2020/11] **[VEGA: Towards an End-to-End Configurable AutoML Pipeline](https://arxiv.org/abs/2011.01507)** : *VEGA*
+
+- [2020/12] **[FILTER: An Enhanced Fusion Method for Cross-lingual Language Understanding](https://arxiv.org/abs/2009.05166)** : *FILTER*
+
+- [2019/12] **[StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding](https://arxiv.org/abs/1908.04577)** : *StructBERT*
+
+- [2019/04] **[Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding](https://arxiv.org/abs/1904.09482)** : *MT-DNN*
+
+- [2019/05] **[Multi-Task Deep Neural Networks for Natural Language Understanding](https://arxiv.org/abs/1901.11504)** : *MT-DNN*
+
+- [] **[]()** : **
 
 
 ## Basic knowledge

@@ -218,8 +218,9 @@
 
 - [2019/04] **[Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding](https://arxiv.org/abs/1904.09482)** : *MT-DNN*
 
-- [] **[]()** : **
+- [2021/05] **[Comparing Kullback-Leibler Divergence and Mean Squared Error Loss in Knowledge Distillation](https://arxiv.org/abs/2105.08919)**
 
+- [] **[]()** : **
 
 ## Basic knowledge
 

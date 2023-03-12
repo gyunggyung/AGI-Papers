@@ -4,34 +4,21 @@
   </a> 
     </a>
   <em>
-    NLP
-    · NLU
+    NLU
     · NLG
   </em>
   <br />
   <em>
-    Summarization
-    · Sentiment analysis
+    Text2All
+    · All2All
   </em>
   <br />
   <em>
-    NER
-    · POS
-    · MNT
-    · QA
+    Multi-modal
+    · Multi-task
   </em>
   <br />
-  <em>
-    Text categorization 
-    · Semantic parsing
-  </em>
-  <br />
-  
-  <em>
-    <a href="https://github.com/gyunggyung/PyTorch">
-      GOTO PyTorch!
-    </a>
-  </em>
+
 </p>
 
 <p align="center">
@@ -50,7 +37,7 @@
 </div>
 
 ## Read 2023
-- [GPT Understands, To](https://arxiv.org/pdf/2103.10385.pdf)
+- [GPT Understands, Too](https://arxiv.org/pdf/2103.10385.pdf)
 - [P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks](https://arxiv.org/abs/2110.07602.pdf)
 - [Do Prompt-Based Models Really Understand the Meaning of their Prompts?](https://arxiv.org/pdf/2109.01247.pdf)
 

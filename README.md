@@ -37,6 +37,11 @@
 </div>
 
 ## Read 2023
+- [Language Is Not All You Need: Aligning Perception with Language Models](https://arxiv.org/pdf/2302.14045v1.pdf)
+- [Tackling multiple tasks with a single visual language model](https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model)
+- [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/pdf/2205.11916.pdf%EC%97%90%EC%84%9C)
+- [Larger language models do in-context learning differently](https://arxiv.org/abs/2303.03846)
+
 - [GPT Understands, Too](https://arxiv.org/pdf/2103.10385.pdf)
 - [P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks](https://arxiv.org/abs/2110.07602.pdf)
 - [Do Prompt-Based Models Really Understand the Meaning of their Prompts?](https://arxiv.org/pdf/2109.01247.pdf)
@@ -71,7 +76,6 @@
 
 - [LLaMA-7B](https://huggingface.co/spaces/chansung/LLaMA-7B), [LLAMA Up-data](https://github.com/hunkim/llama-up-data), [LLaMA: INT8 edition](https://github.com/tloen/llama-int8), [UForm](https://github.com/unum-cloud/uform)
 
-- [Language Is Not All You Need: Aligning Perception with Language Models](https://arxiv.org/pdf/2302.14045v1.pdf)
 - [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/abs/2204.14198), [Blog](https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model)
 - [Multimodal Chain-of-Thought Reasoning in Language Models](https://arxiv.org/abs/2302.00923)
 
@@ -144,7 +148,6 @@
 - [Quantum Simulation of Exact Electron Dynamics can be more Efficient than Classical Mean-Field Methods](https://research.google/pubs/pub52012/)
 - [Quantum simulation of exact electron dynamics can be more efficient than classical mean-field methods](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/231543ccbbbd24d725563e79c01743fbb4eb06e0.pdf)
 - [Propeller: A Profile Guided, Relinking Optimizer for Warehouse-Scale Applications](https://dl.acm.org/doi/10.1145/3575693.3575727)
-- [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/pdf/2205.11916.pdf%EC%97%90%EC%84%9C)
 
 
 - [Deepmind: Improving language models by retrieving from trillions of tokens](https://www.deepmind.com/publications/improving-language-models-by-retrieving-from-trillions-of-tokens)
@@ -155,7 +158,6 @@
 - [Deepmind: Building interactive agents in video game worlds](https://www.deepmind.com/blog/building-interactive-agents-in-video-game-worlds)
 - [Deepmind: Discovering novel algorithms with AlphaTensor](https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor)
 - [Deepmind: AlphaFold reveals the structure of the protein universe](https://www.deepmind.com/blog/alphafold-reveals-the-structure-of-the-protein-universe)
-- [Deepmind: Tackling multiple tasks with a single visual language model](https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model)
 - [Deepmind: Exploring the beauty of pure mathematics in novel ways](https://www.deepmind.com/blog/exploring-the-beauty-of-pure-mathematics-in-novel-ways)
 - [Deepmind: Nowcasting the next hour of rain](https://www.deepmind.com/blog/nowcasting-the-next-hour-of-rain)
 - [Deepmind: Putting the power of AlphaFold into the world’s hands](https://www.deepmind.com/blog/putting-the-power-of-alphafold-into-the-worlds-hands)

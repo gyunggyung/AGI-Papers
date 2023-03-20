@@ -373,11 +373,9 @@ MLLM, LLM, NLG, Dialogue, Reinforcement learning, Distillation, Efficient, Sente
 
 
 
-- [] **[]()** : **
-
 ## Basic knowledge
 
-| mathematics                                                                          | machine learning                                                                                                                                                                            |
-|:------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [![](image/ml.PNG)](https://mml-book.github.io/) | [![](image/pr.PNG)](http://users.isr.ist.utl.pt/~wurmd/Livros/school/) |
-| **[mathematics for machine learning](https://mml-book.github.io/)** | **[Pattern Recognition and Machine Learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/)** |
+| mathematics              | machine learning    | Transformer                            | Hugging Face     |
+|:------------------------------------------------------------------------------:|:------------:|:------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [![](image/ml.PNG)](https://mml-book.github.io/) | [![](image/pr.PNG)](http://users.isr.ist.utl.pt/~wurmd/Livros/school/) | ![](https://www.perlego.com/_next/image?url=https%3A%2F%2Fwww.perlego.com%2Fbooks%2FRM_Books%2Fpackt_pub_vpnckweg%2F9781838826239_500_750.jpg&w=1440&q=75) | [![](https://transformersbook.com/images/book_cover.jpg)](https://transformersbook.com/) |
+| **[mathematics for machine learning](https://mml-book.github.io/)** | **[Pattern Recognition and Machine Learning](http://users.isr.ist.utl.pt/~wurmd/Livros/school/)** | **[Getting Started with Google BERT](https://mml-book.github.io/)** | **[Natural Language Processing with Transformers](https://transformersbook.com/)** |

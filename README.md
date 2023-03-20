@@ -1,4 +1,4 @@
-<h1 align="center"> 🌟  LLM-Papers 🌟 </h1>
+<h1 align="center"> 🌟  MLLM-Papers 🌟 </h1>
 
 <p align="center">
   </a> 

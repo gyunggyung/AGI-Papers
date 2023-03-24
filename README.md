@@ -372,6 +372,19 @@ MLLM, LLM, NLG, Dialogue, Reinforcement learning, Distillation, Efficient, Sente
 - [2021/05] **[Comparing Kullback-Leibler Divergence and Mean Squared Error Loss in Knowledge Distillation](https://arxiv.org/abs/2105.08919)**
 
 
+## 스터디 규칙
+1. 영어만 사용은 금지. 한국어 중심 사용. 특수 용어는 영어 사용.
+2. 1주일에 논문 2개 이상 스터디. 되는 사람은 10개 이상.
+3. 3분에서 20분 현장에서 논문 읽기. 5분에서 30분 토론.
+4. 1시간 스터디 시, 바로 나가도 됨. 원할 때 10분 이하 참여도 무관. 자유롭게 진행. 2시간 매일도 가능.
+5. 각자 더 뛰어난 게 있다는 것을 인지. 다들 대단한 분들이니 질문 많이 하고, 정보 공유 자주.
+6. 본인이 하기로 한 일만은 수행. 한다고 말하고, 안 하는 것은 민폐다.
+7. 기본적으로 녹화 후 내부 공유.
+8. 정보를 혼자 알게 쓰지 말고, 다 같이 알게 말하기.
+9. 개인 사정으로 스터디 탈퇴 시, 자기소개에 인사 작성.
+10. 여러 기관 좋은 규칙 붙여넣기.
+11. 팀에 도움이 된다고 판단하면, 위 규칙을 모두 무시하고 행동.
+12. 추가.
 
 ## Basic knowledge
 

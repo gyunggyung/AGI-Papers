@@ -1,4 +1,4 @@
-<h1 align="center"> 🌟  MLLM-Papers 🌟 </h1>
+<h1 align="center"> 🌟  AGI-Papers 🌟 </h1>
 
 <p align="center">
   </a> 
@@ -36,6 +36,16 @@
     <sub> Let's find out the latest and various LLM-related papers. 🙇‍♂️🙇‍♀️ by <a href="https://github.com/gyunggyung/LLM-Papers/stargazers">Stargazers</a>  </sub>
 </div>
 
+# AGI
+- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)
+- [Reflexion: an autonomous agent with dynamic memory and self-reflection](https://arxiv.org/abs/2303.11366)
+- [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651)
+- [HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in HuggingFace](https://arxiv.org/abs/2303.17580)
+- [Auto-GPT: An Autonomous GPT-4 Experiment](https://github.com/Significant-Gravitas/Auto-GPT)
+- [LiOnConnect](https://github.com/gyunggyung/LiOnConnect)
+- [DeepSpeed](https://www.deepspeed.ai/)
+- [ACCIO](https://www.accio.chat)
+
 # MLLMArxivTalk
 최신 MLLM 관련 스터디. 기본 오후에 진행. 논문, 강의, 코드, 뉴스, 블로그 등 다양한 자료로 학습.
 
@@ -47,9 +57,10 @@ MLLM, LLM, NLG, Dialogue, Reinforcement learning, Distillation, Efficient, Sente
 
 주말을 포함하여, 거의 매일 추가 스터디 존재. 흥미로운 주제거나 참여 되는 날만 중간에 들어와서 중간에 나가도 무관. 모든 규칙은 협의 가능. 오프라인 모임도 예정. 자율 참여.
 
-
-
 ## Read 2023
+- [Free Dolly: Introducing the World's First Truly Open Instruction-Tuned LLM](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm)
+
+
 - [Language Is Not All You Need: Aligning Perception with Language Models](https://arxiv.org/pdf/2302.14045v1.pdf)
 - [Tackling multiple tasks with a single visual language model](https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model)
 - [Large Language Models are Zero-Shot Reasoners](https://arxiv.org/pdf/2205.11916.pdf%EC%97%90%EC%84%9C)

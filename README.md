@@ -37,6 +37,7 @@
 </div>
 
 # AGI
+- [÷🦎 Chameleon: Plug-and-Play Compositional Reasoning with GPT-4](https://github.com/lupantech/chameleon-llm)
 - [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)
 - [Reflexion: an autonomous agent with dynamic memory and self-reflection](https://arxiv.org/abs/2303.11366)
 - [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651)

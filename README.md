@@ -47,16 +47,6 @@
 - [DeepSpeed](https://www.deepspeed.ai/)
 - [ACCIO](https://www.accio.chat)
 
-# MLLMArxivTalk
-최신 MLLM 관련 스터디. 기본 오후에 진행. 논문, 강의, 코드, 뉴스, 블로그 등 다양한 자료로 학습.
-
-MLLM, LLM, NLG, Dialogue, Reinforcement learning, Distillation, Efficient, Sentence similarity, multiple tasks, multimodal, Stable diffusion, TTS, Text-To-Video, All-To-All, 우주, 생명, 지능, 윤리, 규제, 법, 노화, 의학, 투자, 개발, 인프라, 디자인, 경영, ETC... 
-
-유망 스타트업 C레벨, 국내외 탑티어 연구자, 국내외 탑티어 대학, 대학원 재학생과 졸업생, 석학, 교수 등 **A급 인재들이 최신 논문, 강의 등 스터디 및 프로젝트 진행.**
-
-기본 매주 수요일 오후 7시반. 사전 학습 없이 논문 읽기 최대 20분, 토론 최대 40분. 한 번에 1 ~ 10개 논문, 강의 등 진행. 지금까지는 항상 3개. 주제 논문 선정은 자유. 탑티어 학회 논문 및 프로젝트 제작 예정.
-
-주말을 포함하여, 거의 매일 추가 스터디 존재. 흥미로운 주제거나 참여 되는 날만 중간에 들어와서 중간에 나가도 무관. 모든 규칙은 협의 가능. 오프라인 모임도 예정. 자율 참여.
 
 ## Read 2023
 - [Free Dolly: Introducing the World's First Truly Open Instruction-Tuned LLM](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm)
@@ -382,6 +372,17 @@ MLLM, LLM, NLG, Dialogue, Reinforcement learning, Distillation, Efficient, Sente
 - [2019/04] **[Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding](https://arxiv.org/abs/1904.09482)** : *MT-DNN*
 
 - [2021/05] **[Comparing Kullback-Leibler Divergence and Mean Squared Error Loss in Knowledge Distillation](https://arxiv.org/abs/2105.08919)**
+
+# MLLMArxivTalk
+최신 MLLM 관련 스터디. 기본 오후에 진행. 논문, 강의, 코드, 뉴스, 블로그 등 다양한 자료로 학습.
+
+MLLM, LLM, NLG, Dialogue, Reinforcement learning, Distillation, Efficient, Sentence similarity, multiple tasks, multimodal, Stable diffusion, TTS, Text-To-Video, All-To-All, 우주, 생명, 지능, 윤리, 규제, 법, 노화, 의학, 투자, 개발, 인프라, 디자인, 경영, ETC... 
+
+유망 스타트업 C레벨, 국내외 탑티어 연구자, 국내외 탑티어 대학, 대학원 재학생과 졸업생, 석학, 교수 등 **A급 인재들이 최신 논문, 강의 등 스터디 및 프로젝트 진행.**
+
+기본 매주 수요일 오후 7시반. 사전 학습 없이 논문 읽기 최대 20분, 토론 최대 40분. 한 번에 1 ~ 10개 논문, 강의 등 진행. 지금까지는 항상 3개. 주제 논문 선정은 자유. 탑티어 학회 논문 및 프로젝트 제작 예정.
+
+주말을 포함하여, 거의 매일 추가 스터디 존재. 흥미로운 주제거나 참여 되는 날만 중간에 들어와서 중간에 나가도 무관. 모든 규칙은 협의 가능. 오프라인 모임도 예정. 자율 참여.
 
 
 ## 스터디 규칙

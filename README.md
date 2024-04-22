@@ -35,8 +35,12 @@
 <div align="center">
     <sub> Let's find out the latest and various LLM-related papers. 🙇‍♂️🙇‍♀️ by <a href="https://github.com/gyunggyung/LLM-Papers/stargazers">Stargazers</a>  </sub>
 </div>
+- [MoVA: Adapting Mixture of Vision Experts to Multimodal Context](https://arxiv.org/abs/2404.13046v1)
+- [Toward Self-Improvement of LLMs via Imagination, Searching, and Criticizing](https://arxiv.org/abs/2404.12253v1)
+- [Chat Vector: A Simple Approach to Equip LLMs with Instruction Following and Model Alignment in New Languages](https://arxiv.org/abs/2310.04799)
+- []()
 
-
+  
 ## before 2024
 
 - [Unleashing Cognitive Synergy in Large Language Models: A Task-Solving Agent through Multi-Persona Self-Collaboration](https://arxiv.org/abs/2307.05300)
@@ -463,6 +467,7 @@ Human intelligence thrives on the concept of cognitive synergy, where collaborat
 
 - [2021/05] **[Comparing Kullback-Leibler Divergence and Mean Squared Error Loss in Knowledge Distillation](https://arxiv.org/abs/2105.08919)**
 
+중지 
 # MLLMArxivTalk
 최신 MLLM 관련 스터디. 기본 오후에 진행. 논문, 강의, 코드, 뉴스, 블로그 등 다양한 자료로 학습.
 

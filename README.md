@@ -35,11 +35,14 @@
 <div align="center">
     <sub> Let's find out the latest and various LLM-related papers. 🙇‍♂️🙇‍♀️ by <a href="https://github.com/gyunggyung/LLM-Papers/stargazers">Stargazers</a>  </sub>
 </div>
+
+## New Papers
+
 - [MoVA: Adapting Mixture of Vision Experts to Multimodal Context](https://arxiv.org/abs/2404.13046v1)
 - [Toward Self-Improvement of LLMs via Imagination, Searching, and Criticizing](https://arxiv.org/abs/2404.12253v1)
 - [Chat Vector: A Simple Approach to Equip LLMs with Instruction Following and Model Alignment in New Languages](https://arxiv.org/abs/2310.04799)
+- [From r to Q∗: Your Language Model is Secretly a Q-Function](https://arxiv.org/abs//2404.12358)
 - []()
-
   
 ## before 2024
 

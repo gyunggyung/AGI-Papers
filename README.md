@@ -45,7 +45,7 @@
 - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752)
 - [Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone](https://arxiv.org/abs/2404.14219)
 - [DoRA: Weight-Decomposed Low-Rank Adaptation](https://arxiv.org/abs/2402.09353v1)
-- []()
+- [Many-Shot In-Context Learning](https://arxiv.org/abs/2404.11018)
 - []()
   
 ## before 2024

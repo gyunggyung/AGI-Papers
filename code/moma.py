@@ -15,24 +15,28 @@ LEARNING_RATE = 1e-4
 BATCH_SIZE = 32
 SEQ_LENGTH = 1024
 NUM_EPOCHS = 10
-VOCAB_SIZE = 1000
+VOCAB_SIZE = 65536  # 텍스트 토큰 + 이미지 코드북
+IMAGE_CODEBOOK_SIZE = 8192
 NUM_LAYERS = 4
 
+class SwiGLU(nn.Module):
+    def forward(self, x):
+        x, gate = x.chunk(2, dim=-1)
+        return F.silu(gate) * x
+
 class FFNBlock(nn.Module):
-    """Feed-forward network block with SwiGLU activation"""
     def __init__(self, hidden_dim):
         super().__init__()
         self.ffn = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim * 4),
-            nn.SwiGLU(),
-            nn.Linear(hidden_dim * 4, hidden_dim)
+            SwiGLU(),
+            nn.Linear(hidden_dim * 2, hidden_dim)
         )
     
     def forward(self, x):
         return self.ffn(x)
 
 class MoMaLayer(nn.Module):
-    """Mixture of Modality-aware Experts (MoMa) layer"""
     def __init__(self, hidden_dim, num_text_experts, num_image_experts, expert_capacity, depth_capacity):
         super().__init__()
         self.hidden_dim = hidden_dim
@@ -41,16 +45,13 @@ class MoMaLayer(nn.Module):
         self.expert_capacity = expert_capacity
         self.depth_capacity = depth_capacity
         
-        # 텍스트와 이미지 전문가 초기화
         self.text_experts = nn.ModuleList([FFNBlock(hidden_dim) for _ in range(num_text_experts)])
         self.image_experts = nn.ModuleList([FFNBlock(hidden_dim) for _ in range(num_image_experts)])
         
-        # 메인 라우터
         self.text_router = nn.Linear(hidden_dim, num_text_experts)
         self.image_router = nn.Linear(hidden_dim, num_image_experts)
         self.mod_router = nn.Linear(hidden_dim, 1)
         
-        # 보조 라우터
         self.aux_text_router = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim // 2),
             nn.SiLU(),
@@ -71,73 +72,45 @@ class MoMaLayer(nn.Module):
         batch_size, seq_length, _ = x.shape
         
         # Mixture-of-Depths (MoD) 라우팅
-        if use_aux_router:
-            mod_scores = torch.sigmoid(self.aux_mod_router(x).squeeze(-1))
-        else:
-            mod_scores = torch.sigmoid(self.mod_router(x).squeeze(-1))
+        mod_scores = torch.sigmoid(self.aux_mod_router(x) if use_aux_router else self.mod_router(x)).squeeze(-1)
         _, mod_indices = torch.topk(mod_scores, k=int(self.depth_capacity * seq_length), dim=1)
-        mod_mask = torch.zeros_like(modality_mask, dtype=torch.bool)
-        mod_mask.scatter_(1, mod_indices, 1)
+        mod_mask = torch.zeros_like(modality_mask, dtype=torch.bool).scatter_(1, mod_indices, 1)
         
-        # MoD 마스크 적용
         x = x[mod_mask]
         modality_mask = modality_mask[mod_mask]
         
-        # 텍스트와 이미지 토큰 분리
         text_tokens = x[modality_mask == 1]
         image_tokens = x[modality_mask == 0]
         
-        # 텍스트 전문가 라우팅
-        if use_aux_router:
-            text_scores = torch.sigmoid(self.aux_text_router(text_tokens))
-        else:
-            text_scores = self.text_router(text_tokens)
-        text_top_k = int(self.expert_capacity * len(text_tokens))
-        text_expert_outputs = []
-        for i, expert in enumerate(self.text_experts):
-            if use_aux_router:
-                selected_indices = torch.where(text_scores[:, i] > 0.5)[0]
-            else:
-                _, selected_indices = torch.topk(text_scores[:, i], k=min(text_top_k, len(text_tokens)), dim=0)
-            selected_tokens = text_tokens[selected_indices]
-            expert_output = expert(selected_tokens)
-            padded_output = torch.zeros_like(text_tokens)
-            padded_output[selected_indices] = expert_output
-            text_expert_outputs.append(padded_output)
-        text_output = sum(text_expert_outputs)
+        def route_and_process(tokens, router, aux_router, experts):
+            scores = torch.sigmoid(aux_router(tokens) if use_aux_router else router(tokens))
+            top_k = int(self.expert_capacity * len(tokens))
+            outputs = []
+            for i, expert in enumerate(experts):
+                if use_aux_router:
+                    indices = torch.where(scores[:, i] > 0.5)[0]
+                else:
+                    _, indices = torch.topk(scores[:, i], k=min(top_k, len(tokens)), dim=0)
+                selected_tokens = tokens[indices]
+                expert_output = expert(selected_tokens)
+                padded_output = torch.zeros_like(tokens)
+                padded_output[indices] = expert_output
+                outputs.append(padded_output)
+            return sum(outputs), scores
         
-        # 이미지 전문가 라우팅 (텍스트와 유사)
-        if use_aux_router:
-            image_scores = torch.sigmoid(self.aux_image_router(image_tokens))
-        else:
-            image_scores = self.image_router(image_tokens)
-        image_top_k = int(self.expert_capacity * len(image_tokens))
-        image_expert_outputs = []
-        for i, expert in enumerate(self.image_experts):
-            if use_aux_router:
-                selected_indices = torch.where(image_scores[:, i] > 0.5)[0]
-            else:
-                _, selected_indices = torch.topk(image_scores[:, i], k=min(image_top_k, len(image_tokens)), dim=0)
-            selected_tokens = image_tokens[selected_indices]
-            expert_output = expert(selected_tokens)
-            padded_output = torch.zeros_like(image_tokens)
-            padded_output[selected_indices] = expert_output
-            image_expert_outputs.append(padded_output)
-        image_output = sum(image_expert_outputs)
+        text_output, text_scores = route_and_process(text_tokens, self.text_router, self.aux_text_router, self.text_experts)
+        image_output, image_scores = route_and_process(image_tokens, self.image_router, self.aux_image_router, self.image_experts)
         
-        # 결과 합치기
         output = torch.zeros_like(x)
         output[modality_mask == 1] = text_output
         output[modality_mask == 0] = image_output
         
-        # 원래 시퀀스 형태로 복원
         full_output = torch.zeros(batch_size, seq_length, self.hidden_dim, device=x.device)
         full_output[mod_mask] = output
         
         return full_output, mod_mask, text_scores, image_scores
 
 class MoMaModel(nn.Module):
-    """전체 MoMa 모델"""
     def __init__(self, vocab_size, hidden_dim, num_layers):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, hidden_dim)
@@ -153,11 +126,15 @@ class MoMaModel(nn.Module):
             x, _, _, _ = layer(x, modality_mask, use_aux_router)
         return self.output(x)
 
-class DummyDataset(Dataset):
-    """더미 데이터셋 (실제 데이터셋으로 교체 필요)"""
-    def __init__(self, num_samples, seq_length, vocab_size):
+class ChameleonDataset(Dataset):
+    def __init__(self, num_samples, seq_length, vocab_size, image_codebook_size):
         self.data = torch.randint(0, vocab_size, (num_samples, seq_length))
-        self.modality_mask = torch.randint(0, 2, (num_samples, seq_length))
+        self.modality_mask = torch.zeros((num_samples, seq_length), dtype=torch.bool)
+        for i in range(num_samples):
+            image_length = torch.randint(256, 1025, (1,)).item()  # 256~1024 범위의 이미지 토큰
+            image_start = torch.randint(0, seq_length - image_length, (1,)).item()
+            self.data[i, image_start:image_start+image_length] = torch.randint(0, image_codebook_size, (image_length,))
+            self.modality_mask[i, image_start:image_start+image_length] = True
     
     def __len__(self):
         return len(self.data)
@@ -166,7 +143,6 @@ class DummyDataset(Dataset):
         return self.data[idx], self.modality_mask[idx]
 
 def train_model(model, train_loader, num_epochs, learning_rate):
-    """모델 학습 함수"""
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     criterion = nn.CrossEntropyLoss()
     
@@ -186,13 +162,7 @@ def train_model(model, train_loader, num_epochs, learning_rate):
     return model
 
 def train_aux_routers(model, train_loader, num_epochs, learning_rate):
-    """보조 라우터 학습 함수"""
-    aux_params = []
-    for layer in model.layers:
-        aux_params.extend(list(layer.aux_text_router.parameters()))
-        aux_params.extend(list(layer.aux_image_router.parameters()))
-        aux_params.extend(list(layer.aux_mod_router.parameters()))
-    
+    aux_params = [p for layer in model.layers for router in [layer.aux_text_router, layer.aux_image_router, layer.aux_mod_router] for p in router.parameters()]
     optimizer = optim.Adam(aux_params, lr=learning_rate)
     criterion = nn.BCEWithLogitsLoss()
     
@@ -205,8 +175,8 @@ def train_aux_routers(model, train_loader, num_epochs, learning_rate):
                 _, mod_masks, text_scores, image_scores = zip(*[layer(model.embedding(data), modality_mask) for layer in model.layers])
             
             aux_mod_output = torch.cat([layer.aux_mod_router(model.embedding(data)) for layer in model.layers], dim=0)
-            aux_text_output = torch.cat([layer.aux_text_router(model.embedding(data)[modality_mask == 1]) for layer in model.layers], dim=0)
-            aux_image_output = torch.cat([layer.aux_image_router(model.embedding(data)[modality_mask == 0]) for layer in model.layers], dim=0)
+            aux_text_output = torch.cat([layer.aux_text_router(model.embedding(data)[modality_mask]) for layer in model.layers], dim=0)
+            aux_image_output = torch.cat([layer.aux_image_router(model.embedding(data)[~modality_mask]) for layer in model.layers], dim=0)
             
             mod_targets = torch.cat(mod_masks, dim=0).float()
             text_targets = torch.cat([s > 0 for s in text_scores], dim=0).float()
@@ -225,7 +195,6 @@ def train_aux_routers(model, train_loader, num_epochs, learning_rate):
     return model
 
 def upcycle_model(model, train_loader, num_epochs, learning_rate):
-    """모델 업사이클링 함수"""
     # 1단계: 1개의 전문가로 학습
     for layer in model.layers:
         layer.text_experts = nn.ModuleList([layer.text_experts[0]])
@@ -247,20 +216,13 @@ def upcycle_model(model, train_loader, num_epochs, learning_rate):
     return model
 
 def main():
-    # 데이터셋과 데이터 로더 생성
-    train_dataset = DummyDataset(10000, SEQ_LENGTH, VOCAB_SIZE)
+    train_dataset = ChameleonDataset(10000, SEQ_LENGTH, VOCAB_SIZE, IMAGE_CODEBOOK_SIZE)
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
 
-    # 모델 생성
     model = MoMaModel(vocab_size=VOCAB_SIZE, hidden_dim=HIDDEN_DIM, num_layers=NUM_LAYERS)
-
-    # 업사이클링 적용
     model = upcycle_model(model, train_loader, NUM_EPOCHS, LEARNING_RATE)
-
-    # 보조 라우터 학습
     model = train_aux_routers(model, train_loader, NUM_EPOCHS // 2, LEARNING_RATE)
 
-    # 추론 예시
     model.eval()
     with torch.no_grad():
         sample_data, sample_mask = next(iter(train_loader))
@@ -269,3 +231,19 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+```
+이 개선된 버전에서는 다음과 같은 변경사항이 있습니다:
+
+1. Chameleon 모델의 특성을 반영한 `ChameleonDataset` 클래스를 추가했습니다. 이 클래스는 텍스트와 이미지 토큰이 섞인 시퀀스를 생성합니다.
+
+2. SwiGLU 활성화 함수를 별도의 클래스로 구현하여 FFNBlock에 적용했습니다.
+
+3. MoMaLayer의 forward 메서드를 더 간결하고 효율적으로 리팩토링했습니다.
+
+4. vocab_size와 image_codebook_size를 논문에서 언급된 값으로 업데이트했습니다.
+
+5. 라우팅 로직을 더 명확하게 구현하여 expert-choice 라우팅의 특성을 잘 반영했습니다.
+
+이 코드는 논문에서 제안한 MoMa 아키텍처의 핵심 아이디어를 더 정확하게 구현하고 있습니다. 하지만 실제 대규모 학습을 위해서는 분산 학습, 메모리 최적화, 그리고 실제 데이터셋을 사용한 추가적인 구현이 필요할 것입니다.
+```

@@ -1,12 +1,3 @@
-MoMa: Efficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts
-
-https://go.fb.me/kz3b0c
-
-위 논문의 모든 주요 내용을 포함하는 더 완전한 구현을 제공하겠습니다. 이 구현에는 MoMa 아키텍처, 학습 과정, 보조 라우터, 그리고 업사이클링 기법까지 포함됩니다. 코드를 여러 부분으로 나누어 설명하겠습니다.
-
-1. 먼저 필요한 라이브러리를 임포트하고 기본 설정을 정의합니다:
-
-```python
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -14,7 +5,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
 import numpy as np
 
-# 설정
+# 하이퍼파라미터 및 설정
 HIDDEN_DIM = 512
 NUM_TEXT_EXPERTS = 4
 NUM_IMAGE_EXPERTS = 4
@@ -24,12 +15,11 @@ LEARNING_RATE = 1e-4
 BATCH_SIZE = 32
 SEQ_LENGTH = 1024
 NUM_EPOCHS = 10
-```
+VOCAB_SIZE = 1000
+NUM_LAYERS = 4
 
-2. MoMa 레이어와 관련 컴포넌트를 정의합니다:
-
-```python
 class FFNBlock(nn.Module):
+    """Feed-forward network block with SwiGLU activation"""
     def __init__(self, hidden_dim):
         super().__init__()
         self.ffn = nn.Sequential(
@@ -42,6 +32,7 @@ class FFNBlock(nn.Module):
         return self.ffn(x)
 
 class MoMaLayer(nn.Module):
+    """Mixture of Modality-aware Experts (MoMa) layer"""
     def __init__(self, hidden_dim, num_text_experts, num_image_experts, expert_capacity, depth_capacity):
         super().__init__()
         self.hidden_dim = hidden_dim
@@ -50,9 +41,11 @@ class MoMaLayer(nn.Module):
         self.expert_capacity = expert_capacity
         self.depth_capacity = depth_capacity
         
+        # 텍스트와 이미지 전문가 초기화
         self.text_experts = nn.ModuleList([FFNBlock(hidden_dim) for _ in range(num_text_experts)])
         self.image_experts = nn.ModuleList([FFNBlock(hidden_dim) for _ in range(num_image_experts)])
         
+        # 메인 라우터
         self.text_router = nn.Linear(hidden_dim, num_text_experts)
         self.image_router = nn.Linear(hidden_dim, num_image_experts)
         self.mod_router = nn.Linear(hidden_dim, 1)
@@ -77,7 +70,7 @@ class MoMaLayer(nn.Module):
     def forward(self, x, modality_mask, use_aux_router=False):
         batch_size, seq_length, _ = x.shape
         
-        # MoD routing
+        # Mixture-of-Depths (MoD) 라우팅
         if use_aux_router:
             mod_scores = torch.sigmoid(self.aux_mod_router(x).squeeze(-1))
         else:
@@ -86,14 +79,15 @@ class MoMaLayer(nn.Module):
         mod_mask = torch.zeros_like(modality_mask, dtype=torch.bool)
         mod_mask.scatter_(1, mod_indices, 1)
         
-        # Apply MoD mask
+        # MoD 마스크 적용
         x = x[mod_mask]
         modality_mask = modality_mask[mod_mask]
         
+        # 텍스트와 이미지 토큰 분리
         text_tokens = x[modality_mask == 1]
         image_tokens = x[modality_mask == 0]
         
-        # Expert-choice routing for text
+        # 텍스트 전문가 라우팅
         if use_aux_router:
             text_scores = torch.sigmoid(self.aux_text_router(text_tokens))
         else:
@@ -112,7 +106,7 @@ class MoMaLayer(nn.Module):
             text_expert_outputs.append(padded_output)
         text_output = sum(text_expert_outputs)
         
-        # Expert-choice routing for image (similar to text)
+        # 이미지 전문가 라우팅 (텍스트와 유사)
         if use_aux_router:
             image_scores = torch.sigmoid(self.aux_image_router(image_tokens))
         else:
@@ -136,13 +130,14 @@ class MoMaLayer(nn.Module):
         output[modality_mask == 1] = text_output
         output[modality_mask == 0] = image_output
         
-        # Restore original sequence shape
+        # 원래 시퀀스 형태로 복원
         full_output = torch.zeros(batch_size, seq_length, self.hidden_dim, device=x.device)
         full_output[mod_mask] = output
         
         return full_output, mod_mask, text_scores, image_scores
 
 class MoMaModel(nn.Module):
+    """전체 MoMa 모델"""
     def __init__(self, vocab_size, hidden_dim, num_layers):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, hidden_dim)
@@ -157,12 +152,9 @@ class MoMaModel(nn.Module):
         for layer in self.layers:
             x, _, _, _ = layer(x, modality_mask, use_aux_router)
         return self.output(x)
-```
 
-3. 데이터셋과 데이터 로더를 정의합니다 (여기서는 간단한 더미 데이터를 사용합니다):
-
-```python
 class DummyDataset(Dataset):
+    """더미 데이터셋 (실제 데이터셋으로 교체 필요)"""
     def __init__(self, num_samples, seq_length, vocab_size):
         self.data = torch.randint(0, vocab_size, (num_samples, seq_length))
         self.modality_mask = torch.randint(0, 2, (num_samples, seq_length))
@@ -173,15 +165,8 @@ class DummyDataset(Dataset):
     def __getitem__(self, idx):
         return self.data[idx], self.modality_mask[idx]
 
-# 데이터셋과 데이터 로더 생성
-train_dataset = DummyDataset(10000, SEQ_LENGTH, 1000)
-train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
-```
-
-4. 학습 함수와 보조 라우터 학습 함수를 정의합니다:
-
-```python
 def train_model(model, train_loader, num_epochs, learning_rate):
+    """모델 학습 함수"""
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     criterion = nn.CrossEntropyLoss()
     
@@ -201,6 +186,7 @@ def train_model(model, train_loader, num_epochs, learning_rate):
     return model
 
 def train_aux_routers(model, train_loader, num_epochs, learning_rate):
+    """보조 라우터 학습 함수"""
     aux_params = []
     for layer in model.layers:
         aux_params.extend(list(layer.aux_text_router.parameters()))
@@ -237,12 +223,9 @@ def train_aux_routers(model, train_loader, num_epochs, learning_rate):
         print(f"Aux Epoch {epoch+1}/{num_epochs}, Loss: {total_loss/len(train_loader):.4f}")
     
     return model
-```
 
-5. 업사이클링 함수를 정의합니다:
-
-```python
 def upcycle_model(model, train_loader, num_epochs, learning_rate):
+    """모델 업사이클링 함수"""
     # 1단계: 1개의 전문가로 학습
     for layer in model.layers:
         layer.text_experts = nn.ModuleList([layer.text_experts[0]])
@@ -262,33 +245,27 @@ def upcycle_model(model, train_loader, num_epochs, learning_rate):
     model = train_model(model, train_loader, num_epochs // 2, learning_rate)
     
     return model
-```
 
-6. 마지막으로, 모델을 생성하고 학습을 실행합니다:
+def main():
+    # 데이터셋과 데이터 로더 생성
+    train_dataset = DummyDataset(10000, SEQ_LENGTH, VOCAB_SIZE)
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
 
-```python
-# 모델 생성
-model = MoMaModel(vocab_size=1000, hidden_dim=HIDDEN_DIM, num_layers=4)
+    # 모델 생성
+    model = MoMaModel(vocab_size=VOCAB_SIZE, hidden_dim=HIDDEN_DIM, num_layers=NUM_LAYERS)
 
-# 업사이클링 적용
-model = upcycle_model(model, train_loader, NUM_EPOCHS, LEARNING_RATE)
+    # 업사이클링 적용
+    model = upcycle_model(model, train_loader, NUM_EPOCHS, LEARNING_RATE)
 
-# 보조 라우터 학습
-model = train_aux_routers(model, train_loader, NUM_EPOCHS // 2, LEARNING_RATE)
+    # 보조 라우터 학습
+    model = train_aux_routers(model, train_loader, NUM_EPOCHS // 2, LEARNING_RATE)
 
-# 추론 예시
-model.eval()
-with torch.no_grad():
-    sample_data, sample_mask = next(iter(train_loader))
-    output = model(sample_data, sample_mask, use_aux_router=True)
-    print("Inference output shape:", output.shape)
-```
+    # 추론 예시
+    model.eval()
+    with torch.no_grad():
+        sample_data, sample_mask = next(iter(train_loader))
+        output = model(sample_data, sample_mask, use_aux_router=True)
+        print("Inference output shape:", output.shape)
 
-이 구현은 논문의 주요 개념을 모두 포함하고 있습니다:
-
-1. MoMa 아키텍처: 모달리티별 전문가 그룹, expert-choice 라우팅, Mixture-of-Depths (MoD)
-2. 보조 라우터: 추론 시 사용할 별도의 라우터
-3. 업사이클링: 단일 전문가로 시작하여 점진적으로 전문가 수를 늘리는 방식
-4. 학습 과정: 주 모델 학습과 보조 라우터 학습
-
-실제 대규모 구현에서는 분산 학습, 더 복잡한 데이터 처리, 그리고 추가적인 최적화 기법 등이 필요할 것입니다. 또한 이 코드는 시연을 위한 것이므로, 실제 사용을 위해서는 더 많은 테스트와 검증이 필요합니다.add code
+if __name__ == "__main__":
+    main()

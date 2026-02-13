@@ -1,7 +1,7 @@
 # 🚀 AGI-Papers
 
 ![AGI-Papers](https://img.shields.io/badge/AGI--Papers-2026-blue?style=for-the-badge&logo=github)
-![Topic](https://img.shields.io/badge/Topic-AGI%20%7C%20Post_Training%20%7C%20RAG-green?style=for-the-badge)
+![Topic](https://img.shields.io/badge/Topic-AGI%20%7C%20Agents%20%7C%20Trends-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-important?style=for-the-badge)
 
 > **Toward Artificial General Intelligence (AGI) in 2026.**  
@@ -10,7 +10,6 @@
 ## 📌 Introduction
 
 2026년, AGI에 그 어느 때보다 가까운 시대가 도래했습니다.  
-
 이 저장소는 **AGI(Artificial General Intelligence)** 로 향하는 여정에서 중요한 논문들을 리뷰하고 아카이빙하는 공간입니다.
 
 주로 제 **[LinkedIn](https://www.linkedin.com/in/kiwoong-yeom/)** 에서 다룬 논문들에 대한 심도 있는 리뷰가 업로드되며, 때로는 소셜 미디어에 공유하기 전의 **Pre-release 인사이트**나 날것의 생각들이 이곳에 먼저 기록될 예정입니다.
@@ -24,15 +23,145 @@
 
 ## 📚 Contents
 
-- [🚀 Projects](#projects)
-- [🗂️ RAG & Knowledge](#rag--knowledge)
+- [🔥 Trends & Industry](#trends--industry)
 - [🤖 Agents](#agents)
 - [🧠 Architecture](#architecture)
 - [📚 Pre-Training](#pre-training)
 - [🎯 Post-Training](#post-training)
+- [🗂️ RAG & Knowledge](#rag--knowledge)
 - [💻 On-Device AI](#on-device-ai)
+- [🚀 Projects](#projects)
 
 ---
+
+## <a id="trends--industry"></a>🔥 Trends & Industry
+
+*   [**Hugging Face CEO의 한국 AI 모델 응원**](./Trends/53.md)  
+    *SKT A.X, LG AI, Upstage 등 한국 모델의 전성시대.*
+*   [**CES 2026: AMD Lisa Su와 Liquid AI**](./Trends/48.md)  
+    *AMD가 선택한 파트너.*
+*   [**국가대표 AI 프로젝트 1차 결과**](./Trends/43.md)  
+    *LG, SKT, Upstage 선발과 탈락 기업들의 행보.*
+*   [**Post-training의 한계**](./Trends/40.md)  
+    *왜 모델은 학습이 끝나면 더 이상 똑똑해지지 않는가?*
+*   [**LLM 개발과 사내 정치**](./Trends/39.md)  
+    *실무자 vs 경영진의 리스크 관리 관점 차이.*
+
+## <a id="agents"></a>🤖 Agents
+
+*   [**OctoTools**](./Agents/99.md)  
+    *Training-free LLM Agent Framework.*
+*   [**Chain-of-Draft(CoD)**](./Agents/93.md)  
+    *CoT의 장점을 유지하면서 토큰 사용량과 계산 비용을 줄이는 획기적인 접근법.*
+*   [**Adaptation of Agentic AI**](./Agents/80.md)  
+    *거대 모델 튜닝보다 도구 튜닝이 효율적인 이유 (T2 > A2).*
+*   [**Memory in the Age of AI Agents**](./Agents/77.md)  
+    *에이전트 기억의 형태, 기능, 역동성에 대한 고찰.*
+*   [**LFM-Scholar: Local Research Agent**](./Agents/27.md)  
+    *LFM-Scholar, an AI agent that automatically organizes related research.*
+*   [**Detailed balance in LLM-driven agents**](./Agents/23.md)
+*   [**World Models Research**](./Agents/11.md)  
+    *World Knowledge Injection vs Specific Tasks.*
+*   [**Mixture-of-Models**](./Agents/9.md)  
+    *Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation.*
+*   [**AIRS-Bench**](./Agents/5.md)  
+    *Frontier AI Research Science Agents를 위한 태스크.*
+
+## <a id="architecture"></a>🧠 Architecture
+
+*   [**LLM의 "입력 길이 제곱(N^2)"의 저주**](./Architecture/90.md)  
+    *누가 먼저 끊어낼 것인가?*
+*   [**Mistral Large 3: 효율성의 극대화**](./Architecture/88.md)
+*   [**표준이 된 V3 아키텍처**](./Architecture/86.md)  
+    *Mistral Large 3, Kimi K2 그리고 DeepSeek V3.2 분석.*
+*   [**Ai2 Olmo 3**](./Architecture/85.md)  
+    *성능보다는 과정의 투명성에 집중한 LLM 연구의 교과서.*
+*   [**Liquid AI LFM2-2.6B-Exp 튜닝기**](./Architecture/58.md)  
+    *논문 Related Work 섹션을 통째로 생성하는 도구 제작.*
+*   [**Nemotron-3-Nano-30B-A3B**](./Architecture/50.md)  
+    *Qwen3보다 빠르고 강력한 Mamba-2 하이브리드 모델.*
+*   [**DeepSeek Engram**](./Architecture/44.md)  
+    *기억을 효율화하여 연산 낭비를 줄이는 새로운 희소성 축.*
+*   [**2026년의 통념 파괴: 90M, 600M 모델**](./Architecture/41.md)  
+    *초소형 모델들의 놀라운 지시 이행 능력.*
+*   [**Sakana AI RePo**](./Architecture/38.md)  
+    *위치 정보를 재설계(Re-position)하라.*
+*   [**DeepSeek vs Qwen (A3B MoE)**](./Architecture/35.md)  
+    *정반대의 설계 철학 분석.*
+*   [**Pau Labarta Bajo's Insight**](./Architecture/27.md)  
+    *멀티 에이전트 시스템에 대한 인사이트.*
+*   [**Generative Modeling via Drifting**](./Architecture/6.md)
+
+## <a id="pre-training"></a>📚 Pre-Training
+
+*   [**LLM 학습 효율화 방안: 인간의 언어 습득 방식**](./Pre_Training/97.md)
+*   [**Diffusion LLM (100B Parameters)**](./Pre_Training/83.md)  
+    *30B 모델보다 2배 빠른 병렬 생성 모델의 등장.*
+*   [**RoPE가 정보를 유실하고 있다?**](./Pre_Training/79.md)  
+    *푸단대 연구진의 충격적인 발견과 해결책.*
+*   [**Python 재귀로 시작하는 1,000만 토큰 시대**](./Pre_Training/60.md)
+*   [**Solar Open의 GLM 표절 논란 종결**](./Pre_Training/56.md)  
+    *From Scratch 개발의 치열한 흔적.*
+*   [**Sakana AI: 위치 정보(Positional Embeddings)는 버려라**](./Pre_Training/47.md)
+*   [**CALM: Continuous Autoregressive Language Models**](./Pre_Training/34.md)
+*   [**Beyond Transformers 2**](./Pre_Training/13.md)  
+    *덩치 경쟁을 넘어 생각과 본질로.*
+*   [**What LLMs Think When You Don't Tell Them?**](./Pre_Training/4.md)
+
+## <a id="post-training"></a>🎯 Post-Training
+
+*   [**Gemma 3 모델의 핵심 목표 및 특징**](./Post_Training/98.md)
+*   [**Emergent Misalignment**](./Post_Training/96.md)  
+    *취약한 코드를 배운 AI의 위험한 일탈.*
+*   [**Stabilizing RL with LLMs**](./Post_Training/92.md)  
+    *화려한 기교보다 수학적 기본기가 중요한 이유.*
+*   [**LFM2 1.2B 기반 한국어-영어 번역기**](./Post_Training/89.md)
+*   [**LFM2 1.2B 한국어 영어 번역기 제작**](./Post_Training/87.md)  
+    *Liquid AI 1.2B vs Google 4B.*
+*   [**Pau Labarta Bajo's Insight (Post-Training)**](./Post_Training/87.md)
+*   [**최신 AI 트렌드 핵심 발견 요약**](./Post_Training/82.md)
+*   [**Small Language Model for Translation**](./Post_Training/81.md)  
+    *Advice for AI engineers.*
+*   [**Yann LeCun: World Model의 중요성**](./Post_Training/78.md)  
+    *LLM은 물리 세계를 배울 수 없다?*
+*   [**Liquid AI LFM2-1.2B 튜닝 실패기**](./Post_Training/76.md)  
+    *한국어-영어 번역 RL(GRPO) 학습 실패와 교훈.*
+*   [**Sebastian Raschka, PhD: "Ahead of AI"**](./Post_Training/59.md)  
+    *기본기부터 최신 트렌드까지.*
+*   [**한국어 LLM 학습 데이터의 부재**](./Post_Training/51.md)  
+    *Pre-training부터 GRPO까지의 험난한 여정.*
+*   [**Anthropic의 생태계 조이기**](./Post_Training/49.md)  
+    *OpenCode 차단과 Claude Code 사용량 제한의 아쉬움.*
+*   [**GDPO: Multi-reward RL**](./Post_Training/46.md)  
+    *GRPO의 약점을 극복한 새로운 강화학습 기법.*
+*   [**AI 거품론의 본질**](./Post_Training/2.md)  
+    *시장 축소가 아닌 수급 안정화와 산업의 성숙.*
+*   [**iGRPO**](./Post_Training/1.md)  
+    *Self-Feedback-Driven LLM Reasoning.*
+
+## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
+
+*   [**HippoRAG 2**](./RAG/100.md)  
+    *인간의 기억 메커니즘을 모방한 비모수적 연속 학습 (Bio-inspired Continual Learning).*
+*   [**DeepSeek-V3 vs V3.2: 아키텍처의 진화**](./RAG/94.md)  
+    *아키텍처의 진화와 기술적 목표점.*
+*   [**From Code Foundation Models to Agents**](./RAG/84.md)
+*   [**ADR-Bench 전문가 평가**](./RAG/55.md)  
+    *DeepSeek-v3.2를 압도한 효율적인 에이전트 모델.*
+*   [**vLLM의 승리: 압도적인 속도**](./RAG/29.md)  
+    *표준이 되기까지.*
+*   [**RAG & Agent Memory 4선**](./RAG/10.md)  
+    *GraphSearch, S-RAG, xMemory 등 최신 논문 소개.*
+
+## <a id="on-device-ai"></a>💻 On-Device AI
+
+*   [**Liquid AI 1.2B vs Google 4B**](./On_Device/45.md)  
+    *Pau Labarta Bajo's Local AI Insight.*
+*   [**국가대표 AI 탈락 그 후 (On-Device Focus)**](./On_Device/42.md)  
+    *현실적인 진단과 중국 모델과의 비교.*
+*   [**로컬 LLM 구동의 6가지 현실적 방법**](./On_Device/33.md)
+*   [**LLM 지능의 민낯과 한계**](./On_Device/3.md)  
+    *벤치마크는 수석이지만 현장에서는 부족한 이유.*
 
 ## <a id="projects"></a>🚀 Projects
 
@@ -84,130 +213,6 @@
 *   [**1.2B 모델로 PPT 만들기**](./Projects/8.md)  
     *소형 모델의 가능성.*
 *   [**최근 구현한 AI 프로젝트 및 성과**](./Projects/7.md)
-
-## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
-
-*   [**HippoRAG 2**](./RAG/100.md)  
-    *인간의 기억 메커니즘을 모방한 비모수적 연속 학습 (Bio-inspired Continual Learning).*
-*   [**DeepSeek-V3 vs V3.2: 아키텍처의 진화**](./RAG/94.md)  
-    *아키텍처의 진화와 기술적 목표점.*
-*   [**From Code Foundation Models to Agents**](./RAG/84.md)
-*   [**Memory in the Age of AI Agents**](./RAG/77.md)  
-    *에이전트 기억의 형태, 기능, 역동성에 대한 고찰.*
-*   [**ADR-Bench 전문가 평가**](./RAG/55.md)  
-    *DeepSeek-v3.2를 압도한 효율적인 에이전트 모델.*
-*   [**Hugging Face CEO의 한국 AI 모델 응원**](./RAG/53.md)  
-    *SKT A.X, LG AI, Upstage 등 한국 모델의 전성시대.*
-*   [**국가대표 AI 프로젝트 1차 결과**](./RAG/43.md)  
-    *LG, SKT, Upstage 선발과 탈락 기업들의 행보.*
-*   [**Post-training의 한계**](./RAG/40.md)  
-    *왜 모델은 학습이 끝나면 더 이상 똑똑해지지 않는가?*
-*   [**LLM 개발과 사내 정치**](./RAG/39.md)  
-    *실무자 vs 경영진의 리스크 관리 관점 차이.*
-*   [**vLLM의 승리: 압도적인 속도**](./RAG/29.md)  
-    *표준이 되기까지.*
-*   [**World Models Research**](./RAG/11.md)  
-    *World Knowledge Injection vs Specific Tasks.*
-*   [**RAG & Agent Memory 4선**](./RAG/10.md)  
-    *GraphSearch, S-RAG, xMemory 등 최신 논문 소개.*
-*   [**AIRS-Bench**](./RAG/5.md)  
-    *Frontier AI Research Science Agents를 위한 태스크.*
-
-## <a id="agents"></a>🤖 Agents
-
-*   [**OctoTools**](./Agents/99.md)  
-    *Training-free LLM Agent Framework.*
-*   [**Chain-of-Draft(CoD)**](./Agents/93.md)  
-    *CoT의 장점을 유지하면서 토큰 사용량과 계산 비용을 줄이는 획기적인 접근법.*
-
-## <a id="architecture"></a>🧠 Architecture
-
-*   [**LLM의 "입력 길이 제곱(N^2)"의 저주**](./Architecture/90.md)  
-    *누가 먼저 끊어낼 것인가?*
-*   [**Mistral Large 3: 효율성의 극대화**](./Architecture/88.md)
-*   [**표준이 된 V3 아키텍처**](./Architecture/86.md)  
-    *Mistral Large 3, Kimi K2 그리고 DeepSeek V3.2 분석.*
-*   [**Ai2 Olmo 3**](./Architecture/85.md)  
-    *성능보다는 과정의 투명성에 집중한 LLM 연구의 교과서.*
-*   [**Adaptation of Agentic AI**](./Architecture/80.md)  
-    *거대 모델 튜닝보다 도구 튜닝이 효율적인 이유 (T2 > A2).*
-*   [**Liquid AI LFM2-2.6B-Exp 튜닝기**](./Architecture/58.md)  
-    *논문 Related Work 섹션을 통째로 생성하는 도구 제작.*
-*   [**Nemotron-3-Nano-30B-A3B**](./Architecture/50.md)  
-    *Qwen3보다 빠르고 강력한 Mamba-2 하이브리드 모델.*
-*   [**CES 2026: AMD Lisa Su와 Liquid AI**](./Architecture/48.md)  
-    *AMD가 선택한 파트너.*
-*   [**DeepSeek Engram**](./Architecture/44.md)  
-    *기억을 효율화하여 연산 낭비를 줄이는 새로운 희소성 축.*
-*   [**2026년의 통념 파괴: 90M, 600M 모델**](./Architecture/41.md)  
-    *초소형 모델들의 놀라운 지시 이행 능력.*
-*   [**Sakana AI RePo**](./Architecture/38.md)  
-    *위치 정보를 재설계(Re-position)하라.*
-*   [**DeepSeek vs Qwen (A3B MoE)**](./Architecture/35.md)  
-    *정반대의 설계 철학 분석.*
-*   [**로컬 LLM 구동의 6가지 현실적 방법**](./Architecture/33.md)
-*   [**LFM-Scholar: Local Research Agent**](./Architecture/27.md)  
-    *LFM-Scholar, an AI agent that automatically organizes related research.*
-*   [**Detailed balance in LLM-driven agents**](./Architecture/23.md)
-*   [**Mixture-of-Models**](./Architecture/9.md)  
-    *Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation.*
-*   [**Generative Modeling via Drifting**](./Architecture/6.md)
-
-## <a id="pre-training"></a>📚 Pre-Training
-
-*   [**LLM 학습 효율화 방안: 인간의 언어 습득 방식**](./Pre_Training/97.md)
-*   [**Diffusion LLM (100B Parameters)**](./Pre_Training/83.md)  
-    *30B 모델보다 2배 빠른 병렬 생성 모델의 등장.*
-*   [**RoPE가 정보를 유실하고 있다?**](./Pre_Training/79.md)  
-    *푸단대 연구진의 충격적인 발견과 해결책.*
-*   [**Python 재귀로 시작하는 1,000만 토큰 시대**](./Pre_Training/60.md)
-*   [**Solar Open의 GLM 표절 논란 종결**](./Pre_Training/56.md)  
-    *From Scratch 개발의 치열한 흔적.*
-*   [**Sakana AI: 위치 정보(Positional Embeddings)는 버려라**](./Pre_Training/47.md)
-*   [**CALM: Continuous Autoregressive Language Models**](./Pre_Training/34.md)
-*   [**Beyond Transformers 2**](./Pre_Training/13.md)  
-    *덩치 경쟁을 넘어 생각과 본질로.*
-*   [**What LLMs Think When You Don't Tell Them?**](./Pre_Training/4.md)
-
-## <a id="post-training"></a>🎯 Post-Training
-
-*   [**Gemma 3 모델의 핵심 목표 및 특징**](./Post_Training/98.md)
-*   [**Emergent Misalignment**](./Post_Training/96.md)  
-    *취약한 코드를 배운 AI의 위험한 일탈.*
-*   [**Stabilizing RL with LLMs**](./Post_Training/92.md)  
-    *화려한 기교보다 수학적 기본기가 중요한 이유.*
-*   [**LFM2 1.2B 기반 한국어-영어 번역기**](./Post_Training/89.md)
-*   [**LFM2 1.2B 한국어 영어 번역기 제작**](./Post_Training/87.md)  
-    *Liquid AI 1.2B vs Google 4B.*
-*   [**Pau Labarta Bajo's Insight (Post-Training)**](./Post_Training/87.md)
-*   [**최신 AI 트렌드 핵심 발견 요약**](./Post_Training/82.md)
-*   [**Small Language Model for Translation**](./Post_Training/81.md)  
-    *Advice for AI engineers.*
-*   [**Yann LeCun: World Model의 중요성**](./Post_Training/78.md)  
-    *LLM은 물리 세계를 배울 수 없다?*
-*   [**Liquid AI LFM2-1.2B 튜닝 실패기**](./Post_Training/76.md)  
-    *한국어-영어 번역 RL(GRPO) 학습 실패와 교훈.*
-*   [**Sebastian Raschka, PhD: "Ahead of AI"**](./Post_Training/59.md)  
-    *기본기부터 최신 트렌드까지.*
-*   [**한국어 LLM 학습 데이터의 부재**](./Post_Training/51.md)  
-    *Pre-training부터 GRPO까지의 험난한 여정.*
-*   [**Anthropic의 생태계 조이기**](./Post_Training/49.md)  
-    *OpenCode 차단과 Claude Code 사용량 제한의 아쉬움.*
-*   [**GDPO: Multi-reward RL**](./Post_Training/46.md)  
-    *GRPO의 약점을 극복한 새로운 강화학습 기법.*
-*   [**AI 거품론의 본질**](./Post_Training/2.md)  
-    *시장 축소가 아닌 수급 안정화와 산업의 성숙.*
-*   [**iGRPO**](./Post_Training/1.md)  
-    *Self-Feedback-Driven LLM Reasoning.*
-
-## <a id="on-device-ai"></a>💻 On-Device AI
-
-*   [**Liquid AI 1.2B vs Google 4B**](./On_Device/45.md)  
-    *Pau Labarta Bajo's Local AI Insight.*
-*   [**국가대표 AI 탈락 그 후 (On-Device Focus)**](./On_Device/42.md)  
-    *현실적인 진단과 중국 모델과의 비교.*
-*   [**LLM 지능의 민낯과 한계**](./On_Device/3.md)  
-    *벤치마크는 수석이지만 현장에서는 부족한 이유.*
 
 ---
 

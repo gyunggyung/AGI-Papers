@@ -38,22 +38,20 @@
 
 ## <a id="agents"></a>🤖 Agents
 
-*   [**OctoTools**](./Agents/99.md)  
-    *Training-free LLM Agent Framework.*
-*   [**Chain-of-Draft(CoD)**](./Agents/93.md)  
-    *CoT의 장점을 유지하면서 토큰 사용량과 계산 비용을 줄이는 획기적인 접근법.*
 *   [**Adaptation of Agentic AI**](./Agents/80.md)  
     *거대 모델 튜닝보다 도구 튜닝이 효율적인 이유 (T2 > A2).*
 *   [**Memory in the Age of AI Agents**](./Agents/77.md)  
     *에이전트 기억의 형태, 기능, 역동성에 대한 고찰.*
-*   [**LFM-Scholar: Local Research Agent**](./Agents/27.md)  
-    *LFM-Scholar, an AI agent that automatically organizes related research.*
 *   [**World Models Research**](./Agents/11.md)  
     *World Knowledge Injection vs Specific Tasks.*
 *   [**Mixture-of-Models**](./Agents/9.md)  
     *Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation.*
 *   [**AIRS-Bench**](./Agents/5.md)  
     *Frontier AI Research Science Agents를 위한 태스크.*
+*   [**OctoTools**](./Agents/99.md)  
+    *Training-free LLM Agent Framework.*
+*   [**Chain-of-Draft(CoD)**](./Agents/93.md)  
+    *CoT의 장점을 유지하면서 토큰 사용량과 계산 비용을 줄이는 획기적인 접근법.*
 
 ## <a id="architecture"></a>🧠 Architecture
 
@@ -113,10 +111,8 @@
     *화려한 기교보다 수학적 기본기가 중요한 이유.*
 *   [**LFM2 1.2B 기반 한국어-영어 번역기**](./Post_Training/89.md)  
     *LFM2 1.2B 모델로 구글과 알리바바의 4B 모델을 이긴 번역기 제작기.*
-*   [**LFM2 1.2B 한국어 영어 번역기 제작**](./Post_Training/87.md)  
-    *Liquid AI 1.2B vs Google 4B.*
-*   [**Pau Labarta Bajo's Insight (Post-Training)**](./Post_Training/87.md)
-*   [**최신 AI 트렌드 핵심 발견 요약**](./Post_Training/82.md)
+*   [**LFM2 번역기 개발기: 핵심 발견 및 성과**](./Post_Training/82.md)  
+    *SFT와 RL의 성능 차이 분석 및 Liquid AI 공식 쿡북 등재 소식.*
 *   [**Small Language Model for Translation**](./Post_Training/81.md)  
     *Advice for AI engineers.*
 *   [**Yann LeCun: World Model의 중요성**](./Post_Training/78.md)  
@@ -176,7 +172,7 @@
 *   [**SEAL: 스스로 Fine-tuning하는 에이전트**](./Projects/26.md)  
     *가능성과 한계.*
 
-### �️ Coding & Dev Tools
+### 🛠️ Coding & Dev Tools
 *   [**Claube Vibe Coding**](./Projects/52.md)  
     *복잡한 백엔드는 AI에게 맡기고 공원에서 러닝하기.*
 *   [**무한 루프 바이브 코딩**](./Projects/22.md)  
@@ -218,7 +214,7 @@
 *   [**GPT 구조의 한계를 넘어**](./Projects/14.md)  
     *Liquid AI, TII, NVIDIA의 새로운 시도들.*
 
-### � Insights & Essays
+### 💭 Insights & Essays
 *   [**최근 구현한 AI 프로젝트 및 성과**](./Projects/7.md)  
     *Gemini-Claw로 구현한 맥킨지 스타일 보고서 및 PPT 자동 생성.*
 *   [**Gemini-Claw 성능 vs 보안**](./Projects/12.md)  

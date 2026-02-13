@@ -55,6 +55,12 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**LLaDA2.0: Scaling Up Diffusion Language Models to 100B**](./Architecture/103.md)  
+    *100B Diffusion 모델의 등장: 기존 AR 모델을 개조하여 효율성을 2배 높인 비결.*
+*   [**RNN is all you need**](./Architecture/102.md)  
+    *Transformer의 속도를 잡은 병렬 학습 RNN (minLSTM, minGRU)의 부활.*
+*   [**Titans: Learning to Memorize at Test Time**](./Architecture/101.md)  
+    *Transformer의 기억력을 넘어서는 새로운 메모리 중심 아키텍처.*
 *   [**LLM의 "입력 길이 제곱(N^2)"의 저주**](./Architecture/90.md)  
     *누가 먼저 끊어낼 것인가?*
 *   [**Mistral Large 3: 효율성의 극대화**](./Architecture/88.md)  
@@ -103,6 +109,16 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Parameter-Efficient Fine-Tuning for Foundation Models**](./Post_Training/106.md)  
+    *거대 모델을 효율적으로 튜닝하는 5가지 핵심 기법(PEFT) 총정리.*
+*   [**Preference Leakage: A Contamination Problem in LLM-as-a-Judge**](./Post_Training/105.md)  
+    *LLM 평가자가 자신의 패밀리 모델을 편애하는 '선호도 유출' 문제.*
+*   [**When Reasoning Meets its Laws**](./Post_Training/108.md)  
+    *단 3,900개의 데이터로 AI에게 '추론의 물리 법칙'을 가르치는 법 (LORE).*
+*   [**ProRL: Prolonged Reinforcement Learning**](./Post_Training/107.md)  
+    *강화학습, 짧게 하지 말고 길게 하라. RL 스케일링 법칙의 발견.*
+*   [**DuPO: Self-Verification via Dual Preference Optimization**](./Post_Training/104.md)  
+    *정답지 없는 번역을 스스로 검증하는 '일반화된 쌍대성' 기법.*
 *   [**Gemma 3 모델의 핵심 목표 및 특징**](./Post_Training/98.md)  
     *구글 딥마인드의 최신 멀티모달 모델 분석.*
 *   [**Emergent Misalignment**](./Post_Training/96.md)  
@@ -224,6 +240,8 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**Vibe Coding과 영구적인 주니어의 함정**](./Trends/54.md)  
+    *Karpathy도 힘들어하는 시대의 생존법: 바이브 코딩과 기초의 중요성.*
 *   [**Hugging Face CEO의 한국 AI 모델 응원**](./Trends/53.md)  
     *SKT A.X, LG AI, Upstage 등 한국 모델의 전성시대.*
 *   [**CES 2026: AMD Lisa Su와 Liquid AI**](./Trends/48.md)  

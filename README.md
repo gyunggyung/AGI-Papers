@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-important?style=for-the-badge)
 
 > **Toward Artificial General Intelligence (AGI) in 2026.**  
-> Exploring the frontiers of AI, LLMs, and Autonomous Agents.
+> A curated archive of breakthroughs in **Agents**, **Architecture**, **Training**, **RAG**, and **On-Device AI**.
 
 ## 📌 Introduction
 
@@ -17,35 +17,24 @@
 ## 📂 Archives
 
 과거에 정리했던 논문 리스트는 아래 링크에서 확인하실 수 있습니다.
-* 👉 **[Past AGI-Papers (Pre-2026)](https://github.com/gyunggyung/AGI-Papers/blob/master/Pre-README.md)**
+* 👉 **[Past AGI-Papers (Pre-2026)](Pre-README.md)**
 
 ---
 
 ## 📚 Contents
 
-- [🔥 Trends & Industry](#trends--industry)
-- [🤖 Agents](#agents)
-- [🧠 Architecture](#architecture)
-- [📚 Pre-Training](#pre-training)
-- [🎯 Post-Training](#post-training)
-- [🗂️ RAG & Knowledge](#rag--knowledge)
-- [💻 On-Device AI](#on-device-ai)
-- [🚀 Projects](#projects)
+이 저장소는 AGI를 향한 여정을 다음 8가지 핵심 주제로 분류하여 정리합니다.
+
+- [🤖 Agents](#agents) : 자율 에이전트, 행동/계획(Planning) 모델, 프레임워크
+- [🧠 Architecture](#architecture) : LLM 아키텍처 혁신 (Transformer, Mamba, MoE)
+- [📚 Pre-Training](#pre-training) : 학습 데이터, 스케일링 법칙, 파운데이션 모델
+- [🎯 Post-Training](#post-training) : RLHF, DPO, GRPO, 정렬(Alignment)
+- [🗂️ RAG & Knowledge](#rag--knowledge) : 검색 증강 생성, 지식 그래프, 메모리
+- [💻 On-Device AI](#on-device-ai) : 로컬 구동, 엣지 컴퓨팅, 최적화
+- [🚀 Projects](#projects) : 직접 구현한 프로젝트 및 실험 결과
+- [🔥 Trends & Industry](#trends--industry) : AI 산업의 동향, 인사이트, 주요 뉴스
 
 ---
-
-## <a id="trends--industry"></a>🔥 Trends & Industry
-
-*   [**Hugging Face CEO의 한국 AI 모델 응원**](./Trends/53.md)  
-    *SKT A.X, LG AI, Upstage 등 한국 모델의 전성시대.*
-*   [**CES 2026: AMD Lisa Su와 Liquid AI**](./Trends/48.md)  
-    *AMD가 선택한 파트너.*
-*   [**국가대표 AI 프로젝트 1차 결과**](./Trends/43.md)  
-    *LG, SKT, Upstage 선발과 탈락 기업들의 행보.*
-*   [**Post-training의 한계**](./Trends/40.md)  
-    *왜 모델은 학습이 끝나면 더 이상 똑똑해지지 않는가?*
-*   [**LLM 개발과 사내 정치**](./Trends/39.md)  
-    *실무자 vs 경영진의 리스크 관리 관점 차이.*
 
 ## <a id="agents"></a>🤖 Agents
 
@@ -59,7 +48,6 @@
     *에이전트 기억의 형태, 기능, 역동성에 대한 고찰.*
 *   [**LFM-Scholar: Local Research Agent**](./Agents/27.md)  
     *LFM-Scholar, an AI agent that automatically organizes related research.*
-*   [**Detailed balance in LLM-driven agents**](./Agents/23.md)
 *   [**World Models Research**](./Agents/11.md)  
     *World Knowledge Injection vs Specific Tasks.*
 *   [**Mixture-of-Models**](./Agents/9.md)  
@@ -134,6 +122,7 @@
     *OpenCode 차단과 Claude Code 사용량 제한의 아쉬움.*
 *   [**GDPO: Multi-reward RL**](./Post_Training/46.md)  
     *GRPO의 약점을 극복한 새로운 강화학습 기법.*
+*   [**Detailed balance in LLM-driven agents**](./Post_Training/23.md)
 *   [**AI 거품론의 본질**](./Post_Training/2.md)  
     *시장 축소가 아닌 수급 안정화와 산업의 성숙.*
 *   [**iGRPO**](./Post_Training/1.md)  
@@ -214,12 +203,23 @@
     *소형 모델의 가능성.*
 *   [**최근 구현한 AI 프로젝트 및 성과**](./Projects/7.md)
 
+## <a id="trends--industry"></a>🔥 Trends & Industry
+
+*   [**Hugging Face CEO의 한국 AI 모델 응원**](./Trends/53.md)  
+    *SKT A.X, LG AI, Upstage 등 한국 모델의 전성시대.*
+*   [**CES 2026: AMD Lisa Su와 Liquid AI**](./Trends/48.md)  
+    *AMD가 선택한 파트너.*
+*   [**국가대표 AI 프로젝트 1차 결과**](./Trends/43.md)  
+    *LG, SKT, Upstage 선발과 탈락 기업들의 행보.*
+*   [**Post-training의 한계**](./Trends/40.md)  
+    *왜 모델은 학습이 끝나면 더 이상 똑똑해지지 않는가?*
+*   [**LLM 개발과 사내 정치**](./Trends/39.md)  
+    *실무자 vs 경영진의 리스크 관리 관점 차이.*
 ---
 
 ## 📬 Connect
 
-*   [<img src="https://img.shields.io/badge/LinkedIn-Dougy-blue?style=flat&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/kiwoong-yeom) **Kiwoong Yeom**
-*   [<img src="https://img.shields.io/badge/GitHub-gyunggyung-black?style=flat&logo=github&logoColor=white" />](https://github.com/gyunggyung)
+*   [<img src="https://img.shields.io/badge/LinkedIn-Kiwoong Yeom-blue?style=flat&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/kiwoong-yeom) [<img src="https://img.shields.io/badge/GitHub-gyunggyung-black?style=flat&logo=github&logoColor=white" />](https://github.com/gyunggyung)
 *   📧 **Contact:** newhiwoong@gmail.com
 
 ---

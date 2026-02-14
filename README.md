@@ -217,6 +217,8 @@
     *CPU 추론 속도 1.8배 향상.*
 
 ### 🧠 Model Experiments
+*   [**Open-Yaongi Project**](./Projects/Open-Yaongi.md)  
+    *52 Layers 4B(Active 0.6B) 규모의 효율적인 sLLM 오픈소스 프로젝트 (Mamba-2 + MoE).*
 *   [**HybriKo: 하이브리드 RNN+Attention**](./Projects/54.md)  
     *Google Griffin과 Liquid AI LFM2에서 영감을 받은 아키텍처.*
 *   [**HybriKo-117M**](./Projects/37.md)  

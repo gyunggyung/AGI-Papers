@@ -58,11 +58,47 @@
     *Training-free LLM Agent Framework.*
 *   [**Chain-of-Draft(CoD)**](./Agents/93.md)  
     *CoT의 장점을 유지하면서 토큰 사용량과 계산 비용을 줄이는 획기적인 접근법.*
+*   [**Scaling Agent Systems: 다다익선의 함정**](./Agents/100.md)  
+    *구글과 MIT가 밝혀낸 멀티 에이전트의 과학.*
+*   [**LOTaD: Optimal Task Decomposition**](./Agents/101.md)  
+    *에이전트는 어떻게 일을 나눠야 할까?*
+*   [**ADGR: Agentic Deep Graph Reasoning**](./Agents/102.md)  
+    *스스로 지도를 그리는 에이전트.*
+*   [**Agentic Reasoning**](./Agents/103.md)  
+    *생각의 도구를 쓰는 에이전트.*
+*   [**MetaChain**](./Agents/104.md)  
+    *Zero-code Framework: 말만 하면 만들어지는 에이전트.*
+*   [**LoRASA: Agent Adaption**](./Agents/105.md)  
+    *따로 또 같이, 에이전트의 개인기.*
+*   [**AgentArcEval**](./Agents/106.md)  
+    *에이전트 아키텍처, 점수 매겨드립니다.*
+*   [**SciAgents**](./Agents/107.md)  
+    *AI 과학자의 탄생.*
+*   [**Agent Workflows (Anthropic)**](./Agents/108.md)  
+    *앤트로픽이 제안하는 5가지 핵심 패턴.*
+*   [**ASA: Training-Free Tool Calling**](./Agents/110.md)  
+    *게으른 에이전트(Lazy Agent)를 깨우는 가장 가벼운 방법.*
+*   [**HUMANLM: State Alignment for User Simulation**](./Agents/111.md)  
+    *진정한 페르소나는 '마음'에서 나온다.*
+*   [**SKILLRL: 에이전트는 '실패'를 먹고 자란다**](./Agents/112.md)  
+    *에이전트에게 경험을 '스킬'로 증류(Distill)하여 평생 학습의 길을 열어주다.*
 
 ## <a id="architecture"></a>🧠 Architecture
 
 *   [**LLaDA2.0: Scaling Up Diffusion Language Models to 100B**](./Architecture/103.md)  
     *100B Diffusion 모델의 등장: 기존 AR 모델을 개조하여 효율성을 2배 높인 비결.*
+*   [**TEON vs Muon: 옵티마이저 전쟁**](./Architecture/104.md)  
+    *AdamW의 시대는 가는가? 레이어(Layer)를 넘어 텐서(Tensor) 차원의 최적화로.*
+*   [**EinFields: 아인슈타인을 위한 신경망**](./Architecture/105.md)  
+    *우주의 시공간(Spacetime)을 신경망의 가중치 속에 압축하다.*
+*   [**Micro GPT: LLM의 바닥을 보다**](./Architecture/106.md)  
+    *Andrej Karpathy의 선물. 오직 행렬 곱셈과 미분이 있을 뿐.*
+*   [**QED-Nano: 다윗이 골리앗을 이기는 법**](./Architecture/107.md)  
+    *수학 증명에서 4B 모델이 100B 모델을 압도한 비결.*
+*   [**Moonshine: 달빛처럼 가벼운 음성 인식**](./Architecture/108.md)  
+    *OpenAI Whisper의 대항마? 엣지(Edge) 디바이스를 위한 구세주.*
+*   [**Nested Learning**](./Architecture/109.md)  
+    *딥러닝은 '깊이'가 아니라 '중첩'이다.*
 *   [**Diffusion LLM (100B Parameters)**](./Architecture/83.md)  
     *30B 모델보다 2배 빠른 병렬 생성 모델의 등장.*
 *   [**RNN is all you need**](./Architecture/102.md)  
@@ -123,6 +159,8 @@
     *거대 모델을 효율적으로 튜닝하는 5가지 핵심 기법(PEFT) 총정리.*
 *   [**When Reasoning Meets its Laws**](./Post_Training/108.md)  
     *단 3,900개의 데이터로 AI에게 '추론의 물리 법칙'을 가르치는 법 (LORE).*
+*   [**LIE: 깊게 생각할수록 더 똑똑해진다**](./Post_Training/109.md)  
+    *LLM에게 '생각을 멈추지 않는 법'을 가르치는 강화학습 전략.*
 *   [**ProRL: Prolonged Reinforcement Learning**](./Post_Training/107.md)  
     *강화학습, 짧게 하지 말고 길게 하라. RL 스케일링 법칙의 발견.*
 *   [**DuPO: Self-Verification via Dual Preference Optimization**](./Post_Training/104.md)  
@@ -159,6 +197,20 @@
     *표준이 되기까지.*
 *   [**RAG & Agent Memory 4선**](./RAG/10.md)  
     *GraphSearch, S-RAG, xMemory 등 최신 논문 소개.*
+*   [**Beyond Naive RAG**](./RAG/110.md)  
+    *4 Papers that Redefine Agent Memory.*
+*   [**SEPAL: Scalable Feature Learning**](./RAG/111.md)  
+    *9천만 개 지식 그래프, V100 한 장으로 학습하기.*
+*   [**GraphRAG Survey**](./RAG/112.md)  
+    *RAG의 미래는 그래프다 (ACM TOIS).*
+*   [**A-MEM: Agentic Memory**](./RAG/113.md)  
+    *에이전트를 위한 살아있는 기억.*
+*   [**PISCO: Compression for RAG**](./RAG/114.md)  
+    *RAG를 위한 초고효율 압축.*
+*   [**SymAgent: Symbolic Knowledge Graph**](./RAG/115.md)  
+    *기호 추론으로 완성하는 지식 그래프.*
+*   [**VideoRAG**](./RAG/116.md)  
+    *영상을 읽는 RAG.*
 
 ## <a id="on-device-ai"></a>💻 On-Device AI
 
@@ -255,6 +307,14 @@
 
 *   [**Andrej Karpathy: 우리는 유령을 소환하고 있는가?**](./Trends/110.md)  
     *AGI의 효율성과 통제, 그리고 보상 해킹에 대한 단상.*
+*   [**AI Era Cognitive Surrender**](./Trends/112.md)  
+    *AI에 의존하는 대가는 '인지적 항복(Cognitive Surrender)'입니다.*
+*   [**Open Claw: AI가 개발자를 공격할 때**](./Trends/113.md)  
+    *오픈소스 메인테이너가 AI에게 협박을 당했다.*
+*   [**Vibe Coding (바이브 코딩)**](./Trends/114.md)  
+    *코드는 잊어라. 무드(Vibe)를 관리해라.*
+*   [**The Thinking Game (Demis Hassabis)**](./Trends/115.md)  
+    *체스 랭킹 2위의 천재 소년은 왜 비겁한 승부의 세계를 떠나 인류를 구원하러 갔는가?*
 *   [**Sebastian Raschka, PhD: "Ahead of AI"**](./Trends/59.md)  
     *기본기부터 최신 트렌드까지.*
 *   [**Vibe Coding과 영구적인 주니어의 함정**](./Trends/54.md)  

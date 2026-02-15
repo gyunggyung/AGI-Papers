@@ -1,0 +1,45 @@
+---
+id: Moonshine
+category: On-Device
+title: Moonshine: Edge ASR
+---
+# Moonshine: 달빛처럼 가벼운 음성 인식
+
+> **OpenAI Whisper의 대항마? 아니, 엣지(Edge) 디바이스를 위한 구세주. Useful Sensors가 만든 초경량 ASR 모델.**
+
+## 1. 개요
+
+*   **모델명**: Moonshine
+*   **개발사**: Useful Sensors (리모컨, 가전제품 등에 들어가는 초저가 AI 센서를 만드는 곳)
+*   **목표**: 저사양 하드웨어(예: 라즈베리 파이, 스마트 홈 기기)에서 **실시간(Real-time)**으로 돌아가는 고성능 음성 인식(ASR).
+
+---
+
+## 2. Whisper와 무엇이 다른가?
+
+OpenAI의 Whisper는 훌륭하지만, 엣지 장비에서 돌리기엔 무겁고 느립니다. Moonshine은 과감한 다이어트를 감행했습니다.
+
+### 1) No Zero-Padding (패딩 제거)
+기존 모델들은 입력 오디오 길이를 맞추기 위해 0으로 채우는 패딩(Zero-padding)을 사용합니다. 이는 불필요한 연산을 초래합니다. Moonshine은 **가변 길이 입력(Variable Length Input)**을 그대로 처리하여 연산 효율을 극대화했습니다.
+
+### 2) Feature Engineering 제거
+Mel-Spectrogram 같은 전처리 과정을 거치지 않고, **Raw Audio**에 가까운 신호를 처리하도록 설계되었습니다. 이는 전처리에 드는 CPU 자원마저 아끼겠다는 의지입니다.
+
+### 3) 성능 vs 효율
+*   **파라미터**: 2억 5천만(250M) 개 수준으로, Whisper Large(1.5B)의 1/6 크기입니다.
+*   **속도**: 동급 하드웨어에서 Whisper보다 **5배 빠릅니다**.
+*   **정확도**: 그럼에도 불구하고 WER(단어 오류율)은 Whisper와 대등하거나 소폭 우세합니다.
+
+---
+
+## 3. 한계와 가능성
+
+물론 Moonshine은 오디오 기반입니다. 시끄러운 파티장이나 공사장 같은 극한 환경에서는 **입술 움직임(Visual)**이나 **성대 진동(Ultrasonic/EMG)**을 함께 보는 멀티모달(Multimodal) ASR 시스템보다는 약할 수 있습니다.
+
+하지만 "내 방에 있는 스마트 스피커", "엘리베이터 음성 인식" 같은 일상적인 환경에서는 **가장 경제적이고 빠른 솔루션**입니다.
+
+---
+
+## 4. 결론
+
+Moonshine은 **"적정 기술(Appropriate Technology)"**의 AI 버전입니다. 모든 곳에 GPT-4o가 필요한 건 아닙니다. 전등을 켜고 끄는 데에는 1000조 원짜리 모델보다, 1달러짜리 칩에서 돌아가는 Moonshine이 더 훌륭한 기술일 수 있습니다.

@@ -1,0 +1,52 @@
+---
+id: SKILLRL
+category: Agents
+title: SKILLRL: Skill-Augmented Reinforcement Learning
+---
+# SKILLRL: 에이전트는 '실패'를 먹고 자란다
+
+> **"똑같은 실수를 반복하지 마라." 에이전트에게 경험을 '스킬'로 증류(Distill)하여 평생 학습(Lifelong Learning)의 길을 열어주다.**
+
+## 1. 논문 개요
+
+*   **제목**: SKILLRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning
+*   **문제 의식**: 기존의 LLM 에이전트는 새로운 태스크를 만날 때마다 바닥부터 다시 프롬프팅하거나, 긴 컨텍스트에 의존해야 했습니다. 이는 비효율적이며, 과거의 경험(특히 실패 경험)을 제대로 활용하지 못합니다.
+*   **제안**: 에이전트가 겪은 성공과 실패의 궤적(Trajectory)을 **재사용 가능한 '스킬(Skill)'** 형태로 압축 저장하고, 이를 필요할 때 꺼내 쓰는 지속 진화형 프레임워크 **SKILLRL**을 제안합니다.
+
+---
+
+## 2. 핵심 메커니즘
+
+SKILLRL은 크게 세 가지 축으로 돌아갑니다.
+
+### 1) Experience-based Skill Distillation (경험의 증류)
+가장 중요한 포인트입니다. 단순히 "어떻게 성공했는지"만 기록하는 것이 아닙니다.
+*   **Failure as a Teacher**: 실패한 에피소드에서 "왜 실패했는지", "무엇을 하지 말았어야 했는지(Negative Constraint)"를 분석하여 교훈을 추출합니다.
+*   **Token Compression**: 구구절절한 전체 대화 로그를 저장하는 대신, 핵심 전략과 주의사항만을 요약하여 토큰 사용량을 10~20배 줄입니다.
+
+### 2) Hierarchical SkillBank (계층적 스킬 도서관)
+추출된 스킬은 두 가지 레벨로 저장됩니다.
+*   **General Skills**: 어떤 상황에서도 통용되는 범용적인 전략 (예: "검색 결과가 없으면 키워드를 바꿔라").
+*   **Task-Specific Skills**: 특정 문제 유형에만 적용되는 구체적 팁 (예: "ALFWorld에서 열쇠를 찾으려면 서랍을 먼저 열어라").
+
+### 3) Recursive Skill Evolution (재귀적 진화)
+스킬 라이브러리는 고정된 것이 아닙니다. 에이전트가 강해질수록 스킬도 진화합니다.
+*   **Co-evolution**: 강화학습(RL)이 진행되면서 정책(Policy)이 업데이트되면, 더 이상 유효하지 않은 낡은 스킬은 폐기되거나 더 높은 수준의 전략으로 통합(Merge)됩니다.
+
+---
+
+## 3. 실험 결과 및 의미
+
+*   **SOTA 달성**: ALFWorld, WebShop 등 복잡한 에이전트 벤치마크에서 기존 방법론들을 압도했습니다.
+*   **Small Model, Big Performacne**: 7B, 13B 수준의 작은 오픈소스 모델도 SKILLRL을 장착하면, 경험이 쌓일수록 GPT-4 같은 거대 모델의 성능을 따라잡거나 능가하는 모습을 보였습니다.
+
+---
+
+## 4. 결론 및 Insight
+
+SKILLRL은 에이전트에게 **절차적 장기 기억(Long-term Procedural Memory)**을 부여하는 기술입니다.
+우리가 주니어 개발자에게 "이런 에러가 나면 이렇게 하라"고 트러블슈팅 가이드를 만들어주는 것과 같습니다. 이 기술이 발전하면, 에이전트는 더 이상 '백지상태의 천재'가 아니라 **'산전수전 다 겪은 베테랑'**이 될 것입니다.
+
+## Tech Note
+*   **Code**: [GitHub Repository](https://github.com/aiming-lab/SkillRL)
+*   **구현 포인트**: 실패 궤적에서 교훈을 추출하는 프롬프트 엔지니어링과, 이를 벡터 DB(SkillBank)에 저장하고 검색하는 RAG 파이프라인 구축이 핵심입니다.

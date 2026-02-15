@@ -1,0 +1,49 @@
+---
+id: TEON_vs_Muon
+category: Architecture
+title: TEON vs Muon: Pre-training Optimizer
+---
+# TEON vs Muon: 옵티마이저 전쟁
+
+> **AdamW의 시대는 가는가? 레이어(Layer)를 넘어 텐서(Tensor) 차원의 최적화로.**
+
+## 1. 배경: Muon의 등장과 한계
+
+### Muon Optimizer
+최근 LLM 학습 트렌드에서 가장 핫한 감자 중 하나는 **Muon**입니다.
+*   **원리**: 파라미터를 업데이트할 때 일반적인 경사하강법 대신, 각 레이어의 가중치 행렬을 **직교화(Orthogonalization)**하여 업데이트합니다.
+*   **성과**: AdamW보다 적은 데이터로도 동일한 성능에 도달하며, 특히 배치 사이즈가 클수록 그 효율이 극대화됩니다.
+*   **한계**: 하지만 Muon은 각 레이어를 **독립적**으로 봅니다. 레이어 1의 변화가 레이어 2에 미치는 영향(Inter-layer Correlation)을 무시하는 셈입니다.
+
+---
+
+## 2. TEON: 텐서로 묶어서 본다
+
+**TEON** (Tensorized Orthonormalization)은 Muon의 한계를 정면으로 돌파합니다.
+
+### 핵심 아이디어: Higher-Order Tensor
+TEON은 여러 레이어(예: 모든 Attention 레이어의 Query Projection들)를 하나의 거대한 **3차원 텐서(3D Tensor)**로 묶습니다. 그리고 이 텐서 전체에 대해 직교화를 수행합니다.
+*   이렇게 하면 레이어 각각의 특성뿐만 아니라, **레이어들 사이의 상관관계**까지 반영하여 업데이트 방향을 결정할 수 있습니다.
+
+### 성능 비교
+*   **수렴 속도**: TEON은 Muon보다 초기 수렴 속도가 훨씬 빠릅니다.
+*   **최종 성능**: 동일한 학습 스텝을 밟았을 때 PPL(Perplexity)이 더 낮습니다. 즉, 더 똑똑한 모델이 됩니다.
+*   **안정성**: 레이어 간 균형을 맞춰주기 때문에 학습이 더 안정적입니다.
+
+---
+
+## 3. Best Practice: TEON + Telescoping
+
+사용자(당신)가 제안한 전략이 바로 **필승법**입니다.
+
+1.  **엔진은 TEON으로**: 최적화 알고리즘 자체는 성능이 더 좋은 TEON을 사용합니다.
+2.  **튜닝은 Muon 스타일로 (Telescoping)**:
+    *   Muon 논문에서 제세한 **Telescoping** 기법은 "작은 모델에서 찾은 최적의 학습률(LR) 등을 큰 모델로 전이(Transfer)하는 법"을 다룹니다.
+    *   TEON을 쓸 때도 이 법칙을 따르면, 거대 모델 학습 시 하이퍼파라미터 튜닝에 드는 천문학적인 비용을 아낄 수 있습니다.
+
+---
+
+## 4. 결론
+
+옵티마이저는 AI의 심장과 같습니다. 더 효율적인 옵티마이저는 더 적은 GPU로 더 똑똑한 AI를 만들 수 있음을 의미합니다.
+지금 당장 LLM을 밑바닥부터 학습(Pre-training)해야 한다면, **TEON**은 선택이 아니라 필수일지도 모릅니다. AdamW가 지배하던 시대가 서서히 저물고, **구조적 최적화(Structural Optimization)**의 시대가 오고 있습니다.

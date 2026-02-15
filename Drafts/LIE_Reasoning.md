@@ -1,0 +1,43 @@
+---
+id: LIE_Reasoning
+category: Pre-training & Post-training
+title: LIE: Length-Incentivized Exploration
+---
+# LIE: 깊게 생각할수록 더 똑똑해진다
+
+> **"Shallow Exploration Trap"을 넘어. LLM에게 '생각을 멈추지 않는 법'을 가르치는 강화학습 전략.**
+
+## 1. 개요
+
+*   **제목**: Think Longer to Explore Deeper: Learn to Explore In-Context via Length-Incentivized Reinforcement Learning
+*   **문제 의식**: LLM은 본능적으로 정답을 빨리 내놓고 쉬려 합니다. 이를 **"Shallow Exploration Trap (얕은 탐색의 함정)"**이라고 합니다. 추론 과정이 길어질수록 탐색 확률이 지수적으로 감소하기 때문입니다.
+*   **제안**: 추론 과정을 길게 가질수록 보상을 주는 **LIE (Length-Incentivized Exploration)** 메커니즘을 제안합니다.
+
+---
+
+## 2. Methodology: 당근과 채찍
+
+LIE는 단순히 "길게 말해"라고 하는 것이 아닙니다. 핵심은 **"길지만(Long), 쓸데없는 말은 하지 마라(Non-Redundant)"**입니다.
+
+### 1) Length Incentive (당근)
+*   강화학습(RL) 보상 함수에 생성된 토큰 길이에 비례하는 보상항을 추가합니다.
+*   이는 모델이 답을 모르더라도 바로 포기하지 않고, "다른 방법은 없을까?", "검산을 해볼까?"라며 사고 과정을 확장(Self-Correction)하도록 유도합니다.
+
+### 2) Redundancy Penalty (채찍)
+*   무작정 길게만 쓰면 모델은 의미 없는 단어(패딩)를 반복할 것입니다.
+*   이를 막기 위해 N-gram 반복이나 의미 없는 문장 나열에 페널티를 부여합니다.
+*   결과적으로 모델은 **"새로운 정보를 담은 긴 추론"**을 하도록 학습됩니다.
+
+---
+
+## 3. 실험 결과
+
+*   **성능 향상**: 수학(MATH), 코딩 등 깊은 사고가 필요한 영역에서 평균 4.4%의 성능 향상을 기록했습니다.
+*   **Test-Time Scaling**: 모델 크기를 키우지 않고도, 추론 시간(토큰 수)만 늘려서 성능을 높일 수 있음을 증명했습니다. OpenAI의 o1 모델이 보여준 방향성과 일치합니다.
+
+---
+
+## 4. 결론 및 Insight
+
+"빨리 대답하는 것이 똑똑한 것이다"라는 편견을 깹니다.
+System 2(숙고)적 사고는 본질적으로 시간이 걸립니다. LIE는 LLM에게 **인내심(Patience)**을 가르치는 기술입니다. 앞으로의 모델들은 사용자가 기다려줄 수만 있다면, 무한히 생각하며 정답에 수렴해가는 방향으로 진화할 것입니다.

@@ -152,6 +152,8 @@
 
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
+*   [**LIMRANK: Less is More**](./RAG/109.md)  
+    *2만 개 데이터로 SOTA 리랭커 만들기.*
 *   [**HippoRAG 2**](./RAG/100.md)  
     *인간의 기억 메커니즘을 모방한 비모수적 연속 학습 (Bio-inspired Continual Learning).*
 *   [**DeepSeek-V3 vs V3.2: 아키텍처의 진화**](./RAG/94.md)  
@@ -242,6 +244,8 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**Andrej Karpathy: 우리는 유령을 소환하고 있는가?**](./Trends/110.md)  
+    *AGI의 효율성과 통제, 그리고 보상 해킹에 대한 단상.*
 *   [**Vibe Coding과 영구적인 주니어의 함정**](./Trends/54.md)  
     *Karpathy도 힘들어하는 시대의 생존법: 바이브 코딩과 기초의 중요성.*
 *   [**Hugging Face CEO의 한국 AI 모델 응원**](./Trends/53.md)  

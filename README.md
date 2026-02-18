@@ -44,6 +44,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**Prompt Repetition Improves Non-Reasoning LLMs**](./Agents/113.md)  
+    *70전 0패 47승, 같은 프롬프트를 반복하면 성능이 올라갑니다!*
 *   [**Adaptation of Agentic AI**](./Agents/80.md)  
     *거대 모델 튜닝보다 도구 튜닝이 효율적인 이유 (T2 > A2).*
 *   [**Memory in the Age of AI Agents**](./Agents/77.md)  
@@ -305,6 +307,8 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**OpenAI vs Anthropic vs Pentagon**](./Trends/116.md)  
+    *인공지능의 윤리, 광고, 그리고 오픈소스.*
 *   [**Andrej Karpathy: 우리는 유령을 소환하고 있는가?**](./Trends/110.md)  
     *AGI의 효율성과 통제, 그리고 보상 해킹에 대한 단상.*
 *   [**AI Era Cognitive Surrender**](./Trends/112.md)  

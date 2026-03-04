@@ -84,9 +84,15 @@
     *진정한 페르소나는 '마음'에서 나온다.*
 *   [**SKILLRL: 에이전트는 '실패'를 먹고 자란다**](./Agents/112.md)  
     *에이전트에게 경험을 '스킬'로 증류(Distill)하여 평생 학습의 길을 열어주다.*
+*   [**The Devil Behind Moltbook: 다중 에이전트 사회의 타락**](./Agents/114.md)  
+    *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**STATIC: 1,000배 빠른 LLM 추천시스템**](./Architecture/111.md)  
+    *구글 딥마인드가 트리 구조를 희소 행렬로 펼쳐 LLM 제약 디코딩을 1,033배 가속한 방법.*
+*   [**Text-to-LoRA & Doc-to-LoRA: 즉각적 모델 업데이트**](./Architecture/110.md)  
+    *Sakana AI: 문서 내재화에 0.5초, 새로운 스킬 장착에 1초 미만.*
 *   [**LLaDA2.0: Scaling Up Diffusion Language Models to 100B**](./Architecture/103.md)  
     *100B Diffusion 모델의 등장: 기존 AR 모델을 개조하여 효율성을 2배 높인 비결.*
 *   [**TEON vs Muon: 옵티마이저 전쟁**](./Architecture/104.md)  
@@ -268,6 +274,8 @@
     *CPU 추론 속도 1.8배 향상.*
 
 ### 🧠 Model Experiments
+*   [**LFM2-350M-ToolLLaMA: 14달러로 GPT-5-Nano를 이기다**](./Projects/117.md)  
+    *H100 한 대, 학습 4시간, 총 14달러로 ToolBench에서 GPT-5-Nano보다 6.6배 이상 좋은 350M 모델 제작.*
 *   [**Open-Yaongi Project**](./Projects/Open-Yaongi.md)  
     *52 Layers 4B(Active 0.6B) 규모의 효율적인 sLLM 오픈소스 프로젝트 (Mamba-2 + MoE).*
 *   [**HybriKo: 하이브리드 RNN+Attention**](./Projects/54.md)  
@@ -296,6 +304,8 @@
     *Pre-training부터 GRPO까지의 험난한 여정.*
 
 ### 💭 Insights & Essays
+*   [**3개월 9개 프로젝트 회고: GPU Poor의 여정**](./Projects/118.md)  
+    *RAM 16GB, i5 CPU 노트북에서 9개의 프로젝트와 2가지 아카이브를 만든 기록.*
 *   [**최근 구현한 AI 프로젝트 및 성과**](./Projects/7.md)  
     *Gemini-Claw로 구현한 맥킨지 스타일 보고서 및 PPT 자동 생성.*
 *   [**Gemini-Claw 성능 vs 보안**](./Projects/12.md)  
@@ -307,6 +317,12 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**AGI라는 위험한 이데올로기: 아세모글루와 르쿤의 일침**](./Trends/117.md)  
+    *노벨 경제학상 수상자와 얀 르쿤이 동시에 내린 결론: 만능 AI 환상에서 깨어나라.*
+*   [**규모의 경쟁을 넘어선 14가지 시도**](./Trends/118.md)  
+    *구조적 한계를 비틀고 우회하는 최신 AI 연구 14선.*
+*   [**AI 기업의 방향: B2B와 중년·노년층 B2C**](./Trends/119.md)  
+    *인류의 80%는 AI를 한 번도 안 써봤다. 코딩 에이전트가 아닌 도구 호출 기반 서비스가 답.*
 *   [**OpenAI vs Anthropic vs Pentagon**](./Trends/116.md)  
     *인공지능의 윤리, 광고, 그리고 오픈소스.*
 *   [**Andrej Karpathy: 우리는 유령을 소환하고 있는가?**](./Trends/110.md)  

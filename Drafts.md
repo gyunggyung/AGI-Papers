@@ -61,6 +61,10 @@ This file contains drafts and summaries of new papers that have not yet been ful
     *   **Topic**: Terminal Agent / Training Strategy
     *   **Summary**: H100 1대에서 FP8 LoRA로 4,500개 SFT(1에폭) → 실환경 RL로 자가 치유형 터미널 에이전트 구축. 활성 2.3B의 미친 속도, 총비용 ~$150.
 
+*   [**FORMAL JUDGE: Neuro-Symbolic Agentic Oversight**](Drafts/FormalJudge.md)
+    *   **Topic**: Safety / Verification
+    *   **Summary**: LLM+SMT Solver 결합. 7B 심판이 72B 에이전트 기만을 90%+ 탐지. 안전성 70.7% → 99.8% 달성. GitHub 코드 공개.
+
 ---
 
 ## 🧠 Architecture
@@ -120,6 +124,14 @@ This file contains drafts and summaries of new papers that have not yet been ful
     *   **Topic**: Optimizer / Memory Efficiency
     *   **Summary**: AdamW의 파라미터당 메모리를 16B → 7B(5B)로 절반 이하로 축소. 성능 손실 제로(Zero Degradation). Llama-3.1-8B 학습 메모리 36% 절감.
 
+*   [**GAT + LLM: Graph Attention Networks Integration**](Drafts/GAT_LLM.md)
+    *   **Topic**: Graph Neural Networks / LLM
+    *   **Summary**: ICLR 2018 근간 논문. Transformer Attention을 그래프에 이식. GraphRAG, Multi-Agent Router, Node Feature Encoder 등 LLM 결합 방안 분석.
+
+*   [**Multi-GPU: Tensor Parallelism vs Device Map**](Drafts/TP_vs_DeviceMap.md)
+    *   **Topic**: Infrastructure / Parallelism
+    *   **Summary**: HuggingFace 멀티 GPU 가이드. device_map(메모리 분산, 순차 실행) vs tp_plan(진정한 병렬, torchrun 필요)의 선택 기준.
+
 ---
 
 ## 📚 Pre-Training & Post-Training
@@ -143,6 +155,10 @@ This file contains drafts and summaries of new papers that have not yet been ful
 *   [**Search-R1++: How to Train Your Deep Research Agent**](Drafts/Search_R1_Plus_Plus.md)
     *   **Topic**: Deep Research / RL Training
     *   **Summary**: Fast Thinking + F1+ 보상 + REINFORCE 삼위일체. "생각을 많이 할수록 성능 향상"이라는 통념을 뒤집고, Qwen2.5-7B에서 기존 대비 +3.9% 정확도 향상.
+
+*   [**OPCD: On-Policy Context Distillation**](Drafts/OPCD.md)
+    *   **Topic**: Knowledge Distillation / RL
+    *   **Summary**: ICL로 얻은 경험적 지식을 영구 파라미터로 내재화. 역 KL 발산 기반 On-Policy 증류. Qwen3-8B 수학 80.9%, 시스템 프롬프트 증류로 Llama-3.2-3B 59.4%→76.3%.
 
 ---
 
@@ -191,4 +207,16 @@ This file contains drafts and summaries of new papers that have not yet been ful
 *   [**9 Years to AGI? Post-Training Paradigm**](Drafts/Nine_Years_to_AGI.md)
     *   **Topic**: Paradigm Shift
     *   **Summary**: 사전 학습은 뼈대일 뿐. 모델이 스스로 생각하는 시간과 강화학습에 연산을 집중시키는 Post-Training Scaling 패러다임 전환.
+
+*   [**데이터가 90%다: AI 시대의 가장 중요한 습관**](Drafts/Data_Is_Everything.md)
+    *   **Topic**: Data / Insight
+    *   **Summary**: AI 중요도: 데이터 90%, 에이전트 9%, 모델 1%. 최신 도구보다 고객 데이터를 저장·정리하는 습관이 핵심. 데이터 없는 AI는 헛소리 생성기.
+
+*   [**Reward Hacking in Real-World AI Systems**](Drafts/Reward_Hacking.md)
+    *   **Topic**: AI Safety / Alignment
+    *   **Summary**: Anthropic 연구. 추천 시스템·LLM·로보틱스에서 보상 해킹 실사례 분석. 굿하트의 법칙 — AI 성능↑ = 해킹 위험↑. RLHF·적대적 훈련·해석 가능성으로 대응.
+
+*   [**AI 사회화와 확률적 앵무새 (Stochastic Parrots)**](Drafts/AI_Socialization.md)
+    *   **Topic**: Philosophy / AI Ethics
+    *   **Summary**: AI 합성 텍스트가 인간 언어 신뢰성 체계를 교란하는 메커니즘 분석. "포템킨 문장" 개념 제안 — 문법·맥락은 완벽하지만 지칭 대상이 부재.
 

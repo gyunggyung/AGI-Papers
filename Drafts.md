@@ -45,6 +45,22 @@ This file contains drafts and summaries of new papers that have not yet been ful
     *   **Topic**: Hardware Optimization / RL
     *   **Summary**: 에이전트가 CUDA 커널을 직접 작성하고, 실행 결과를 피드백으로 받아 다중 턴 강화학습으로 고성능 커널을 자동 생성.
 
+*   [**AgentCgroup: OS Resource Control for AI Agents**](Drafts/AgentCgroup.md)
+    *   **Topic**: OS Resource Management
+    *   **Summary**: 다중 테넌트 환경에서 에이전트의 메모리 피크(15.4배 폭발)를 커널 내부(eBPF)에서 마이크로초 단위로 제어. 생존율 66% → 100%.
+
+*   [**Sniper-Router-Surgeon: ELECTRA + dLLM Coding Agent**](Drafts/ELECTRA_dLLM_Pipeline.md)
+    *   **Topic**: Coding Agent Architecture
+    *   **Summary**: ELECTRA가 버그 토큰을 저격(Sniper), dLLM이 양방향 문맥으로 수술(Surgeon), RLVR이 검증하는 자가 치유형 코딩 에이전트. GLM-4.7-Flash(SWE-bench 73.8%) 기반.
+
+*   [**Nemotron-Terminal: Scaling LLM Terminal Capabilities**](Drafts/Nemotron_Terminal.md)
+    *   **Topic**: Terminal Agent / Data Engineering
+    *   **Summary**: 32B SFT 모델이 480B Qwen3-Coder를 능가(27.4%). 모델 크기보다 고품질 터미널 궤적 데이터가 핵심.
+
+*   [**LFM2-24B Terminal Agent: FP8 LoRA SFT + RL**](Drafts/LFM2_Terminal_Agent.md)
+    *   **Topic**: Terminal Agent / Training Strategy
+    *   **Summary**: H100 1대에서 FP8 LoRA로 4,500개 SFT(1에폭) → 실환경 RL로 자가 치유형 터미널 에이전트 구축. 활성 2.3B의 미친 속도, 총비용 ~$150.
+
 ---
 
 ## 🧠 Architecture
@@ -100,6 +116,10 @@ This file contains drafts and summaries of new papers that have not yet been ful
     *   **Topic**: Signal Propagation / ResNet
     *   **Summary**: DeepSeek이 1967년 Sinkhorn-Knopp 알고리즘으로 ResNet의 신호 폭발 문제를 해결. 3,000배 → 1.6배로 억제.
 
+*   [**FlashOptim: Memory-Efficient Deep Learning Optimizer**](Drafts/FlashOptim.md)
+    *   **Topic**: Optimizer / Memory Efficiency
+    *   **Summary**: AdamW의 파라미터당 메모리를 16B → 7B(5B)로 절반 이하로 축소. 성능 손실 제로(Zero Degradation). Llama-3.1-8B 학습 메모리 36% 절감.
+
 ---
 
 ## 📚 Pre-Training & Post-Training
@@ -120,6 +140,10 @@ This file contains drafts and summaries of new papers that have not yet been ful
     *   **Topic**: Translation / Self-Verification RL
     *   **Summary**: 정답이 없는 번역 영역에서 역번역(Back-Translation)을 보상으로 활용. 외부 데이터 없이 7B 모델이 GPT-4o급 번역 품질 달성.
 
+*   [**Search-R1++: How to Train Your Deep Research Agent**](Drafts/Search_R1_Plus_Plus.md)
+    *   **Topic**: Deep Research / RL Training
+    *   **Summary**: Fast Thinking + F1+ 보상 + REINFORCE 삼위일체. "생각을 많이 할수록 성능 향상"이라는 통념을 뒤집고, Qwen2.5-7B에서 기존 대비 +3.9% 정확도 향상.
+
 ---
 
 ## 🗂️ RAG & Knowledge
@@ -139,6 +163,14 @@ This file contains drafts and summaries of new papers that have not yet been ful
 *   [**Moonshine: Speech Recognition**](Drafts/Moonshine.md)
     *   **Topic**: Audio / On-Device
     *   **Summary**: Whisper Large v3보다 5배 빠르고 가벼운 실시간 음성 인식 모델. **한국어 공식 지원** 및 스트리밍 처리에 최적화되어 에이전트의 '귀' 역할로 적합.
+
+*   [**Whisper Fine-tuning for Proper Noun ASR**](Drafts/Whisper_Street_ASR.md)
+    *   **Topic**: ASR / Fine-tuning
+    *   **Summary**: 상용 ASR 모델의 고유명사(길 이름) 인식 실패율 44%를 합성 TTS 데이터 1,000개로 파인튜닝하여 60% 개선. 비영어 화자 편향 문제도 해결.
+
+*   [**Dynamic 2-bit Quantization for Edge LLM**](Drafts/Dynamic_2bit_Quantization.md)
+    *   **Topic**: Quantization / Edge Deployment
+    *   **Summary**: Unsloth Dynamic 2.0의 혼합 정밀도로 MoE 모델을 12GB GGUF로 압축. Imatrix 캘리브레이션 데이터의 도메인 혼합(영어+한국어+터미널)이 핵심.
 
 ---
 

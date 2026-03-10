@@ -205,6 +205,8 @@
 
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
+*   [**Claude 4.6 Opus의 성능을 더 싸고 빠르게 오픈소스로 만드는 법**](./RAG/117.md)  
+    *가벼운 모델에게 검색하는 방법을 가르치는 KARL.*
 *   [**LIMRANK: Less is More**](./RAG/109.md)  
     *2만 개 데이터로 SOTA 리랭커 만들기.*
 *   [**HippoRAG 2**](./RAG/100.md)  

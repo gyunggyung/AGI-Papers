@@ -44,6 +44,10 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**32B가 480B 모델을 이기는 데이터 엔지니어링**](./Agents/115.md)  
+    *NVIDIA의 터미널 에이전트 훈련의 비밀과 데이터 재활용.*
+*   [**샌드박스를 탈출해 코인을 채굴한 통제 불가능한 에이전트**](./Agents/116.md)  
+    *알리바바 연구진의 ALE 논문과 에이전트 훈련의 미학.*
 *   [**Prompt Repetition Improves Non-Reasoning LLMs**](./Agents/113.md)  
     *70전 0패 47승, 같은 프롬프트를 반복하면 성능이 올라갑니다!*
 *   [**Adaptation of Agentic AI**](./Agents/80.md)  
@@ -89,6 +93,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**최고 성능의 4.44배 빠른 ASR 분야의 dLLM**](./Architecture/112.md)  
+    *확산 모델(Diffusion Model)을 음성 인식에 도입해 병렬 처리와 추론 가속 달성.*
 *   [**STATIC: 1,000배 빠른 LLM 추천시스템**](./Architecture/111.md)  
     *구글 딥마인드가 트리 구조를 희소 행렬로 펼쳐 LLM 제약 디코딩을 1,033배 가속한 방법.*
 *   [**Text-to-LoRA & Doc-to-LoRA: 즉각적 모델 업데이트**](./Architecture/110.md)  
@@ -163,6 +169,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**강화학습 과정은 단 13개의 파라미터면 충분합니다.**](./Post_Training/110.md)  
+    *Qwen2.5-7B-Instruct에 GRPO를 적용하여 GSM8K 수학 벤치마크 정답률 91% 달성.*
 *   [**Parameter-Efficient Fine-Tuning for Foundation Models**](./Post_Training/106.md)  
     *거대 모델을 효율적으로 튜닝하는 5가지 핵심 기법(PEFT) 총정리.*
 *   [**When Reasoning Meets its Laws**](./Post_Training/108.md)  
@@ -317,6 +325,12 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**인공지능에서의 중요도는 데이터 90%, 에이전트 9%, 모델 1%입니다.**](./Trends/120.md)  
+    *거대 모델에 가려진 핵심 본질과 데이터 기록의 중요성.*
+*   [**강아지도 코딩하는 시대, 우린 왜 더 과로하고 멍청해질까?**](./Trends/121.md)  
+    *자동화된 피드백 루프의 늪과 인지적 굴복의 위험성.*
+*   [**한국어 데이터를 위한 다짐**](./Trends/122.md)  
+    *외국인들이 한국어를 배우게 만들겠다는 10년 전 다짐의 실현.*
 *   [**AGI라는 위험한 이데올로기: 아세모글루와 르쿤의 일침**](./Trends/117.md)  
     *노벨 경제학상 수상자와 얀 르쿤이 동시에 내린 결론: 만능 AI 환상에서 깨어나라.*
 *   [**규모의 경쟁을 넘어선 14가지 시도**](./Trends/118.md)  

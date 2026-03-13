@@ -93,6 +93,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**Nemotron 3 Super와 NVFP4의 마법**](./Architecture/113.md)  
+    *NVIDIA의 기업용 에이전트 니모클로(Nemoclo)와 블랙웰 하드웨어 장벽.*
 *   [**최고 성능의 4.44배 빠른 ASR 분야의 dLLM**](./Architecture/112.md)  
     *확산 모델(Diffusion Model)을 음성 인식에 도입해 병렬 처리와 추론 가속 달성.*
 *   [**STATIC: 1,000배 빠른 LLM 추천시스템**](./Architecture/111.md)  
@@ -169,6 +171,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Introduction to Post-Training 강연 재구성**](./Post_Training/111.md)  
+    *Maxime Labonne님의 자료를 기반으로 한 7가지 최신 RL 논문과 비전.*
 *   [**강화학습 과정은 단 13개의 파라미터면 충분합니다.**](./Post_Training/110.md)  
     *Qwen2.5-7B-Instruct에 GRPO를 적용하여 GSM8K 수학 벤치마크 정답률 91% 달성.*
 *   [**Parameter-Efficient Fine-Tuning for Foundation Models**](./Post_Training/106.md)  

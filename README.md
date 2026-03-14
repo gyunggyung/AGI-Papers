@@ -7,9 +7,13 @@
 > **Toward Artificial General Intelligence (AGI) in 2026.**  
 > A curated archive of breakthroughs in **Agents**, **Architecture**, **Training**, **RAG**, and **On-Device AI**.
 
-## 📌 Introduction
+## 📢 News
 
-2026년, AGI에 그 어느 때보다 가까운 시대가 도래했습니다.  
+*   **[2026-03-14]** [**Introduction to Post-Training 강연 자료 (PDF)**](./PDF/introduction-to-post-training.pdf)를 추가했습니다.
+
+## 📌 Introduction
+2026년, 인공지능의 발전 속도가 유례없을 지경입니다.
+
 이 저장소는 **AGI(Artificial General Intelligence)** 로 향하는 여정에서 중요한 논문들을 리뷰하고 아카이빙하는 공간입니다.
 
 주로 제 **[LinkedIn](https://www.linkedin.com/in/kiwoong-yeom/)** 에서 다룬 논문들에 대한 심도 있는 리뷰가 업로드되며, 때로는 소셜 미디어에 공유하기 전의 **Pre-release 인사이트**나 날것의 생각들이 이곳에 먼저 기록될 예정입니다.

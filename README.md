@@ -209,8 +209,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
-*   [**Introduction to Post-Training 강연 재구성**](./Post_Training/111.md)  
-    *Maxime Labonne님의 자료를 기반으로 한 7가지 최신 RL 논문과 비전.*
+*   [**그 OpenClaw로 강화학습을? 프린스턴 대학교의 OpenClaw-RL**](./Post_Training/124.md)  
+    *프린스턴 대학교 연구진이 제안한 OpenClaw-RL 프레임워크와 실시간 강화학습의 한계.*
 *   [**강화학습 과정은 단 13개의 파라미터면 충분합니다.**](./Post_Training/110.md)  
     *Qwen2.5-7B-Instruct에 GRPO를 적용하여 GSM8K 수학 벤치마크 정답률 91% 달성.*
 *   [**Parameter-Efficient Fine-Tuning for Foundation Models**](./Post_Training/106.md)  
@@ -344,6 +344,10 @@
     *Liquid AI, TII, NVIDIA의 새로운 시도들.*
 
 ### 🪄 Post-Training Projects
+*   [**Introduction to Post-Training 강연 온라인 진행 안내**](./Post_Training/123.md)  
+    *Maxime Labonne님의 자료를 재구성한 온라인 무료 강연 일정 안내 및 디스코드 투표.*
+*   [**Introduction to Post-Training 강연 재구성**](./Post_Training/111.md)  
+    *Maxime Labonne님의 자료를 기반으로 한 7가지 최신 RL 논문과 비전.*
 *   [**LFM2 1.2B 기반 한국어-영어 번역기**](./Projects/89.md)  
     *LFM2 1.2B 모델로 구글과 알리바바의 4B 모델을 이긴 번역기 제작기.*
 *   [**LFM2 번역기 개발기: 핵심 발견 및 성과**](./Projects/82.md)  

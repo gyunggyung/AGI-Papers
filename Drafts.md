@@ -136,6 +136,10 @@ This file contains drafts and summaries of new papers that have not yet been ful
 
 ## 📚 Pre-Training & Post-Training
 
+*   [**신경망 덤불과 RandOpt 리뷰**](Drafts/RandOpt_Review.md)
+    *   **Topic**: Optimization / Evaluation / Post-Training
+    *   **Summary**: 기울기(Gradient) 계산 없이 무작위로 가중치를 섞는 RandOpt 알고리즘의 실체를 파헤친 리뷰. 막대한 추론 비용(K배 폭발), 포맷팅에 치우친 가짜 지능, H100 1대 기준 비현실적인 학습 시간을 지적하며 극단적 학술 연구가 지닌 실무적 한계와 의의를 정리.
+
 *   [**LIE: Length-Incentivized Exploration**](Drafts/LIE_Reasoning.md)
     *   **Topic**: Reasoning / RL
     *   **Summary**: LLM이 추론 시 "더 길게 생각하도록(Think Longer)" 유도하는 강화학습 기법. 정답을 못 맞춰도 논리적인 탐색 과정을 길게 가져가면 보상을 주어, **Self-Correction** 능력을 이끌어냄.

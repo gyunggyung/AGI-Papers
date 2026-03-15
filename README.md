@@ -9,7 +9,7 @@
 
 ## 📢 News
 
-*   **[2026-03-14]** [**Introduction to Post-Training 강연 자료 (PDF)**](./PDF/introduction-to-post-training.pdf)를 추가했습니다.
+*   **[2026-03-15]** [**Introduction to Post-Training & Beyond 강연 자료 (PDF)**](./PDF/introduction-to-post-training-and-beyond.pdf)를 업데이트했습니다.
 
 ## 📌 Introduction
 2026년, 인공지능의 발전 속도가 유례없을 지경입니다.

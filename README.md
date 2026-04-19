@@ -103,6 +103,13 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**인공지능 자체가 하나의 운영체제가 된다면? Neural Computer (NC)**](./Architecture/121.md)  
+    *Meta AI의 NC: 모델 내부 신경망 잠재 공간 안에서 연산, 기억, 입출력을 통합 처리하는 실험적 접근.*
+*   [**트랜스포머의 성능, RNN의 가벼움을: Memory Caching (MC)**](./Architecture/120.md)  
+    *Google과 Cornell의 MC: 세그먼트별 요약본 캐싱을 통한 O(NL) 복잡도 달성.*
+*   [**파라미터를 늘리지 않고, 모델 내부에서 재귀를 돌리는 우로(Ouro)**](./Architecture/119.md)  
+    *ByteDance의 Ouro와 LoopRPT: 잠재 공간에서의 재귀적 추론과 사전 강화학습.*
+
 *   [**패러다임 전환: VLM 기반 문서 OCR의 한계를 넘는 MinerU-Diffusion**](./Architecture/118.md)  
     *텍스트 디코더에 확산(Diffusion) 모델을 도입해 전체 페이지를 병렬 해독하는 문서 OCR.*
 *   [**Modern Model Architectures Overview 강연 온라인 진행 안내**](./Architecture/117.md)  
@@ -191,6 +198,11 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Garbage In, Good Out: 쓰레기 데이터로 성능 올리기 (SSD)**](./Post_Training/127.md)  
+    *Apple 연구팀의 Simple Self-Distillation: 외부 피드백 없이 모델 스스로의 출력으로 기초 체력을 강화하는 기술.*
+*   [**똑똑한 선생님한테 배웠는데 왜 성적은 떨어질까? TESSY 프레임워크**](./Post_Training/126.md)  
+    *교사-학생 모델 간의 스타일 충돌을 해결하여 SFT 성능을 수직 상승시키는 전략.*
+
 *   [**Introduction to Post-Training & Beyond 강연 후기 및 향후 계획**](./Post_Training/125.md)  
     *Maxime Labonne의 강연 자료를 기반으로 한 온라인 강연 성공 사례와 향후 디스코드 스터디 계획.*
 *   [**그 OpenClaw로 강화학습을? 프린스턴 대학교의 OpenClaw-RL**](./Post_Training/124.md)  
@@ -274,6 +286,8 @@
 ## <a id="projects"></a>🚀 Projects
 
 ### 🤖 Autonomous Agents
+*   [**터미널 에이전트: 1B(8B A1B) 모델의 가능성**](./Projects/119.md)  
+    *LFM2-8B-A1B 모델과 Nemotron-Terminal-Corpus를 활용한 로컬 터미널 에이전트 구축 및 테스트 결과.*
 *   [**Gemini-Claw 개발기**](./Projects/20.md)  
     *2시간 만에 만든, 스스로 코드를 짜고 뉴스를 분석하는 에이전트.*
 *   [**스스로 웹페이지를 만들고 검증하는 AI**](./Projects/16.md)  
@@ -360,6 +374,13 @@
     *멀티 에이전트 시스템에 대한 인사이트.*
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
+
+*   [**Gemini가 선정한 AI 논문 및 인사이트 10선**](./Trends/132.md)  
+    *작성 중인 글들 중 Gemini가 뽑은 10가지 핵심 기술 리포트와 분석 요약.*
+*   [**대학 교육의 소멸과 성실성의 종말: 아키텍트의 부상**](./Trends/131.md)  
+    *AI 시대에 대학이 직면한 구조적 한계와, AI를 도구로 활용하는 아키텍트 능력의 중요성에 대하여.*
+*   [**오픈소스 제작은 꼴찌를 하기 위해서 하는 겁니다**](./Trends/130.md)  
+    *오픈소스 생태계의 본질인 '기반과 발판'에 대한 철학적 고찰과 미래에 대한 단상.*
 
 *   [**LLM Wiki와 같은 결론: 기술적 지향점의 일치**](./Trends/129.md)  
     *Karpathy의 LLM Wiki 아이디어, 동일한 결론에 도달하게 되는 기술적 사고 과정과 실행력에 관하여.*

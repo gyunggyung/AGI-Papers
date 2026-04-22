@@ -198,6 +198,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**PivotRL: 아는 문제는 안 풉니다**](./Post_Training/128.md)  
+    *NVIDIA의 PivotRL: 궤적 중 '피벗'만을 찾아 집중 훈련해 망각을 막고 훈련 시간을 5.5배 단축시키는 강화학습 전략.*
 *   [**Garbage In, Good Out: 쓰레기 데이터로 성능 올리기 (SSD)**](./Post_Training/127.md)  
     *Apple 연구팀의 Simple Self-Distillation: 외부 피드백 없이 모델 스스로의 출력으로 기초 체력을 강화하는 기술.*
 *   [**똑똑한 선생님한테 배웠는데 왜 성적은 떨어질까? TESSY 프레임워크**](./Post_Training/126.md)  
@@ -375,6 +377,10 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**The AI Layoff Trap: AI 해고의 죄수의 딜레마**](./Trends/133.md)  
+    *인공지능으로 인한 해고가 필연적으로 멸망을 향한다는 수학적 증명과 그 역설.*
+*   [**하네스 이야기를 쓰면 반응이 달라질까요?**](./Trends/134.md)  
+    *유행하는 키워드(안드레이 카파시, 얀 르쿤, 딥시크 등)의 강력한 영향력과 실험 심리학.*
 *   [**Gemini가 선정한 AI 논문 및 인사이트 10선**](./Trends/132.md)  
     *작성 중인 글들 중 Gemini가 뽑은 10가지 핵심 기술 리포트와 분석 요약.*
 *   [**대학 교육의 소멸과 성실성의 종말: 아키텍트의 부상**](./Trends/131.md)  

@@ -103,6 +103,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**만능 옴니모델 vs 도메인 특화 모델: KDL Frontier**](./Architecture/122.md)  
+    *비대한 자아를 가진 옴니모델의 한계와 구조적 혁신을 이룬 도메인 특화 OCR 모델의 부상.*
 *   [**인공지능 자체가 하나의 운영체제가 된다면? Neural Computer (NC)**](./Architecture/121.md)  
     *Meta AI의 NC: 모델 내부 신경망 잠재 공간 안에서 연산, 기억, 입출력을 통합 처리하는 실험적 접근.*
 *   [**트랜스포머의 성능, RNN의 가벼움을: Memory Caching (MC)**](./Architecture/120.md)  

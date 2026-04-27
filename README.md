@@ -103,6 +103,10 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**DeepSeek-V4-Pro: 100만 토큰을 씹어 먹는 극단적 가성비의 코딩/수학 특화 모델**](./Architecture/124.md)  
+    *코딩(Codeforces) 3206점으로 3대장을 압도한 딥시크의 신작. CSA/HCA 하이브리드 어텐션과 FP4 양자화로 구현한 극단적 가성비 분석.*
+*   [**Attention to Mamba & Effective Distillation to xLSTM: 로컬 모델을 위한 증류 수술법**](./Architecture/123.md)  
+    *트랜스포머의 OOM 한계를 넘기 위한 두 가지 증류 전략: 순수 선형화(Mamba) vs 하이브리드 타협(xLSTM)의 장단점 비교.*
 *   [**만능 옴니모델 vs 도메인 특화 모델: KDL Frontier**](./Architecture/122.md)  
     *비대한 자아를 가진 옴니모델의 한계와 구조적 혁신을 이룬 도메인 특화 OCR 모델의 부상.*
 *   [**인공지능 자체가 하나의 운영체제가 된다면? Neural Computer (NC)**](./Architecture/121.md)  
@@ -290,6 +294,8 @@
 ## <a id="projects"></a>🚀 Projects
 
 ### 🤖 Autonomous Agents
+*   [**로컬 터미널 에이전트 CLI 개발 및 LFM2-8B-Terminal-SFT 튜닝**](./Projects/120.md)  
+    *Liquid AI의 LFM2-8B-A1B 모델을 활용한 로컬 터미널 에이전트 'liquid-cli' 개발 및 배포기.*
 *   [**터미널 에이전트: 1B(8B A1B) 모델의 가능성**](./Projects/119.md)  
     *LFM2-8B-A1B 모델과 Nemotron-Terminal-Corpus를 활용한 로컬 터미널 에이전트 구축 및 테스트 결과.*
 *   [**Gemini-Claw 개발기**](./Projects/20.md)  
@@ -379,10 +385,12 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
-*   [**The AI Layoff Trap: AI 해고의 죄수의 딜레마**](./Trends/133.md)  
-    *인공지능으로 인한 해고가 필연적으로 멸망을 향한다는 수학적 증명과 그 역설.*
+*   [**1% 성장의 늪과 AI 해고의 덫: 환상 속의 AGI를 넘어**](./Trends/135.md)  
+    *실체 없는 AGI 신기루가 초래한 1% 성장의 한계와 시장 구매력을 붕괴시키는 AI 해고의 덫에 대한 종합적 고찰.*
 *   [**하네스 이야기를 쓰면 반응이 달라질까요?**](./Trends/134.md)  
     *유행하는 키워드(안드레이 카파시, 얀 르쿤, 딥시크 등)의 강력한 영향력과 실험 심리학.*
+*   [**The AI Layoff Trap: AI 해고의 죄수의 딜레마**](./Trends/133.md)  
+    *인공지능으로 인한 해고가 필연적으로 멸망을 향한다는 수학적 증명과 그 역설.*
 *   [**Gemini가 선정한 AI 논문 및 인사이트 10선**](./Trends/132.md)  
     *작성 중인 글들 중 Gemini가 뽑은 10가지 핵심 기술 리포트와 분석 요약.*
 *   [**대학 교육의 소멸과 성실성의 종말: 아키텍트의 부상**](./Trends/131.md)  

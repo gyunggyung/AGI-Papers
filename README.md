@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**Agentic World Modeling: 세계 모델의 3단계 역량과 4대 지배 법칙**](./Agents/119.md)  
+    *중구난방이던 세계 모델의 기준을 구조화하고, 에이전트의 환경(Environment) 병목과 UI OCR의 중요성을 강조한 논문 리뷰.*
 *   [**하네스(Harness)의 민낯과 그 한계**](./Agents/118.md)  
     *Meta-Harness, NLAH, ARC-AGI-3 등 하네스의 효과와 본질적 한계를 파헤친 3편의 논문 리뷰.*
 *   [**HYPERAGENTS: 스스로 '공부법'을 코딩하며 진화하는 AI**](./Agents/117.md)  
@@ -103,6 +105,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**There Will Be a Scientific Theory of Deep Learning: 연금술에서 과학으로**](./Architecture/125.md)  
+    *딥러닝을 예측 가능한 '학습 역학'으로 정의하고, Scaling Laws와 하이퍼파라미터 전이 등 딥러닝의 블랙박스를 여는 수학적/물리적 증거들을 제시한 리뷰.*
 *   [**DeepSeek-V4-Pro: 100만 토큰을 씹어 먹는 극단적 가성비의 코딩/수학 특화 모델**](./Architecture/124.md)  
     *코딩(Codeforces) 3206점으로 3대장을 압도한 딥시크의 신작. CSA/HCA 하이브리드 어텐션과 FP4 양자화로 구현한 극단적 가성비 분석.*
 *   [**Attention to Mamba & Effective Distillation to xLSTM: 로컬 모델을 위한 증류 수술법**](./Architecture/123.md)  

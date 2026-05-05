@@ -50,6 +50,12 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**Agentic Harness Engineering (AHE): 스스로 파이썬 코드를 짜서 하네스를 개조하는 AI**](./Agents/122.md)  
+    *프롬프트 엔지니어링의 한계를 넘어, 에이전트 스스로 쉘 도구와 미들웨어를 구축해 완벽한 폐쇄 루프(Closed Loop) 진화를 이뤄낸 방법.*
+*   [**LLMs Corrupt Your Documents: 조용한 부패와 위임의 환상**](./Agents/121.md)  
+    *AI에게 편집을 위임할 때 발생하는 '조용한 부패(Silent Corruption)' 현상과 툴(Tool) 사용이 오히려 문서 훼손을 가속화한다는 마이크로소프트 리서치의 연구.*
+*   [**RecursiveMAS: 텍스트 없이 잠재 공간에서 대화하는 에이전트**](./Agents/120.md)  
+    *기존의 다중 에이전트 시스템의 어휘 공간 디코딩 병목을 해결하고, 잠재 공간(Latent Space)에서 실시간으로 소통하여 토큰 낭비를 75% 절감한 연구.*
 *   [**Agentic World Modeling: 세계 모델의 3단계 역량과 4대 지배 법칙**](./Agents/119.md)  
     *중구난방이던 세계 모델의 기준을 구조화하고, 에이전트의 환경(Environment) 병목과 UI OCR의 중요성을 강조한 논문 리뷰.*
 *   [**하네스(Harness)의 민낯과 그 한계**](./Agents/118.md)  
@@ -208,6 +214,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**터미널 에이전트를 위한 SFT 학습과 평가에서 느낀 3가지 한계점**](./Post_Training/129.md)  
+    *H200 8대로 LFM2, Gemma4 등 53개 모델을 튜닝하며 발견한 벤치마크 프록시 평가의 함정과 모델-데이터 포맷의 호환성 문제.*
 *   [**PivotRL: 아는 문제는 안 풉니다**](./Post_Training/128.md)  
     *NVIDIA의 PivotRL: 궤적 중 '피벗'만을 찾아 집중 훈련해 망각을 막고 훈련 시간을 5.5배 단축시키는 강화학습 전략.*
 *   [**Garbage In, Good Out: 쓰레기 데이터로 성능 올리기 (SSD)**](./Post_Training/127.md)  
@@ -248,6 +256,8 @@
 
 ## <a id="evaluation"></a>⚖️ Evaluation
 
+*   [**IKP 벤치마크: 압축 불가능한 지식으로 독점 모델의 파라미터 크기 유추하기**](./Evaluation/106.md)  
+    *희귀 지식의 정답률과 파라미터 크기의 로그-선형 관계를 이용해 GPT-5.5, Claude Opus 4.6 등 숨겨진 블랙박스 모델의 크기를 역산한 연구.*
 *   [**Preference Leakage: A Contamination Problem in LLM-as-a-Judge**](./Evaluation/105.md)  
     *LLM 평가자가 자신의 패밀리 모델을 편애하는 '선호도 유출' 문제.*
 *   [**ADR-Bench 전문가 평가**](./Evaluation/55.md)  
@@ -255,6 +265,8 @@
 
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
+*   [**SLIDERS: LLM의 환각과 컨텍스트 한계를 제어하는 SQL 데이터베이스 구조**](./RAG/119.md)  
+    *동적인 텍스트 탐색(RAG) 대신 초거대 문서를 SQL 데이터베이스 표(RDB)로 전처리하여 환각을 없애고 롱 컨텍스트 한계를 넘는 방법.*
 *   [**1억 토큰의 장벽을 깨다: RAG의 한계를 극복한 MSA**](./RAG/118.md)  
     *RAG를 버리고 모델 내부에 1억 토큰을 담아내는 Memory Sparse Attention 기술.*
 *   [**더 싸고 빠른 오픈소스 모델로 Claude 4.6 Opus 잡기**](./RAG/117.md)  
@@ -389,6 +401,8 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**계약의 효율적 파기: OpenAI의 클라우드 독점 계약 파기 사례를 중심으로**](./Trends/136.md)  
+    *법과 경제학의 융합 관점에서 OpenAI가 체결한 클라우드 독점 계약을 파기하는 것이 경제적 효용 측면에서 어떻게 효율적일 수 있는지 분석한 과제물 공유.*
 *   [**1% 성장의 늪과 AI 해고의 덫: 환상 속의 AGI를 넘어**](./Trends/135.md)  
     *실체 없는 AGI 신기루가 초래한 1% 성장의 한계와 시장 구매력을 붕괴시키는 AI 해고의 덫에 대한 종합적 고찰.*
 *   [**하네스 이야기를 쓰면 반응이 달라질까요?**](./Trends/134.md)  

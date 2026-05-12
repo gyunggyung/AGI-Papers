@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**SID-1: GPT-5.1을 이긴 14B 검색 에이전트의 탄생**](./Agents/123.md)  
+    *철저히 도서관 사서 역할만 하도록 훈련되어 환각을 원천 차단하고, GPT-5.1 대비 24배 빠른 속도와 압도적인 가성비를 증명한 에이전트 검색 모델.*
 *   [**Agentic Harness Engineering (AHE): 스스로 파이썬 코드를 짜서 하네스를 개조하는 AI**](./Agents/122.md)  
     *프롬프트 엔지니어링의 한계를 넘어, 에이전트 스스로 쉘 도구와 미들웨어를 구축해 완벽한 폐쇄 루프(Closed Loop) 진화를 이뤄낸 방법.*
 *   [**LLMs Corrupt Your Documents: 조용한 부패와 위임의 환상**](./Agents/121.md)  
@@ -111,6 +113,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**학습 없이 가중치 편집으로 모델을 제어하다: VPD(Adversarial Parameter Decomposition)**](./Architecture/126.md)  
+    *적대적 파라미터 분해(VPD) 기술을 통해 거대 가중치를 독립적인 개념 조각으로 찢어내고, 재학습 없이 정밀한 가중치 조작만으로 모델의 행동을 교정한 연구.*
 *   [**There Will Be a Scientific Theory of Deep Learning: 연금술에서 과학으로**](./Architecture/125.md)  
     *딥러닝을 예측 가능한 '학습 역학'으로 정의하고, Scaling Laws와 하이퍼파라미터 전이 등 딥러닝의 블랙박스를 여는 수학적/물리적 증거들을 제시한 리뷰.*
 *   [**DeepSeek-V4-Pro: 100만 토큰을 씹어 먹는 극단적 가성비의 코딩/수학 특화 모델**](./Architecture/124.md)  
@@ -214,6 +218,10 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**NVIDIA: Speculative Decoding을 통한 RL 훈련 속도 2.5배 향상**](./Post_Training/131.md)  
+    *추측 해독(Speculative Decoding) 기술을 RL 훈련 파이프라인에 통합하여, 학습 품질 저하 없이 초대형 모델의 훈련 속도를 최대 2.5배까지 끌어올린 엔비디아의 최적화 기법.*
+*   [**REASONMAXXER: 단일 GPU, 단돈 4달러로 무거운 RL 모델들을 압도하다**](./Post_Training/130.md)  
+    *거대한 RL 루프를 걷어내고, 모델의 엔트로피가 급증하는 '결정 포인트'만을 타격하는 50개의 고순도 데이터와 소형 LoRA만으로 최고 수준의 성능을 달성한 연구.*
 *   [**터미널 에이전트를 위한 SFT 학습과 평가에서 느낀 3가지 한계점**](./Post_Training/129.md)  
     *H200 8대로 LFM2, Gemma4 등 53개 모델을 튜닝하며 발견한 벤치마크 프록시 평가의 함정과 모델-데이터 포맷의 호환성 문제.*
 *   [**PivotRL: 아는 문제는 안 풉니다**](./Post_Training/128.md)  
@@ -256,6 +264,8 @@
 
 ## <a id="evaluation"></a>⚖️ Evaluation
 
+*   [**Mirage: 멀티모달 모델의 시각 지능은 신기루인가?**](./Evaluation/107.md)  
+    *최신 VLM들이 이미지를 보지 않고도 텍스트 단서만으로 답을 유추하는 '신기루 현상'을 폭로하며, 진정한 시각 지능을 위한 데이터 정제와 RL 기반 접근의 중요성을 강조한 논문.*
 *   [**IKP 벤치마크: 압축 불가능한 지식으로 독점 모델의 파라미터 크기 유추하기**](./Evaluation/106.md)  
     *희귀 지식의 정답률과 파라미터 크기의 로그-선형 관계를 이용해 GPT-5.5, Claude Opus 4.6 등 숨겨진 블랙박스 모델의 크기를 역산한 연구.*
 *   [**Preference Leakage: A Contamination Problem in LLM-as-a-Judge**](./Evaluation/105.md)  
@@ -310,6 +320,8 @@
 ## <a id="projects"></a>🚀 Projects
 
 ### 🤖 Autonomous Agents
+*   [**H200 8대로 56개 터미널 에이전트 모델 전면 재평가: Qwen 3.5의 독주**](./Projects/121.md)  
+    *Ouro 등 최신 모델을 추가하여 56개 모델의 성능을 전면 재측정하고, 베이스 모델의 특성과 데이터 포맷팅이 에이전트 성능에 미치는 결정적 영향을 분석한 리포트.*
 *   [**로컬 터미널 에이전트 CLI 개발 및 LFM2-8B-Terminal-SFT 튜닝**](./Projects/120.md)  
     *Liquid AI의 LFM2-8B-A1B 모델을 활용한 로컬 터미널 에이전트 'liquid-cli' 개발 및 배포기.*
 *   [**터미널 에이전트: 1B(8B A1B) 모델의 가능성**](./Projects/119.md)  
@@ -401,6 +413,10 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**앤트로픽의 엔터프라이즈 AI 전담 법인 설립과 래퍼(Wrapper) 기업의 위기**](./Trends/138.md)  
+    *빅테크가 거대 자본과 손잡고 기업 내부 워크플로우를 직접 장악하기 시작한 시대, 단순 API 포장 스타트업들의 종말과 독보적 기술력을 가진 진짜들의 생존 전략.*
+*   [**초기 스타트업의 연봉 1억 제안과 로컬 sLM의 미래: Conscience Technology**](./Trends/137.md)  
+    *로컬 sLM을 활용해 환각을 없애려는 초기 스타트업의 파격적인 제안을 통해 본 AI 인재 시장의 변화와 기술적 지향점에 대한 단상.*
 *   [**계약의 효율적 파기: OpenAI의 클라우드 독점 계약 파기 사례를 중심으로**](./Trends/136.md)  
     *법과 경제학의 융합 관점에서 OpenAI가 체결한 클라우드 독점 계약을 파기하는 것이 경제적 효용 측면에서 어떻게 효율적일 수 있는지 분석한 과제물 공유.*
 *   [**1% 성장의 늪과 AI 해고의 덫: 환상 속의 AGI를 넘어**](./Trends/135.md)  

@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**최근 Meta, Stanford University, UIUC 등에서 발표한 2026년 에이전트 하네스 분야의 바이블 논문 (Code as Agent Harness)**](./Agents/124.md)  
+    *LLM의 환각을 통제하고 물리적 폐쇄 루프 내에서 자율 계획-실행-검증을 가능하게 만드는 에이전트 하네스(Harness)의 3계층 아키텍처와 최전선 연구(L2MAC, EvoMAC) 요약.*
 *   [**SID-1: GPT-5.1을 이긴 14B 검색 에이전트의 탄생**](./Agents/123.md)  
     *철저히 도서관 사서 역할만 하도록 훈련되어 환각을 원천 차단하고, GPT-5.1 대비 24배 빠른 속도와 압도적인 가성비를 증명한 에이전트 검색 모델.*
 *   [**Agentic Harness Engineering (AHE): 스스로 파이썬 코드를 짜서 하네스를 개조하는 AI**](./Agents/122.md)  
@@ -113,6 +115,10 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**1,500달러로 7B를 압도한 1B 모델, HRM-Text: 전두두정엽 루프에서 영감을 받은 아키텍처 혁신**](./Architecture/128.md)  
+    *인간 전두엽 루프의 가중치 공유(Weight Sharing) 원리를 적용하여 VRAM 사용량을 1B 수준으로 묶어둔 채 128층의 수학적 연산 깊이를 확보해 7B 모델들을 압도한 HRM-Text 아키텍처.*
+*   [**우리 뇌는 역전파 과정이 없습니다: 딥러닝 역전파 알고리즘의 3가지 비효율과 대안 연구들**](./Architecture/127.md)  
+    *딥러닝의 심장인 역전파 알고리즘이 품고 있는 공간·전력·시간적 비효율을 고발하고, 이를 타파하기 위해 발표된 3가지 대안 연구(FF 알고리즘, EGGROLL, Hamiltonian Inference) 소개.*
 *   [**학습 없이 가중치 편집으로 모델을 제어하다: VPD(Adversarial Parameter Decomposition)**](./Architecture/126.md)  
     *적대적 파라미터 분해(VPD) 기술을 통해 거대 가중치를 독립적인 개념 조각으로 찢어내고, 재학습 없이 정밀한 가중치 조작만으로 모델의 행동을 교정한 연구.*
 *   [**There Will Be a Scientific Theory of Deep Learning: 연금술에서 과학으로**](./Architecture/125.md)  
@@ -218,6 +224,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Microsoft Research가 말하는 터미널 환경과 에러 메시지를 월드모델로 써서, 터미널 에이전트가 똑똑해지는 법 (ECHO)**](./Post_Training/135.md)  
+    *터미널 에이전트 강화학습 과정에서 무시되던 에러 로그와 디렉토리 결과를 버리지 않고 가중치 업데이트에 활용(Loss 계산)함으로써, 연산량 증가 없이 성능을 2배 높인 MS 리서치의 ECHO 방법론.*
 *   [**알파고의 탐색을 LLM에게: 성능을 18.8% 올린 DLR (Dynamic Latent Routing)**](./Post_Training/134.md)  
     *알파고의 MCTS 개념을 트랜스포머의 잠재 공간(Latent Space)에 이식해 토큰 생성 지연 없이 추론 성능을 최대 18.8% 끌어올린 베이징 항공우주대 연구진의 아키텍처.*
 *   [**AI 안전은 사기일까요?: 단 하나의 뉴런으로 무력화되는 Safety Alignment (A Single Neuron Is Sufficient)**](./Post_Training/133.md)  
@@ -270,6 +278,8 @@
 
 ## <a id="evaluation"></a>⚖️ Evaluation
 
+*   [**인공지능이 문서를 진짜로 읽고 있을까요?: 최신 멀티모달 모델의 귀속 환각(Attribution Hallucination)을 폭로한 CiteVQA 논문**](./Evaluation/109.md)  
+    *시각적 근거 매핑(SAA) 평가를 통해 VLM들이 정답은 맞히면서도 실제 이미지를 읽지 못하고 기억에 기반한 텍스트 확률로 대답하는 '귀속 환각(Attribution Hallucination)' 현상을 실증한 CiteVQA.*
 *   [**Step-3.5, LLaDA2.1... 86개 모델들을 테스트하고 느낀 점들**](./Evaluation/108.md)  
     *86개 최신 모델들을 직접 굴려보며 뼈저리게 느낀 벤치마크 오염(기출문제 암기), 한국어 데이터 파이프라인 부재, 베이스 모델 지능 체급의 중요성, Qwen/LFM의 희망 등에 대한 고찰.*
 *   [**Mirage: 멀티모달 모델의 시각 지능은 신기루인가?**](./Evaluation/107.md)  
@@ -283,6 +293,8 @@
 
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
+*   [**이제 RAG에서 구식 Vector DB를 버리고, 지식만 전문으로 암기하는 소형 비서 sLM 모델을 따로 만들어 LLM 옆에 두면 어떨까요? (MEMO)**](./RAG/123.md)  
+    *도서관 사서 역할을 하던 기존 Vector DB 기반 RAG의 한계를 극복하기 위해, 문서를 고품질 QA 문제집으로 정제하여 지식을 가중치 공간에 개념 구조로 암기시킨 소형 비서 모델(MEMO)의 아키텍처.*
 *   [**Is Grep All You Need?: 벡터 DB 없이 리눅스 명령어와 TF-IDF로 구축한 초간단 RAG**](./RAG/122.md)  
     *수천 대의 GPU로 학습한 모델이나 복잡한 RAG 프레임워크 없이 오직 리눅스의 grep과 간단한 TF-IDF만으로 최신 하이브리드 RAG 솔루션을 압도한 가성비와 유연성의 RAG 연구.*
 *   [**RAG와 벡터 DB 구축에 대한 핵심 Q&A 및 LlamaIndex 리소스 요약**](./RAG/121.md)  
@@ -431,6 +443,8 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**어떤 사람들의 주장을 읽을 때, 그 사람의 배경을 봐보세요: 이해관계와 오픈소스 생태계에 대한 단상**](./Trends/142.md)  
+    *인물들의 배경과 이해관계를 통해 AI 거대 규제론과 오픈소스 옹호론의 본질을 파헤치고, 독점적 프레임에 갇히지 않는 독자적 무기와 기본기의 중요성을 역설한 수필.*
 *   [**안드레이 카파시(Andrej Karpathy)가 앤트로픽(Anthropic)에 합류했습니다**](./Trends/141.md)  
     *연구보다 교육자로서의 아이덴티티가 강한 안드레이 카파시와 앤트로픽의 리서치 분석 보고서 역량의 조화가 가져올 AI 교육 표준 선점 파급력에 대한 고찰.*
 *   [**인공지능의 발전은 생각보다 너무 느리고, 우리들의 삶의 변화는 그에 비해 너무 빠릅니다**](./Trends/140.md)  

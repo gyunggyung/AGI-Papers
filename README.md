@@ -50,6 +50,7 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**에이전트도 늙습니다. 늙을 수록 멍청해지죠 (Agent Lifespan Engineering)**](./Agents/125.md)  
 *   [**최근 Meta, Stanford University, UIUC 등에서 발표한 2026년 에이전트 하네스 분야의 바이블 논문 (Code as Agent Harness)**](./Agents/124.md)  
     *LLM의 환각을 통제하고 물리적 폐쇄 루프 내에서 자율 계획-실행-검증을 가능하게 만드는 에이전트 하네스(Harness)의 3계층 아키텍처와 최전선 연구(L2MAC, EvoMAC) 요약.*
 *   [**SID-1: GPT-5.1을 이긴 14B 검색 에이전트의 탄생**](./Agents/123.md)  
@@ -115,6 +116,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**사람은 수면을 통해 낮에 본 단기 기억을 대뇌피질로 옮기고... (Language Models Need Sleep)**](./Architecture/130.md)  
+*   [**MiniMax M2 시리즈 기술 보고서: Full Attention과 자가 진화**](./Architecture/129.md)  
 *   [**1,500달러로 7B를 압도한 1B 모델, HRM-Text: 전두두정엽 루프에서 영감을 받은 아키텍처 혁신**](./Architecture/128.md)  
     *인간 전두엽 루프의 가중치 공유(Weight Sharing) 원리를 적용하여 VRAM 사용량을 1B 수준으로 묶어둔 채 128층의 수학적 연산 깊이를 확보해 7B 모델들을 압도한 HRM-Text 아키텍처.*
 *   [**우리 뇌는 역전파 과정이 없습니다: 딥러닝 역전파 알고리즘의 3가지 비효율과 대안 연구들**](./Architecture/127.md)  
@@ -278,6 +281,7 @@
 
 ## <a id="evaluation"></a>⚖️ Evaluation
 
+*   [**엔트로피로 LLM 거짓말 탐지기 제작 (Entropy Distribution as a Fingerprint)**](./Evaluation/110.md)  
 *   [**인공지능이 문서를 진짜로 읽고 있을까요?: 최신 멀티모달 모델의 귀속 환각(Attribution Hallucination)을 폭로한 CiteVQA 논문**](./Evaluation/109.md)  
     *시각적 근거 매핑(SAA) 평가를 통해 VLM들이 정답은 맞히면서도 실제 이미지를 읽지 못하고 기억에 기반한 텍스트 확률로 대답하는 '귀속 환각(Attribution Hallucination)' 현상을 실증한 CiteVQA.*
 *   [**Step-3.5, LLaDA2.1... 86개 모델들을 테스트하고 느낀 점들**](./Evaluation/108.md)  
@@ -293,6 +297,7 @@
 
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
+*   [**GraphRAG를 위해 미리 지식 그래프를 만들 필요 없습니다 (LogicRAG)**](./RAG/124.md)  
 *   [**이제 RAG에서 구식 Vector DB를 버리고, 지식만 전문으로 암기하는 소형 비서 sLM 모델을 따로 만들어 LLM 옆에 두면 어떨까요? (MEMO)**](./RAG/123.md)  
     *도서관 사서 역할을 하던 기존 Vector DB 기반 RAG의 한계를 극복하기 위해, 문서를 고품질 QA 문제집으로 정제하여 지식을 가중치 공간에 개념 구조로 암기시킨 소형 비서 모델(MEMO)의 아키텍처.*
 *   [**Is Grep All You Need?: 벡터 DB 없이 리눅스 명령어와 TF-IDF로 구축한 초간단 RAG**](./RAG/122.md)  
@@ -443,6 +448,10 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**바이브 코딩이라면서 LLM에게 모든 일을 위임하는 사람들에게 (확률 게임과 검증)**](./Trends/146.md)  
+*   [**요즘 생각: LLM의 한계 인지와 토큰 리더보드의 멍청함**](./Trends/145.md)  
+*   [**FBI도 수개월 걸리던 온라인 신원 추적, LLM은 단돈 1달러에 5분이면 끝냅니다**](./Trends/144.md)  
+*   [**RL, RAG, 에이전트, 하네스의 공통점과 LLM의 가능성 제한**](./Trends/143.md)  
 *   [**어떤 사람들의 주장을 읽을 때, 그 사람의 배경을 봐보세요: 이해관계와 오픈소스 생태계에 대한 단상**](./Trends/142.md)  
     *인물들의 배경과 이해관계를 통해 AI 거대 규제론과 오픈소스 옹호론의 본질을 파헤치고, 독점적 프레임에 갇히지 않는 독자적 무기와 기본기의 중요성을 역설한 수필.*
 *   [**안드레이 카파시(Andrej Karpathy)가 앤트로픽(Anthropic)에 합류했습니다**](./Trends/141.md)  

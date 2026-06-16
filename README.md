@@ -116,6 +116,9 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**QKV 분리 착각: AI 메모리 용량을 절반으로 (Do Transformers Need Three Projections?)**](./Architecture/133.md)  
+*   [**LLM의 진짜 정체는 거대한 텍스트 압축기입니다 (Predictable Compression Failures)**](./Architecture/132.md)  
+*   [**Qwen 3.5 9B를 dLLM으로 100B 모델을 압도하기 (FLARE 프레임워크)**](./Architecture/131.md)  
 *   [**사람은 수면을 통해 낮에 본 단기 기억을 대뇌피질로 옮기고... (Language Models Need Sleep)**](./Architecture/130.md)  
 *   [**MiniMax M2 시리즈 기술 보고서: Full Attention과 자가 진화**](./Architecture/129.md)  
 *   [**1,500달러로 7B를 압도한 1B 모델, HRM-Text: 전두두정엽 루프에서 영감을 받은 아키텍처 혁신**](./Architecture/128.md)  
@@ -227,6 +230,7 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Liquid AI의 LFM2.5-8B-A1B을 터미널 환경에서 스스로 에러를 해결하고 작업을 수행하는 에이전트 성능을 개선하기 위해 SFT와 RLVR 실험을 진행했습니다.**](./Post_Training/136.md)  
 *   [**Microsoft Research가 말하는 터미널 환경과 에러 메시지를 월드모델로 써서, 터미널 에이전트가 똑똑해지는 법 (ECHO)**](./Post_Training/135.md)  
     *터미널 에이전트 강화학습 과정에서 무시되던 에러 로그와 디렉토리 결과를 버리지 않고 가중치 업데이트에 활용(Loss 계산)함으로써, 연산량 증가 없이 성능을 2배 높인 MS 리서치의 ECHO 방법론.*
 *   [**알파고의 탐색을 LLM에게: 성능을 18.8% 올린 DLR (Dynamic Latent Routing)**](./Post_Training/134.md)  
@@ -448,6 +452,7 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**Anthropic은 본인들의 모델이 너무 강하고 위험하니 정부 규제가 필요하다고 말했습니다.**](./Trends/147.md)  
 *   [**바이브 코딩이라면서 LLM에게 모든 일을 위임하는 사람들에게 (확률 게임과 검증)**](./Trends/146.md)  
 *   [**요즘 생각: LLM의 한계 인지와 토큰 리더보드의 멍청함**](./Trends/145.md)  
 *   [**FBI도 수개월 걸리던 온라인 신원 추적, LLM은 단돈 1달러에 5분이면 끝냅니다**](./Trends/144.md)  

@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators**](./Agents/126.md)  
+    *에이전트와 평가자가 서로 진화하며 성능을 향상시키는 동적 루프 기반의 공동 진화 시스템 제안.*
 *   [**에이전트도 늙습니다. 늙을 수록 멍청해지죠 (Agent Lifespan Engineering)**](./Agents/125.md)  
     *AI 에이전트가 장기 작업 시 메모리 한계로 인해 지능이 저하되는 노화 현상을 분석한 연구.*
 *   [**최근 Meta, Stanford University, UIUC 등에서 발표한 2026년 에이전트 하네스 분야의 바이블 논문 (Code as Agent Harness)**](./Agents/124.md)  
@@ -117,6 +119,8 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**Log-Linear Attention: 현대 LLM은 비쌉니다**](./Architecture/134.md)  
+    *순환 모델의 고질적인 기억 용량 부족 문제를 시간축 트리 구조(이진트리)로 풀어낸 아키텍처 연구.*
 *   [**QKV 분리 착각: AI 메모리 용량을 절반으로 (Do Transformers Need Three Projections?)**](./Architecture/133.md)  
     *K와 V 행렬을 통합하여 지능 저하 없이 LLM의 KV 캐시 메모리 사용량을 절반으로 줄인 혁신적 접근법.*
 *   [**LLM의 진짜 정체는 거대한 텍스트 압축기입니다 (Predictable Compression Failures)**](./Architecture/132.md)  
@@ -221,6 +225,8 @@
 
 ## <a id="pre-training"></a>📚 Pre-Training
 
+*   [**한국어를 잘하는 소형 모델 Mid-training**](./Pre_Training/98.md)  
+    *LFM2.5-8B-A1B 모델 기반 6.5B 토큰 규모의 한국어 지식 주입(CPT) 실험 성과 및 한계점 공유.*
 *   [**LLM 학습 효율화 방안: 인간의 언어 습득 방식**](./Pre_Training/97.md)  
     *인간의 언어 습득 방식을 모방한 점진적 어휘 학습법(Vocabulary Curriculum Learning).*
 
@@ -236,6 +242,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs**](./Post_Training/138.md)  
+    *LLM에게 억지로 생각할 시간을 주어 내재 지식(Parametric Knowledge) 인출 능력을 향상시키는 방법.*
 *   [**VibeThinker-3B: 3B 소형 모델이 T급 거대 모델을 이길 수 있었던 이유**](./Post_Training/137.md)  
     *단순 암기가 아닌 SFT의 풀이 스펙트럼과 강화학습(RL)을 통해 추론 능력을 극대화한 3B 모델 분석.*
 *   [**Liquid AI의 LFM2.5-8B-A1B을 터미널 환경에서 스스로 에러를 해결하고 작업을 수행하는 에이전트 성능을 개선하기 위해 SFT와 RLVR 실험을 진행했습니다.**](./Post_Training/136.md)  
@@ -311,6 +319,8 @@
 
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
+*   [**MRAgent: Memory is Reconstructed, Not Retrieved**](./RAG/125.md)  
+    *단순한 벡터 검색이 아닌, 단서와 태그로 지식을 저장하고 필요시 능동적으로 추론하는 Agentic GraphRAG.*
 *   [**GraphRAG를 위해 미리 지식 그래프를 만들 필요 없습니다 (LogicRAG)**](./RAG/124.md)  
     *거대한 사전 지식 그래프 구축 없이 질문이 들어올 때 즉석에서 작은 논리 구조를 개척하는 방법론.*
 *   [**이제 RAG에서 구식 Vector DB를 버리고, 지식만 전문으로 암기하는 소형 비서 sLM 모델을 따로 만들어 LLM 옆에 두면 어떨까요? (MEMO)**](./RAG/123.md)  
@@ -366,6 +376,8 @@
 ## <a id="projects"></a>🚀 Projects
 
 ### 🤖 Autonomous Agents
+*   [**변호사 시험 만점을 받았습니다. 제15회 변호사 시험 선택형 150문제**](./Projects/125.md)  
+    *Gemini 3.1 Pro와 Codex를 활용한 법률 컨텍스트 구축 및 추론 제어로 한국 변호사 시험 만점 달성.*
 *   [**Terminal-Bench 에이전트 소형 모델 실험: 누적 다운로드 60,000회 돌파**](./Projects/124.md)  
     *8B 이하 소형 모델로 터미널 벤치마크에서 초대형 모델들을 뛰어넘은 SFT 및 RLVR 훈련 과정과 성과.*
 *   [**터미널 모델 다운로드 27,000회 돌파 소회: GPU Poor 환경에서의 생존 전략**](./Projects/123.md)  

@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**Neural Procedural Memory (NPM): 모델의 행동 오류를 고치는 뇌 신호 조종**](./Agents/127.md)  
+    *에이전트의 뇌 신경을 미세한 전기 신호로 조종하여 행동 오류를 근본적으로 고치는 NPM 기술 소개.*
 *   [**The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators**](./Agents/126.md)  
     *에이전트와 평가자가 서로 진화하며 성능을 향상시키는 동적 루프 기반의 공동 진화 시스템 제안.*
 *   [**에이전트도 늙습니다. 늙을 수록 멍청해지죠 (Agent Lifespan Engineering)**](./Agents/125.md)  
@@ -119,6 +121,14 @@
 
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**HydraHead: 어텐션 헤드를 쪼개는 분업의 효율성**](./Architecture/138.md)  
+    *하나의 층 내부에서 어텐션 헤드를 쪼개어 가볍고 빠른 선형 어텐션과 무거운 전체 어텐션을 분업시키는 하이브리드 기술.*
+*   [**ICML 2026 최우수 논문과 Diffusion LLM의 미래**](./Architecture/137.md)  
+    *수학이나 코딩에서 AR 모델을 넘어설 가능성을 보여준 칭화대와 예일대의 최신 디퓨션 모델 연구 2편 리뷰.*
+*   [**100만 토큰의 한계를 넘으려는 시도: BLOCKSEARCH와 HiLS-Attention**](./Architecture/136.md)  
+    *1M 토큰 이상의 초장문 컨텍스트를 처리하기 위한 블록 검색 및 계층형 요약 기반의 효율적 어텐션 모델 소개.*
+*   [**HOLA (Hippocampal Linear Attention): 순환 모델의 구조적 건망증 해결**](./Architecture/135.md)  
+    *해마와 대뇌피질에서 영감을 얻어, 기존 순환 모델의 정보 압축 한계와 환각을 극복한 아키텍처 연구.*
 *   [**Log-Linear Attention: 현대 LLM은 비쌉니다**](./Architecture/134.md)  
     *순환 모델의 고질적인 기억 용량 부족 문제를 시간축 트리 구조(이진트리)로 풀어낸 아키텍처 연구.*
 *   [**QKV 분리 착각: AI 메모리 용량을 절반으로 (Do Transformers Need Three Projections?)**](./Architecture/133.md)  
@@ -242,6 +252,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**LLM이 스스로 가설을 세우는 방식: 지식 그래프 기반 강화학습**](./Post_Training/139.md)  
+    *LLM이 지식 그래프를 실시간으로 작성하며 가설을 세우도록 강제하여 할루시네이션을 방지하고 추론 능력을 극대화한 연구.*
 *   [**Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs**](./Post_Training/138.md)  
     *LLM에게 억지로 생각할 시간을 주어 내재 지식(Parametric Knowledge) 인출 능력을 향상시키는 방법.*
 *   [**VibeThinker-3B: 3B 소형 모델이 T급 거대 모델을 이길 수 있었던 이유**](./Post_Training/137.md)  
@@ -476,6 +488,8 @@
 
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**AI가 촉발한 새로운 정신병과 망상**](./Trends/150.md)  
+    *LLM 에이전트의 빠른 수렴이 인간에게 미치는 맹신과 망상, 그리고 이를 극복하기 위한 올바른 AI 활용 단상.*
 *   [**요즘 생각 (39가지 단상)**](./Trends/149.md)  
     *오픈소스, AI 생태계, 조직 관계와 삶의 밸런스 등 최근 경험을 바탕으로 한 39가지 인사이트.*
 *   [**인공지능과 LLM이 우리에게 미치는 안 좋은 영향들 10가지**](./Trends/148.md)  

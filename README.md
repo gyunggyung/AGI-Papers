@@ -118,9 +118,11 @@
     *에이전트에게 경험을 '스킬'로 증류(Distill)하여 평생 학습의 길을 열어주다.*
 *   [**The Devil Behind Moltbook: 다중 에이전트 사회의 타락**](./Agents/114.md)  
     *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
-
 ## <a id="architecture"></a>🧠 Architecture
-
+*   [**Kimi K3: GPT-5.6과 Fable 5를 넘어서는 2.8T 중국 오픈 모델**](./Architecture/139.md)  
+    *2.8T 파라미터와 Stable LatentMoE, Attention Residuals 구조로 Claude Opus 4.8을 넘어서는 Kimi K3 아키텍처 분석.*
+*   [**Inkling: T급(975B) 개방형 멀티모달 오픈 모델의 등장**](./Architecture/140.md)  
+    *Thinking Machines Lab에서 공개한 미국 최고 성능의 오디오 지원 범용 멀티모달 오픈 모델 Inkling과 최적화의 의미.*
 *   [**HydraHead: 어텐션 헤드를 쪼개는 분업의 효율성**](./Architecture/138.md)  
     *하나의 층 내부에서 어텐션 헤드를 쪼개어 가볍고 빠른 선형 어텐션과 무거운 전체 어텐션을 분업시키는 하이브리드 기술.*
 *   [**ICML 2026 최우수 논문과 Diffusion LLM의 미래**](./Architecture/137.md)  
@@ -161,7 +163,6 @@
     *Google과 Cornell의 MC: 세그먼트별 요약본 캐싱을 통한 O(NL) 복잡도 달성.*
 *   [**파라미터를 늘리지 않고, 모델 내부에서 재귀를 돌리는 우로(Ouro)**](./Architecture/119.md)  
     *ByteDance의 Ouro와 LoopRPT: 잠재 공간에서의 재귀적 추론과 사전 강화학습.*
-
 *   [**패러다임 전환: VLM 기반 문서 OCR의 한계를 넘는 MinerU-Diffusion**](./Architecture/118.md)  
     *텍스트 디코더에 확산(Diffusion) 모델을 도입해 전체 페이지를 병렬 해독하는 문서 OCR.*
 *   [**Modern Model Architectures Overview 강연 온라인 진행 안내**](./Architecture/117.md)  
@@ -208,7 +209,6 @@
     *Mistral Large 3, Kimi K2 그리고 DeepSeek V3.2 분석.*
 *   [**Ai2 Olmo 3**](./Architecture/85.md)  
     *성능보다는 과정의 투명성에 집중한 LLM 연구의 교과서.*
-
 *   [**Nemotron-3-Nano-30B-A3B**](./Architecture/50.md)  
     *Qwen3보다 빠르고 강력한 Mamba-2 하이브리드 모델.*
 *   [**DeepSeek Engram**](./Architecture/44.md)  
@@ -221,7 +221,6 @@
     *위치 정보를 재설계(Re-position)하라.*
 *   [**DeepSeek vs Qwen (A3B MoE)**](./Architecture/35.md)  
     *정반대의 설계 철학 분석.*
-
 *   [**Generative Modeling via Drifting**](./Architecture/6.md)  
     *확산 모델의 250단계를 단 1단계(1-step)로 줄여 속도와 품질을 동시에 잡은 혁신.*
 *   [**Beyond Transformers 2**](./Architecture/13.md)  
@@ -232,14 +231,12 @@
     *구글 딥마인드의 최신 멀티모달 모델 분석.*
 *   [**Python 재귀로 시작하는 1,000만 토큰 시대**](./Architecture/60.md)  
     *Recursive Language Models: Python 재귀로 1,000만 토큰 처리하기.*
-
 ## <a id="pre-training"></a>📚 Pre-Training
 
 *   [**한국어를 잘하는 소형 모델 Mid-training**](./Pre_Training/98.md)  
     *LFM2.5-8B-A1B 모델 기반 6.5B 토큰 규모의 한국어 지식 주입(CPT) 실험 성과 및 한계점 공유.*
 *   [**LLM 학습 효율화 방안: 인간의 언어 습득 방식**](./Pre_Training/97.md)  
     *인간의 언어 습득 방식을 모방한 점진적 어휘 학습법(Vocabulary Curriculum Learning).*
-
 *   [**RoPE가 정보를 유실하고 있다?**](./Pre_Training/79.md)  
     *푸단대 연구진의 충격적인 발견과 해결책.*
 
@@ -251,7 +248,8 @@
 
 
 ## <a id="post-training"></a>🎯 Post-Training
-
+*   [**Persuasion Attacks: CoT를 악용한 감시자 가스라이팅과 교차 검증**](./Post_Training/140.md)  
+    *에이전트가 CoT 공간을 악용해 감시자 모델을 설득하는 취약점과 타사 모델 간 교차 팩트체커 배치의 중요성.*
 *   [**LLM이 스스로 가설을 세우는 방식: 지식 그래프 기반 강화학습**](./Post_Training/139.md)  
     *LLM이 지식 그래프를 실시간으로 작성하며 가설을 세우도록 강제하여 할루시네이션을 방지하고 추론 능력을 극대화한 연구.*
 *   [**Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs**](./Post_Training/138.md)  
@@ -280,7 +278,6 @@
     *Apple 연구팀의 Simple Self-Distillation: 외부 피드백 없이 모델 스스로의 출력으로 기초 체력을 강화하는 기술.*
 *   [**똑똑한 선생님한테 배웠는데 왜 성적은 떨어질까? TESSY 프레임워크**](./Post_Training/126.md)  
     *교사-학생 모델 간의 스타일 충돌을 해결하여 SFT 성능을 수직 상승시키는 전략.*
-
 *   [**Introduction to Post-Training & Beyond 강연 후기 및 향후 계획**](./Post_Training/125.md)  
     *Maxime Labonne의 강연 자료를 기반으로 한 온라인 강연 성공 사례와 향후 디스코드 스터디 계획.*
 *   [**그 OpenClaw로 강화학습을? 프린스턴 대학교의 OpenClaw-RL**](./Post_Training/124.md)  
@@ -311,9 +308,9 @@
     *LLM이 물리학의 '최소 작용의 원리'를 따른다는 것을 증명한 연구.*
 *   [**iGRPO**](./Post_Training/1.md)  
     *Self-Feedback-Driven LLM Reasoning: 모델이 스스로 만든 초안을 보고 배우는 자가 개선 강화학습.*
-
 ## <a id="evaluation"></a>⚖️ Evaluation
-
+*   [**LLM의 메타인지: 자신이 무엇을 아는지 모니터링하는 능력**](./Evaluation/111.md)  
+    *최신 LLM의 메타인지 능력을 진단하고, 20점 스케일링과 자가 수정 한계 등 메타인지 효율을 높이는 팁을 분석한 서베이.*
 *   [**엔트로피로 LLM 거짓말 탐지기 제작 (Entropy Distribution as a Fingerprint)**](./Evaluation/110.md)  
     *모델 출력 시 요동치는 로짓 확률 분포(엔트로피)를 실시간으로 분석해 환각을 잡아내는 CES 탐지기.*
 *   [**인공지능이 문서를 진짜로 읽고 있을까요?: 최신 멀티모달 모델의 귀속 환각(Attribution Hallucination)을 폭로한 CiteVQA 논문**](./Evaluation/109.md)  
@@ -328,7 +325,6 @@
     *LLM 평가자가 자신의 패밀리 모델을 편애하는 '선호도 유출' 문제.*
 *   [**ADR-Bench 전문가 평가**](./Evaluation/55.md)  
     *DeepSeek-v3.2를 압도한 효율적인 에이전트 모델.*
-
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
 
 *   [**MRAgent: Memory is Reconstructed, Not Retrieved**](./RAG/125.md)  
@@ -371,7 +367,6 @@
     *기호 추론으로 완성하는 지식 그래프.*
 *   [**VideoRAG**](./RAG/116.md)  
     *영상을 읽는 RAG.*
-
 ## <a id="on-device-ai"></a>💻 On-Device AI
 
 *   [**flash-moe: 48GB 맥북에서 Qwen3.5-397B-A17B 돌리기**](./On_Device/126.md)  
@@ -384,7 +379,6 @@
     *STEM: 단순히 지식을 꺼내기 위해 비싼 GPU를 쓰지 말자.*
 *   [**LLM 지능의 민낯과 한계**](./On_Device/3.md)  
     *벤치마크는 수석이지만 현장(진료)에서는 낙제인 이유와 해결책.*
-
 ## <a id="projects"></a>🚀 Projects
 
 ### 🤖 Autonomous Agents
@@ -393,6 +387,7 @@
 *   [**Terminal-Bench 에이전트 소형 모델 실험: 누적 다운로드 60,000회 돌파**](./Projects/124.md)  
     *8B 이하 소형 모델로 터미널 벤치마크에서 초대형 모델들을 뛰어넘은 SFT 및 RLVR 훈련 과정과 성과.*
 *   [**터미널 모델 다운로드 27,000회 돌파 소회: GPU Poor 환경에서의 생존 전략**](./Projects/123.md)  
+    *터미널 모델 2.7만 회 다운로드 소회 및 생존 전략.*
 *   [**터미널 에이전트를 위한 SFT 학습과 평가에서 느낀 3가지 한계점 (다운로드 1,000회 돌파)**](./Projects/122.md)  
     *김정수님의 H200 GPU 서버를 지원받아 개발한 모델들의 다운로드 1,000회 돌파를 기념하며 정리한 에이전트 벤치마크 오버피팅, SFT 지능 극복 한계, 평가 프레임워크의 문제 등 3가지 현실적인 한계.*
 *   [**H200 8대로 56개 터미널 에이전트 모델 전면 재평가: Qwen 3.5의 독주**](./Projects/121.md)  
@@ -409,7 +404,6 @@
     *An LLM-Based Multi-Agent System for Data Insights.*
 *   [**SEAL: 스스로 Fine-tuning하는 에이전트**](./Projects/26.md)  
     *가능성과 한계.*
-
 ### 🛠️ Coding & Dev Tools
 *   [**Claube Vibe Coding**](./Projects/52.md)  
     *복잡한 백엔드는 AI에게 맡기고 공원에서 러닝하기.*
@@ -427,7 +421,6 @@
     *기대 이상의 코드 퀄리티와 재미.*
 *   [**Liquid AI LFM2-2.6B-Exp 튜닝기**](./Architecture/58.md)  
     *논문 Related Work 섹션을 통째로 생성하는 도구 제작.*
-
 ### 💻 On-Device AI
 *   [**Tiny MoA**](./Projects/32.md)  
     *시간당 $100 태우는 AI vs CPU로 돌리는 가성비 멀티 에이전트.*
@@ -439,7 +432,6 @@
     *API 없는 진정한 온디바이스 AI를 향하여.*
 *   [**vLLM & SGLang in llama.cpp**](./Projects/28.md)  
     *CPU 추론 속도 1.8배 향상.*
-
 ### 🧠 Model Experiments
 *   [**LFM2-350M-ToolLLaMA: 14달러로 GPT-5-Nano를 이기다**](./Projects/117.md)  
     *H100 한 대, 학습 4시간, 총 14달러로 ToolBench에서 GPT-5-Nano보다 6.6배 이상 좋은 350M 모델 제작.*
@@ -457,7 +449,6 @@
     *소형 모델의 가능성.*
 *   [**GPT 구조의 한계를 넘어**](./Projects/14.md)  
     *Liquid AI, TII, NVIDIA의 새로운 시도들.*
-
 ### 🪄 Post-Training Projects
 *   [**Introduction to Post-Training 강연 온라인 진행 안내**](./Post_Training/123.md)  
     *Maxime Labonne님의 자료를 재구성한 온라인 무료 강연 일정 안내 및 디스코드 투표.*
@@ -473,7 +464,6 @@
     *한국어-영어 번역 RL(GRPO) 학습 실패와 교훈.*
 *   [**한국어 LLM 학습 데이터의 부재**](./Projects/51.md)  
     *Pre-training부터 GRPO까지의 험난한 여정.*
-
 ### 💭 Insights & Essays
 *   [**3개월 9개 프로젝트 회고: GPU Poor의 여정**](./Projects/118.md)  
     *RAM 16GB, i5 CPU 노트북에서 9개의 프로젝트와 2가지 아카이브를 만든 기록.*
@@ -485,9 +475,9 @@
     *OpenClaw, 환각 인용, Vibe Coding 현상에 대한 단상.*
 *   [**Pau Labarta Bajo's Insight**](./Architecture/27.md)  
     *멀티 에이전트 시스템에 대한 인사이트.*
-
 ## <a id="trends--industry"></a>🔥 Trends & Industry
-
+*   [**LLM의 언어와 삶의 형태: 검증 가능한 환경이 만드는 고유한 지능**](./Trends/151.md)  
+    *언어는 환경과의 피드백으로 완성되며, 현대 LLM이 RLVR 환경을 통해 물리 법칙처럼 직관을 형성하는 원리에 대한 고찰.*
 *   [**AI가 촉발한 새로운 정신병과 망상**](./Trends/150.md)  
     *LLM 에이전트의 빠른 수렴이 인간에게 미치는 맹신과 망상, 그리고 이를 극복하기 위한 올바른 AI 활용 단상.*
 *   [**요즘 생각 (39가지 단상)**](./Trends/149.md)  
@@ -530,7 +520,6 @@
     *AI 시대에 대학이 직면한 구조적 한계와, AI를 도구로 활용하는 아키텍트 능력의 중요성에 대하여.*
 *   [**오픈소스 제작은 꼴찌를 하기 위해서 하는 겁니다**](./Trends/130.md)  
     *오픈소스 생태계의 본질인 '기반과 발판'에 대한 철학적 고찰과 미래에 대한 단상.*
-
 *   [**LLM Wiki와 같은 결론: 기술적 지향점의 일치**](./Trends/129.md)  
     *Karpathy의 LLM Wiki 아이디어, 동일한 결론에 도달하게 되는 기술적 사고 과정과 실행력에 관하여.*
 *   [**점점 API로만 공개되는 새로운 중국 모델들 (새로운 Qwen, GLM)**](./Trends/128.md)  
@@ -590,9 +579,7 @@
 *   [**What LLMs Think When You Don't Tell Them?**](./Trends/4.md)  
     *아무런 지시도 하지 않았을 때 LLM은 무엇을 생각하는가? 모델 성격 유형 분석.*
 *   [**AI 거품론의 본질**](./Trends/2.md)  
-    *시장 축소가 아닌 수급 안정화와 산업의 성숙.*
-
----
+    *시장 축소가 아닌 수급 안정화와 산업의 성숙. ---*
 
 
 ## <a id="recommended-resources"></a> 🌟 Recommended Resources

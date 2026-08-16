@@ -123,6 +123,14 @@
 *   [**The Devil Behind Moltbook: 다중 에이전트 사회의 타락**](./Agents/114.md)  
     *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
 ## <a id="architecture"></a>🧠 Architecture
+*   [**현대 MoE의 끝판왕: NVIDIA LatentMoE와 Moonshot AI의 Stable LatentMoE**](./Architecture/144.md)  
+    *잠재 공간 압축으로 통신 병목을 줄이는 LatentMoE와, 2.8T 파라미터 Kimi K3에 적용된 SiTU-GLU 및 Quantile Balancing 기반 Stable LatentMoE 기술 분석.*
+*   [**차세대 MoE 아키텍처: RFMoE(Routing-Free)와 UoE(Union-of-Experts)**](./Architecture/143.md)  
+    *중앙 통제 없이 동적 자율 활성화를 이룬 RFMoE와, 탈락한 전문가의 연산값을 가상 공유 전문가로 전환해 연산 낭비를 없앤 UoE 아키텍처 분석.*
+*   [**MoE 라우팅의 한계를 넘어: ReMoE(ReLU 라우팅)와 AoE(자율 전문가 모델)**](./Architecture/142.md)  
+    *Top-K 및 Softmax의 불연속성을 ReLU 라우팅으로 해결한 ReMoE와, 중앙 라우터 없이 전문가 자율 평가로 연산 효율을 높인 AoE 논문 리뷰.*
+*   [**MoE(Mixture-of-Experts) 아키텍처의 동작 방식과 역사**](./Architecture/141.md)  
+    *MoE 레이어의 어텐션 및 FFN 분할 구조, 라우터 내적과 Top-k Softmax 가중 합산 등 MoE의 기초 동작 메커니즘과 역사를 정리한 글.*
 *   [**Kimi K3: GPT-5.6과 Fable 5를 넘어서는 2.8T 중국 오픈 모델**](./Architecture/139.md)  
     *2.8T 파라미터와 Stable LatentMoE, Attention Residuals 구조로 Claude Opus 4.8을 넘어서는 Kimi K3 아키텍처 분석.*
 *   [**Inkling: T급(975B) 개방형 멀티모달 오픈 모델의 등장**](./Architecture/140.md)  
@@ -252,6 +260,8 @@
 
 
 ## <a id="post-training"></a>🎯 Post-Training
+*   [**AgentOPSD: 멀티턴 에이전트 강화학습을 위한 턴 단위 기여도 정밀 평가 (Recursive Self-Distillation)**](./Post_Training/142.md)  
+    *기존 GRPO의 보상 신호 희석 문제를 해결하고자 Self-Teacher와 베이지안 누적 신뢰도로 턴별 기여도를 정밀 산출해 장기 에이전트 성능을 유지한 논문 리뷰.*
 *   [**SFT와 RL의 관계: 지식을 엮는 것과 부품화하는 것 (ICML 2026)**](./Post_Training/141.md)  
     *SFT는 지식을 얽혀진 상태로 제공하고, RL은 이를 재사용 가능한 모듈로 분해하여 OOD 일반화 능력을 극대화한다는 논문 리뷰.*
 *   [**Persuasion Attacks: CoT를 악용한 감시자 가스라이팅과 교차 검증**](./Post_Training/140.md)  
@@ -482,6 +492,16 @@
 *   [**Pau Labarta Bajo's Insight**](./Architecture/27.md)  
     *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="trends--industry"></a>🔥 Trends & Industry
+*   [**요즘 생각 (29가지 단상: 최신 모델 폭주와 인공지능의 지향점)**](./Trends/161.md)  
+    *Qwen3.8, DeepSeek V4 Pro, GLM-5.3 등 최신 모델 쏟아짐 속에 모델의 추론 한계, 오픈소스 라이선스, AI 서비스가 가질 본질적 가치에 대한 29가지 단상.*
+*   [**독파모 AAII 점수 공개와 Qwen3.8, Grok 4.6, Muse-Glimmer 동향**](./Trends/160.md)  
+    *독파모 모델들의 AAII 벤치마크 결과와 Qwen3.8 허깅페이스 공개, Grok 4.6 및 Meta Muse-Glimmer-30B 등 최신 모델 릴레이 요약.*
+*   [**Motif-3 공식 공개와 Meta & NVIDIA의 30B 오픈웨이트 릴레이**](./Trends/159.md)  
+    *독파모 최고 성능 Motif-3의 MIT 라이선스 전환과 벤치마크 분석, 그리고 Meta Muse-Glimmer-30B와 NVIDIA Nemotron-Lightning 공개에 관한 정리.*
+*   [**Qwen3.8 Max의 에이전틱 능력과 중국 AI 모델의 급부상: 오픈소스의 변화와 시사점**](./Trends/158.md)  
+    *Qwen3.8 Max의 벤치마크 2위 달성과 중국 프론티어 모델들의 발전, 상업화 라이선스 전환 흐름, 그리고 한국 AI 개발 방향에 대한 단상.*
+*   [**제프 딘의 구글 퇴사와 Discovery Loop 창업: AI 거장들의 이동과 생태계 변화**](./Trends/157.md)  
+    *제프 딘, 산제이 게마왓 등 구글의 핵심 AI 리더들의 퇴사와 공익 기업 Discovery Loop 설립, 그리고 구글 AI 경쟁력과 TPU 동향에 관한 단상.*
 *   [**LLM 스케일링의 역사: 우리는 올바른 길로 가고 있는가**](./Trends/156.md)  
     *GPT 시리즈부터 최신 추론 모델까지 이어지는 스케일링 역사의 흐름과 거대 자본 주도 패러다임의 한계 고찰.*
 *   [**파시즘에 가까운 클로즈드 진영과 오픈 모델 생태계의 중요성**](./Trends/155.md)  

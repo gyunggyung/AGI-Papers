@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**LLMs Get Lost in Evolving User Intent: 7턴 만에 붕괴하는 멀티턴 대화와 AI 상태 관리의 실체**](./Agents/130.md)  
+    *정보 추가, 조건 수정, 작업 전환이 결합된 멀티턴 대화에서 프론티어 LLM들이 7턴 만에 붕괴하는 원인을 상태 관리 부재로 분석하고, GRPO 기반 행동 정렬 해결책을 밝힌 MS 리서치 논문.*
 *   [**에이전트 자가 개선(Self-improving) 인공지능 서베이**](./Agents/129.md)  
     *프롬프트 최적화에서 풀 스캐폴딩과 실시간 진화로 발전하는 자가 개선 에이전트의 흐름과 위험성을 다룬 서베이 논문 리뷰.*
 *   [**The Harness Effect: 하네스 설계가 결정하는 에이전트 토큰 경제학**](./Agents/128.md)  
@@ -123,6 +125,10 @@
 *   [**The Devil Behind Moltbook: 다중 에이전트 사회의 타락**](./Agents/114.md)  
     *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
 ## <a id="architecture"></a>🧠 Architecture
+*   [**Frontier Language Models Struggle to Copy: 1차원 RoPE의 한계를 극복하는 2D-RoPE**](./Architecture/146.md)  
+    *프론티어 모델들이 단순 텍스트 복사를 못하는 구조적 원인을 RoPE의 1차원 거리에 기반한 한계로 지적하고, 행/열 2차원 시트로 전환하는 2D-RoPE 및 Auto-2D-RoPE 기술 분석.*
+*   [**서베이 논문으로 보는 디퓨션 언어 모델(DLM)의 원리와 2026 최신 흐름**](./Architecture/145.md)  
+    *MBZUAI와 칭화대 연구진의 서베이 논문을 바탕으로 DLM의 기초 원리부터 3가지 생성 방식(이산, 하이브리드, 연속), RL/추론 혁신, 1-Step 가속 및 한계점 총정리.*
 *   [**현대 MoE의 끝판왕: NVIDIA LatentMoE와 Moonshot AI의 Stable LatentMoE**](./Architecture/144.md)  
     *잠재 공간 압축으로 통신 병목을 줄이는 LatentMoE와, 2.8T 파라미터 Kimi K3에 적용된 SiTU-GLU 및 Quantile Balancing 기반 Stable LatentMoE 기술 분석.*
 *   [**차세대 MoE 아키텍처: RFMoE(Routing-Free)와 UoE(Union-of-Experts)**](./Architecture/143.md)  
@@ -492,6 +498,12 @@
 *   [**Pau Labarta Bajo's Insight**](./Architecture/27.md)  
     *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="trends--industry"></a>🔥 Trends & Industry
+*   [**독자 AI 파운데이션 모델(독파모) 2차 평가 결과와 Motif Technologies 탈락에 대한 고찰**](./Trends/164.md)  
+    *독자 아키텍처와 글로벌 Top10 성능(AAII)을 달성한 Motif-3의 탈락 소식과 국내 독자 AI 파운데이션 모델 생태계에 대한 아쉬움 정리.*
+*   [**Qwen3.8 27B와 GLM-5.3: 오픈웨이트 및 Post-Training 혁신이 이끄는 중국 AI의 독주**](./Trends/163.md)  
+    *로컬 구동 가능한 Qwen3.8 27B의 멀티모달/법률 에이전틱 능력과, 오직 Post-Training만으로 CyberGym 보안 1위 및 AAII 60점을 달성한 GLM-5.3 분석.*
+*   [**OpenRouter 1위 무료 모델 Ox Alpha의 등장과 실전 에이전트 사용기**](./Trends/162.md)  
+    *DeepSWE 80%로 GPT-5.6을 압도하며 하루 4T 토큰 소비를 달성한 정체불명의 Ox Alpha 모델 특징과 Claude Code/Codex 연결 후기 및 제작사 추정.*
 *   [**요즘 생각 (29가지 단상: 최신 모델 폭주와 인공지능의 지향점)**](./Trends/161.md)  
     *Qwen3.8, DeepSeek V4 Pro, GLM-5.3 등 최신 모델 쏟아짐 속에 모델의 추론 한계, 오픈소스 라이선스, AI 서비스가 가질 본질적 가치에 대한 29가지 단상.*
 *   [**독파모 AAII 점수 공개와 Qwen3.8, Grok 4.6, Muse-Glimmer 동향**](./Trends/160.md)  

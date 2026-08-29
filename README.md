@@ -331,6 +331,9 @@
 *   [**iGRPO**](./Post_Training/1.md)  
     *Self-Feedback-Driven LLM Reasoning: 모델이 스스로 만든 초안을 보고 배우는 자가 개선 강화학습.*
 ## <a id="evaluation"></a>⚖️ Evaluation
+*   [**ClawBench: A Comprehensive Benchmark for Web Agents**](https://arxiv.org/abs/2604.08523)  
+    *A live-web benchmark for evaluating AI agents on 153 realistic tasks across 144 websites, with browser-action, HTTP-traffic, screenshots, video, and agent-message evidence.*
+
 *   [**LLM의 메타인지: 자신이 무엇을 아는지 모니터링하는 능력**](./Evaluation/111.md)  
     *최신 LLM의 메타인지 능력을 진단하고, 20점 스케일링과 자가 수정 한계 등 메타인지 효율을 높이는 팁을 분석한 서베이.*
 *   [**엔트로피로 LLM 거짓말 탐지기 제작 (Entropy Distribution as a Fingerprint)**](./Evaluation/110.md)  

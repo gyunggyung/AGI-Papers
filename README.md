@@ -50,6 +50,11 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**PARSER: 병렬 독해와 중앙 지휘관 추론으로 초장문 컨텍스트를 뚫어낸 멀티 에이전트 아키텍처**](./Agents/132.md)  
+    *수백 개의 서브에이전트 병렬 독해와 GRPO로 학습된 중앙 지휘관의 단계별 질의를 결합해 896K 초장문에서 완벽한 길이 불변성과 11배 속도 향상을 이룬 CUHK 연구.*
+*   [**Frog Nano: 대형 모델 증류 없이 하네스와 온라인 RL만으로 4B 코딩 에이전트 만들기**](./Agents/131.md)  
+    *사전 SFT 증류 없이 경량 하네스(LEAF)와 난이도 조절 온라인 태스크 합성(TaskPilot), 비동기 제어로 4B 모델을 거대 에이전트급으로 끌어올린 MSR 연구.*
+
 *   [**LLMs Get Lost in Evolving User Intent: 7턴 만에 붕괴하는 멀티턴 대화와 AI 상태 관리의 실체**](./Agents/130.md)  
     *정보 추가, 조건 수정, 작업 전환이 결합된 멀티턴 대화에서 프론티어 LLM들이 7턴 만에 붕괴하는 원인을 상태 관리 부재로 분석하고, GRPO 기반 행동 정렬 해결책을 밝힌 MS 리서치 논문.*
 *   [**에이전트 자가 개선(Self-improving) 인공지능 서베이**](./Agents/129.md)  
@@ -125,6 +130,9 @@
 *   [**The Devil Behind Moltbook: 다중 에이전트 사회의 타락**](./Agents/114.md)  
     *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
 ## <a id="architecture"></a>🧠 Architecture
+
+*   [**DeepSeek-V4.1-Flash: 극한의 KV 캐시 압축과 Causal Encoder-Decoder로 완성한 효율성**](./Architecture/147.md)  
+    *글로벌 KV 캐시 75% 감축, 입력 깊이를 절반만 통과시키는 CED 구조, SWA Bounded Replay 및 완전 자동화 Post-training 공장을 구축한 DeepSeek-V4.1-Flash 분석.*
 *   [**Frontier Language Models Struggle to Copy: 1차원 RoPE의 한계를 극복하는 2D-RoPE**](./Architecture/146.md)  
     *프론티어 모델들이 단순 텍스트 복사를 못하는 구조적 원인을 RoPE의 1차원 거리에 기반한 한계로 지적하고, 행/열 2차원 시트로 전환하는 2D-RoPE 및 Auto-2D-RoPE 기술 분석.*
 *   [**서베이 논문으로 보는 디퓨션 언어 모델(DLM)의 원리와 2026 최신 흐름**](./Architecture/145.md)  
@@ -251,6 +259,9 @@
     *Recursive Language Models: Python 재귀로 1,000만 토큰 처리하기.*
 ## <a id="pre-training"></a>📚 Pre-Training
 
+*   [**Skaling: 친칠라 법칙의 오류를 깨고 스케일링 예측 비용을 10배 줄인 Meta FAIR의 새로운 스케일링 법칙**](./Pre_Training/99.md)  
+    *모델 파라미터와 데이터의 음(-)의 교차 시너지를 단일 지수 k로 결합해 외삽 오차를 줄이고 L자형 샘플링으로 사전 연산 비용을 10배 절감한 Skaling 법칙 분석.*
+
 *   [**한국어를 잘하는 소형 모델 Mid-training**](./Pre_Training/98.md)  
     *LFM2.5-8B-A1B 모델 기반 6.5B 토큰 규모의 한국어 지식 주입(CPT) 실험 성과 및 한계점 공유.*
 *   [**LLM 학습 효율화 방안: 인간의 언어 습득 방식**](./Pre_Training/97.md)  
@@ -266,6 +277,15 @@
 
 
 ## <a id="post-training"></a>🎯 Post-Training
+
+*   [**Do We Need Adam?: 강화학습(RLVR)에서 AdamW 대신 순수 SGD가 메모리와 성능을 모두 잡는 이유**](./Post_Training/146.md)  
+    *실시간 정책 변화로 과거 모멘텀이 무력화되는 강화학습 환경에서, 순수 SGD로 옵티마이저 메모리를 3배 아끼고 극소수 파라미터만 업데이트해 성능과 망각 방지를 달성한 논문 리뷰.*
+*   [**Spurious Advantage Hidden in GRPO: 찍어서 맞힌 요행에 폭탄 보상을 주는 결함과 SignBalance 해결책**](./Post_Training/145.md)  
+    *GRPO가 소수 정답 궤적에 폭탄 보상을 주는 수학적 역설을 밝히고, 정답 보상 고정과 오답 균등 분배(SignBalance)로 성능을 끌어올린 연구.*
+*   [**TailSFT: 아는 문제를 버려야 RL이 산다 — 엔트로피 붕괴를 막는 SFT 필터링 기법**](./Post_Training/144.md)  
+    *쉬운 예제의 손실을 제외하고 꼬리(Tail) 난도 데이터만 미세조정하여 탐색 커버리지(pass@16)를 보존하고 후속 강화학습(GRPO) 성능을 극대화한 MS 연구.*
+*   [**Understanding Reasoning from Pretraining to Post-Training: 사전학습이 결정하는 RL의 상한선과 최적 연산 배분 법칙**](./Post_Training/143.md)  
+    *사전학습 검증 손실이 사후 RL의 최종 성능을 결정짓는 초기화의 저주를 규명하고, Pass@1 대 Pass@k의 실체와 연산 예산 최적 분배 공식을 제시한 NYU 논문.*
 *   [**AgentOPSD: 멀티턴 에이전트 강화학습을 위한 턴 단위 기여도 정밀 평가 (Recursive Self-Distillation)**](./Post_Training/142.md)  
     *기존 GRPO의 보상 신호 희석 문제를 해결하고자 Self-Teacher와 베이지안 누적 신뢰도로 턴별 기여도를 정밀 산출해 장기 에이전트 성능을 유지한 논문 리뷰.*
 *   [**SFT와 RL의 관계: 지식을 엮는 것과 부품화하는 것 (ICML 2026)**](./Post_Training/141.md)  
@@ -331,6 +351,9 @@
 *   [**iGRPO**](./Post_Training/1.md)  
     *Self-Feedback-Driven LLM Reasoning: 모델이 스스로 만든 초안을 보고 배우는 자가 개선 강화학습.*
 ## <a id="evaluation"></a>⚖️ Evaluation
+
+*   [**벤치마크의 오염과 숫자의 한계: Reasoning or Memorization?**](./Evaluation/112.md)  
+    *벤치마크 오염과 기출 암기 문제, AAII 순위 변동 속에서 단일 벤치마크 수치의 한계와 실전 모델 선택 및 AI 의존에 대한 고찰.*
 *   [**LLM의 메타인지: 자신이 무엇을 아는지 모니터링하는 능력**](./Evaluation/111.md)  
     *최신 LLM의 메타인지 능력을 진단하고, 20점 스케일링과 자가 수정 한계 등 메타인지 효율을 높이는 팁을 분석한 서베이.*
 *   [**엔트로피로 LLM 거짓말 탐지기 제작 (Entropy Distribution as a Fingerprint)**](./Evaluation/110.md)  
@@ -348,6 +371,9 @@
 *   [**ADR-Bench 전문가 평가**](./Evaluation/55.md)  
     *DeepSeek-v3.2를 압도한 효율적인 에이전트 모델.*
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
+
+*   [**Empty Shelves or Lost Keys?: 프론티어 모델의 95% 지식 저장과 인출 병목(Recall Bottleneck)의 진실**](./RAG/126.md)  
+    *LLM이 이미 95% 이상의 지식을 내재화(인코딩)했음에도 인출(Recall) 실패로 오답을 내는 원인을 분석하고, Thinking(CoT)의 자가 점화 효과를 증명한 구글 리서치 논문.*
 
 *   [**MRAgent: Memory is Reconstructed, Not Retrieved**](./RAG/125.md)  
     *단순한 벡터 검색이 아닌, 단서와 태그로 지식을 저장하고 필요시 능동적으로 추론하는 Agentic GraphRAG.*
@@ -498,6 +524,13 @@
 *   [**Pau Labarta Bajo's Insight**](./Architecture/27.md)  
     *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="trends--industry"></a>🔥 Trends & Industry
+
+*   [**미국 빅테크의 역습: Fable 5.1, Muse Spark 1.3, Gemini 3.8 Flash의 성능·속도 비교와 추론 비용 단상**](./Trends/167.md)  
+    *AAII 선두를 달리는 Fable 5.1과 압도적 속도의 Muse Spark 1.3, Gemini 3.8 Flash의 등장 및 앤트로픽 요금제 논란과 프론티어 모델 경쟁 분석.*
+*   [**엔비디아의 허깅페이스 인수와 AI 시대의 중앙은행: 자체 칩의 반격과 순환 금융 리스크**](./Trends/166.md)  
+    *허깅페이스 인수와 전방위 투자로 생태계를 장악하는 엔비디아의 전략, 그리고 빅테크 자체 칩 탈출기와 네오클라우드 순환 금융의 잠재적 버블 리스크 분석.*
+*   [**Ox Alpha의 정체(GLM-5.3-Flash)와 Qwen3.8-Flash-Next, 그리고 Gemini 3.7 Flash의 재발견**](./Trends/165.md)  
+    *Ox Alpha의 실체인 GLM-5.3-Flash와 QSA·GR 구조의 Qwen3.8-Flash-Next, 압도적 속도의 Gemini 3.7 Flash 사용기와 프론티어 모델 다극화 시대 고찰.*
 *   [**독자 AI 파운데이션 모델(독파모) 2차 평가 결과와 Motif Technologies 탈락에 대한 고찰**](./Trends/164.md)  
     *독자 아키텍처와 글로벌 Top10 성능(AAII)을 달성한 Motif-3의 탈락 소식과 국내 독자 AI 파운데이션 모델 생태계에 대한 아쉬움 정리.*
 *   [**Qwen3.8 27B와 GLM-5.3: 오픈웨이트 및 Post-Training 혁신이 이끄는 중국 AI의 독주**](./Trends/163.md)  

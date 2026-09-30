@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**The Last AI Built by Humans: 진정한 재귀적 자가 개선(RSI)을 향한 5단계 자율성 로드맵과 환경 엔지니어링**](./Agents/133.md)  
+    *491편의 논문과 72개 산업 사례 분석을 통해 AI 자율성 5단계와 통제되지 않는 자가 수정의 위험성을 짚고, 작업 환경과 에이전트 하네스 정제의 중요성을 밝힌 RSI 서베이.*
 *   [**PARSER: 병렬 독해와 중앙 지휘관 추론으로 초장문 컨텍스트를 뚫어낸 멀티 에이전트 아키텍처**](./Agents/132.md)  
     *수백 개의 서브에이전트 병렬 독해와 GRPO로 학습된 중앙 지휘관의 단계별 질의를 결합해 896K 초장문에서 완벽한 길이 불변성과 11배 속도 향상을 이룬 CUHK 연구.*
 *   [**Frog Nano: 대형 모델 증류 없이 하네스와 온라인 RL만으로 4B 코딩 에이전트 만들기**](./Agents/131.md)  
@@ -259,6 +261,8 @@
     *Recursive Language Models: Python 재귀로 1,000만 토큰 처리하기.*
 ## <a id="pre-training"></a>📚 Pre-Training
 
+*   [**Breaking the Token Ceiling: 256개 순수 바이트로 토큰 천장을 뚫는 사전학습 지식 증류**](./Pre_Training/100.md)  
+    *어휘 사전을 버리고 256개 순수 바이트만으로 사전학습 지식 증류(End-of-Token)를 적용해 데이터 1/6, 저장 공간 1/5로 토큰 모델 대비 4.0%p 높은 성능 상한선을 뚫어낸 Meta FAIR 연구.*
 *   [**Skaling: 친칠라 법칙의 오류를 깨고 스케일링 예측 비용을 10배 줄인 Meta FAIR의 새로운 스케일링 법칙**](./Pre_Training/99.md)  
     *모델 파라미터와 데이터의 음(-)의 교차 시너지를 단일 지수 k로 결합해 외삽 오차를 줄이고 L자형 샘플링으로 사전 연산 비용을 10배 절감한 Skaling 법칙 분석.*
 
@@ -278,6 +282,10 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Normalized Low-Rank Adaptation (NoRA): 행렬 정규화 한 줄로 LoRA의 성능과 안정성을 극대화하다**](./Post_Training/148.md)  
+    *LoRA의 A 행렬 열 벡터를 단위 크기로 정규화해 초반 그래디언트 왜곡을 없애고, 가중치 병합을 유지하며 SFT 점수 대폭 향상, 치명적 망각 방지, RLVR 최적화 안정화를 이뤄낸 연구.*
+*   [**Never Give Up (NGU): 쉬운 문제는 빠르게 털고 어려운 문제는 끝까지 물고 늘어지는 LLM 강화학습**](./Post_Training/147.md)  
+    *다 푼 문제는 K=4로 조기 탈락시키고 틀린 문제만 비동기 큐에 재투입하여 수십 번 실패 끝에 건진 정답에 강력한 보상(Anchor Positives)을 꽂아 고난도 수학·코딩 난제를 뚫어낸 연구.*
 *   [**Do We Need Adam?: 강화학습(RLVR)에서 AdamW 대신 순수 SGD가 메모리와 성능을 모두 잡는 이유**](./Post_Training/146.md)  
     *실시간 정책 변화로 과거 모멘텀이 무력화되는 강화학습 환경에서, 순수 SGD로 옵티마이저 메모리를 3배 아끼고 극소수 파라미터만 업데이트해 성능과 망각 방지를 달성한 논문 리뷰.*
 *   [**Spurious Advantage Hidden in GRPO: 찍어서 맞힌 요행에 폭탄 보상을 주는 결함과 SignBalance 해결책**](./Post_Training/145.md)  
@@ -352,6 +360,10 @@
     *Self-Feedback-Driven LLM Reasoning: 모델이 스스로 만든 초안을 보고 배우는 자가 개선 강화학습.*
 ## <a id="evaluation"></a>⚖️ Evaluation
 
+*   [**CHEATBENCH: 10개 영역에서 드러난 최신 프론티어 AI 에이전트들의 보상 해킹(Reward Gaming) 실태**](./Evaluation/114.md)  
+    *도구 활용 능력이 고도화된 최신 프론티어 에이전트들이 어려운 과업에서 48%~81% 확률로 편법과 부정행위를 시도하는 실태와 CoT-행동 간 모순을 폭로한 CAIS 벤치마크.*
+*   [**Jev-as-a-Judge: 확신할 땐 수용하고 모호할 땐 이관하라 (Accept When Confident, Escalate When Unsure)**](./Evaluation/113.md)  
+    *출력 토큰 없이 152ms만에 정형 판정을 내리는 초저가 판사 Jev의 장단점을 분석하고, 자체 확신도 기반 캐스케이드로 47% 비용 절감과 플래그십급 정확도를 보존한 CMU 논문.*
 *   [**벤치마크의 오염과 숫자의 한계: Reasoning or Memorization?**](./Evaluation/112.md)  
     *벤치마크 오염과 기출 암기 문제, AAII 순위 변동 속에서 단일 벤치마크 수치의 한계와 실전 모델 선택 및 AI 의존에 대한 고찰.*
 *   [**LLM의 메타인지: 자신이 무엇을 아는지 모니터링하는 능력**](./Evaluation/111.md)  
@@ -481,6 +493,8 @@
 *   [**vLLM & SGLang in llama.cpp**](./Projects/28.md)  
     *CPU 추론 속도 1.8배 향상.*
 ### 🧠 Model Experiments
+*   [**4달러로 Jev보다 뛰어난 모델 만들기: Qwev-9B-RLCD 제작 및 평가기**](./Projects/126.md)  
+    *Kev-9B 베이스에 4,800건의 합성·불확실성 데이터를 구축하고 Gemini 3.8 Flash로 RLCD를 구현해 A100 1대로 단 30분 만에 Jev와 GPT-6 Astra를 넘어서는 9B 의사결정 모델을 만든 실험기.*
 *   [**LFM2-350M-ToolLLaMA: 14달러로 GPT-5-Nano를 이기다**](./Projects/117.md)  
     *H100 한 대, 학습 4시간, 총 14달러로 ToolBench에서 GPT-5-Nano보다 6.6배 이상 좋은 350M 모델 제작.*
 *   [**Open-Yaongi Project**](./Projects/Open-Yaongi.md)  
@@ -525,6 +539,12 @@
     *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**속도 조절론의 위선과 프론티어 신작 경쟁: Claude Opus 5.5, GPT-6 Sol, MiMo-V2.6-Pro**](./Trends/170.md)  
+    *인류 위험과 속도 조절론을 외치자마자 쏟아진 빅테크들의 독점 플래그십(Opus 5.5, GPT-6 Sol)과 MIT 라이선스로 기술과 RL 로그를 전면 개방한 샤오미 1.02T MiMo-V2.6-Pro의 명암.*
+*   [**Jev는 일반화된 대형 BERT인가?: ChatGPT의 역사와 평행이론, 그리고 오픈소스의 반격**](./Trends/169.md)  
+    *생성 루프를 제거하고 RLCD와 타입 인터페이스로 무장한 Jev의 상용화 공식 분석과, Laya·AnyJev 등 오픈소스 진영의 고속 추격 및 의사결정 모델 생태계 고찰.*
+*   [**프론티어 모델 증류 허용 논란과 오픈 생태계의 본질: 규제의 위선과 공정 사용**](./Trends/168.md)  
+    *저작권 위반으로 학습하고는 자사 모델 증류를 막아서는 프론티어 랩들의 독점 규제와 계정 제재의 위선을 비판하고, 오픈 생태계를 위한 적극적 증류와 공정 사용의 필요성을 역설한 단상.*
 *   [**미국 빅테크의 역습: Fable 5.1, Muse Spark 1.3, Gemini 3.8 Flash의 성능·속도 비교와 추론 비용 단상**](./Trends/167.md)  
     *AAII 선두를 달리는 Fable 5.1과 압도적 속도의 Muse Spark 1.3, Gemini 3.8 Flash의 등장 및 앤트로픽 요금제 논란과 프론티어 모델 경쟁 분석.*
 *   [**엔비디아의 허깅페이스 인수와 AI 시대의 중앙은행: 자체 칩의 반격과 순환 금융 리스크**](./Trends/166.md)  

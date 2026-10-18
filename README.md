@@ -50,6 +50,8 @@
 
 ## <a id="agents"></a>🤖 Agents
 
+*   [**NeMo-DCR: 1T 크기 에이전틱 RL을 위한 비트 단위 델타 압축 가중치 동기화(Refit)**](./Agents/134.md)  
+    *풀 파라미터 에이전틱 RL 시 실제 바뀌는 1% 가중치만을 XOR 연산과 zstd로 압축 전송하고 장애 시 Overwrite로 무손실 복구하여 87.5분 걸리던 동기화 시간을 2.5분(35배)으로 단축한 NVIDIA의 시스템 연구.*
 *   [**The Last AI Built by Humans: 진정한 재귀적 자가 개선(RSI)을 향한 5단계 자율성 로드맵과 환경 엔지니어링**](./Agents/133.md)  
     *491편의 논문과 72개 산업 사례 분석을 통해 AI 자율성 5단계와 통제되지 않는 자가 수정의 위험성을 짚고, 작업 환경과 에이전트 하네스 정제의 중요성을 밝힌 RSI 서베이.*
 *   [**PARSER: 병렬 독해와 중앙 지휘관 추론으로 초장문 컨텍스트를 뚫어낸 멀티 에이전트 아키텍처**](./Agents/132.md)  
@@ -133,6 +135,10 @@
     *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
 ## <a id="architecture"></a>🧠 Architecture
 
+*   [**KV-Lingo: 재프리필 없이 1차 선형 행렬로 이종 모델 간 KV 캐시를 번역하는 Apple의 기술**](./Architecture/149.md)  
+    *MoA와 모델 라우팅의 치명적 병목인 재프리필(Re-prefill)을 없애기 위해, 레이어별 1차 선형 맵과 자기 증류로 타깃 모델 규격에 맞게 KV 캐시를 실시간 직접 번역해 최대 29배 가속을 달성한 애플의 연구.*
+*   [**Why Does Post-Training Quantization Work?: LLM이 4비트 양자화 후에도 살아남는 신경망 자정 작용과 차원 완충의 원리**](./Architecture/148.md)  
+    *사전 학습된 LLM이 층별 음의 상호작용으로 오차를 스스로 상쇄하고 고차원 LM Head로 1등 토큰을 보존하는 자정 능력을 규명하여, 기존 양자화 알고리즘의 환상을 깨고 초저비트의 한계를 짚은 칭화대 논문.*
 *   [**DeepSeek-V4.1-Flash: 극한의 KV 캐시 압축과 Causal Encoder-Decoder로 완성한 효율성**](./Architecture/147.md)  
     *글로벌 KV 캐시 75% 감축, 입력 깊이를 절반만 통과시키는 CED 구조, SWA Bounded Replay 및 완전 자동화 Post-training 공장을 구축한 DeepSeek-V4.1-Flash 분석.*
 *   [**Frontier Language Models Struggle to Copy: 1차원 RoPE의 한계를 극복하는 2D-RoPE**](./Architecture/146.md)  
@@ -282,6 +288,14 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Finetuning with Sampling: MCMC 투영 샘플링으로 SFT만으로 최신 RL을 압도한 하버드 연구**](./Post_Training/152.md)  
+    *전문가의 정답 논리를 유지한 채 MCMC 기반 투영 샘플링으로 베이스 모델의 온폴리시 말투로 데이터를 재생성하여, 순수 SFT만으로 최신 RL(GRPO)과 자가증류를 뛰어넘고 OOD 일반화와 지식 보존을 증명한 하버드 논문.*
+*   [**Theoretical Limits of Language Model Alignment: 제프리스 발산으로 밝혀낸 RL의 이론적 한계와 BoN 최적성**](./Post_Training/151.md)  
+    *사전 공분산 통계량과 제프리스 발산으로 학습 전 달성 가능한 절대 보상 상한선을 유도하고, PPO/GRPO의 한계와 Best-of-N의 완벽성, 보상 오차의 지수적 폭주 및 앙상블 효과를 증명한 애플의 NeurIPS 2026 Spotlight 논문.*
+*   [**MiMo-V2.6: 스텝당 30억 토큰 대규모 RL과 Grader Agent로 달성한 샤오미의 자가 개선(Self-Improvement)**](./Post_Training/150.md)  
+    *SWA+GA 하이브리드 MoE 구조 위에 Mid-Training과 스텝당 최대 37억 토큰의 대규모 비동기 RL, 토큰 페널티 및 채점기 에이전트(Grader Agent)를 도입해 오픈웨이트 최고 성능을 달성한 샤오미의 학습 레시피 분석.*
+*   [**Single-Rollout Asynchronous Optimization (SAO): 멀티턴 에이전틱 강화학습을 위한 비동기 최적화와 가치평가 모델**](./Post_Training/149.md)  
+    *멀티턴 에이전트 환경에서 기본 GRPO의 피드백 뭉개짐과 지연 병목을 극복하기 위해, 가치평가 모델(Critic)과 Skip-Observation Token GAE를 도입해 프롬프트당 단 1개 롤아웃으로 비동기 학습을 완성한 GLM-5.2/5.3의 핵심 RL 기법.*
 *   [**Normalized Low-Rank Adaptation (NoRA): 행렬 정규화 한 줄로 LoRA의 성능과 안정성을 극대화하다**](./Post_Training/148.md)  
     *LoRA의 A 행렬 열 벡터를 단위 크기로 정규화해 초반 그래디언트 왜곡을 없애고, 가중치 병합을 유지하며 SFT 점수 대폭 향상, 치명적 망각 방지, RLVR 최적화 안정화를 이뤄낸 연구.*
 *   [**Never Give Up (NGU): 쉬운 문제는 빠르게 털고 어려운 문제는 끝까지 물고 늘어지는 LLM 강화학습**](./Post_Training/147.md)  
@@ -539,6 +553,10 @@
     *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
+*   [**Gemini 4 Argon과 Muse Wonder Full의 등장: 프론티어 모델 4자 구도와 거대 인프라의 시대**](./Trends/172.md)  
+    *구글의 Gemini 4 Argon과 메타의 Muse Wonder Full이 합류하며 형성된 프론티어 4자 구도와, 거대 GPU 인프라·자본 중심의 경쟁 속에서 독창성과 추격 속도에 대한 고찰.*
+*   [**요즘 생각 (44가지 단상: 프론티어 모델 비용, GPU 인프라 해자, CoT와 검증기)**](./Trends/171.md)  
+    *천문학적 인프라 비용과 치열한 모델 경쟁 속에서 인프라 해자, 실용성과 기술력, LLM 가독성 퇴보와 검증기 필요성, 격변하는 업계 생태계에 대한 44가지 단상.*
 *   [**속도 조절론의 위선과 프론티어 신작 경쟁: Claude Opus 5.5, GPT-6 Sol, MiMo-V2.6-Pro**](./Trends/170.md)  
     *인류 위험과 속도 조절론을 외치자마자 쏟아진 빅테크들의 독점 플래그십(Opus 5.5, GPT-6 Sol)과 MIT 라이선스로 기술과 RL 로그를 전면 개방한 샤오미 1.02T MiMo-V2.6-Pro의 명암.*
 *   [**Jev는 일반화된 대형 BERT인가?: ChatGPT의 역사와 평행이론, 그리고 오픈소스의 반격**](./Trends/169.md)  

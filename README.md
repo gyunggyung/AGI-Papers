@@ -33,13 +33,14 @@
 
 ## 📚 Contents
 
-이 저장소는 AGI를 향한 여정을 다음 9가지 핵심 주제로 분류하여 정리합니다.
+이 저장소는 AGI를 향한 여정을 다음 10가지 핵심 주제로 분류하여 정리합니다.
 
 - [🤖 Agents](#agents) : 자율 에이전트, 행동/계획(Planning) 모델, 프레임워크
 - [🧠 Architecture](#architecture) : LLM 아키텍처 혁신 (Transformer, Mamba, MoE)
-- [📚 Pre-Training](#pre-training) : 학습 데이터, 스케일링 법칙, 파운데이션 모델
-- [🎯 Post-Training](#post-training) : RLHF, DPO, GRPO, 정렬(Alignment)
-- [⚡ Inference & Prompting](#inference--prompting) : 프롬프팅, CoT 추론 제어, 활성화 조향, 무학습 가중치 편집
+- [📚 Pre-Training](#pre-training) : 학습 데이터, 스케일링 법칙, 옵티마이저, 파운데이션 모델
+- [🎯 Post-Training](#post-training) : RLHF, DPO, GRPO, 정렬(Alignment), 에이전트 학습
+- [⚡ Inference & Prompting](#inference--prompting) : 프롬프팅, CoT 추론 제어, Test-Time Compute, 추론 엔진
+- [🧬 Steering & Weight Editing](#steering--weight-editing) : 활성화 조향(Activation Steering), 무학습 가중치 편집, 뉴런 제어
 - [⚖️ Evaluation](#evaluation) : 벤치마크, 평가 방법론, 비평
 - [🗂️ RAG & Knowledge](#rag--knowledge) : 검색 증강 생성, 지식 그래프, 메모리
 - [💻 On-Device AI](#on-device-ai) : 로컬 구동, 엣지 컴퓨팅, 최적화
@@ -51,8 +52,6 @@
 
 ## <a id="agents"></a>🤖 Agents
 
-*   [**Reactive Optimizers: 학습 도중 에이전트가 실시간으로 옵티마이저 코드를 수정해 고정 옵티마이저를 압도한 MIT 연구**](./Agents/134.md)  
-    *Claude Opus 5.5 에이전트가 학습 상태를 진단(`analysis.py`)하고 가중치 업데이트 규칙(`updater.py`)을 비동기로 실시간 재작성하여, 정밀도 보정·알고리즘 전환·노이즈 배치 게이팅을 통해 Muon 등 고정 옵티마이저를 앞지른 MIT 논문.*
 *   [**The Last AI Built by Humans: 진정한 재귀적 자가 개선(RSI)을 향한 5단계 자율성 로드맵과 환경 엔지니어링**](./Agents/133.md)  
     *491편의 논문과 72개 산업 사례 분석을 통해 AI 자율성 5단계와 통제되지 않는 자가 수정의 위험성을 짚고, 작업 환경과 에이전트 하네스 정제의 중요성을 밝힌 RSI 서베이.*
 *   [**PARSER: 병렬 독해와 중앙 지휘관 추론으로 초장문 컨텍스트를 뚫어낸 멀티 에이전트 아키텍처**](./Agents/132.md)  
@@ -86,10 +85,6 @@
     *Meta-Harness, NLAH, ARC-AGI-3 등 하네스의 효과와 본질적 한계를 파헤친 3편의 논문 리뷰.*
 *   [**HYPERAGENTS: 스스로 '공부법'을 코딩하며 진화하는 AI**](./Agents/117.md)  
     *LLM이 스스로 파이썬 코드를 짜면서 학습 방법을 진화시키는 개방형 지능 연구.*
-*   [**32B가 480B 모델을 이기는 데이터 엔지니어링**](./Agents/115.md)  
-    *NVIDIA의 터미널 에이전트 훈련의 비밀과 데이터 재활용.*
-*   [**샌드박스를 탈출해 코인을 채굴한 통제 불가능한 에이전트**](./Agents/116.md)  
-    *알리바바 연구진의 ALE 논문과 에이전트 훈련의 미학.*
 *   [**Adaptation of Agentic AI**](./Agents/80.md)  
     *거대 모델 튜닝보다 도구 튜닝이 효율적인 이유 (T2 > A2).*
 *   [**Memory in the Age of AI Agents**](./Agents/77.md)  
@@ -98,8 +93,6 @@
     *World Knowledge Injection vs Specific Tasks.*
 *   [**Mixture-of-Models**](./Agents/9.md)  
     *Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation.*
-*   [**AIRS-Bench**](./Agents/5.md)  
-    *Frontier AI Research Science Agents를 위한 태스크.*
 *   [**OctoTools**](./Agents/99.md)  
     *Training-free LLM Agent Framework.*
 *   [**Scaling Agent Systems: 다다익선의 함정**](./Agents/100.md)  
@@ -112,10 +105,6 @@
     *생각의 도구를 쓰는 에이전트.*
 *   [**MetaChain**](./Agents/104.md)  
     *Zero-code Framework: 말만 하면 만들어지는 에이전트.*
-*   [**LoRASA: Agent Adaption**](./Agents/105.md)  
-    *따로 또 같이, 에이전트의 개인기.*
-*   [**AgentArcEval**](./Agents/106.md)  
-    *에이전트 아키텍처, 점수 매겨드립니다.*
 *   [**SciAgents**](./Agents/107.md)  
     *AI 과학자의 탄생.*
 *   [**Agent Workflows (Anthropic)**](./Agents/108.md)  
@@ -126,6 +115,8 @@
     *에이전트에게 경험을 '스킬'로 증류(Distill)하여 평생 학습의 길을 열어주다.*
 *   [**The Devil Behind Moltbook: 다중 에이전트 사회의 타락**](./Agents/114.md)  
     *닫힌 계(Closed System)에서 에이전트들의 소통 붕괴, 합의된 환각, 공모 공격을 증명한 연구.*
+*   [**Pau Labarta Bajo's Insight**](./Agents/27.md)  
+    *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="architecture"></a>🧠 Architecture
 
 *   [**KV-Lingo: 재프리필 없이 1차 선형 행렬로 이종 모델 간 KV 캐시를 번역하는 Apple의 기술**](./Architecture/149.md)  
@@ -176,8 +167,6 @@
     *인간 전두엽 루프의 가중치 공유(Weight Sharing) 원리를 적용하여 VRAM 사용량을 1B 수준으로 묶어둔 채 128층의 수학적 연산 깊이를 확보해 7B 모델들을 압도한 HRM-Text 아키텍처.*
 *   [**우리 뇌는 역전파 과정이 없습니다: 딥러닝 역전파 알고리즘의 3가지 비효율과 대안 연구들**](./Architecture/127.md)  
     *딥러닝의 심장인 역전파 알고리즘이 품고 있는 공간·전력·시간적 비효율을 고발하고, 이를 타파하기 위해 발표된 3가지 대안 연구(FF 알고리즘, EGGROLL, Hamiltonian Inference) 소개.*
-*   [**There Will Be a Scientific Theory of Deep Learning: 연금술에서 과학으로**](./Architecture/125.md)  
-    *딥러닝을 예측 가능한 '학습 역학'으로 정의하고, Scaling Laws와 하이퍼파라미터 전이 등 딥러닝의 블랙박스를 여는 수학적/물리적 증거들을 제시한 리뷰.*
 *   [**DeepSeek-V4-Pro: 100만 토큰을 씹어 먹는 극단적 가성비의 코딩/수학 특화 모델**](./Architecture/124.md)  
     *코딩(Codeforces) 3206점으로 3대장을 압도한 딥시크의 신작. CSA/HCA 하이브리드 어텐션과 FP4 양자화로 구현한 극단적 가성비 분석.*
 *   [**Attention to Mamba & Effective Distillation to xLSTM: 로컬 모델을 위한 증류 수술법**](./Architecture/123.md)  
@@ -192,8 +181,6 @@
     *ByteDance의 Ouro와 LoopRPT: 잠재 공간에서의 재귀적 추론과 사전 강화학습.*
 *   [**패러다임 전환: VLM 기반 문서 OCR의 한계를 넘는 MinerU-Diffusion**](./Architecture/118.md)  
     *텍스트 디코더에 확산(Diffusion) 모델을 도입해 전체 페이지를 병렬 해독하는 문서 OCR.*
-*   [**Modern Model Architectures Overview 강연 온라인 진행 안내**](./Architecture/117.md)  
-    *다양한 모델 아키텍처 소개 및 온라인 무료 강연 진행 일정 안내.*
 *   [**손실 없는 Transformer to xLSTM 증류법**](./Architecture/116.md)  
     *무거운 어텐션 모듈을 덜어내고 하이브리드 모듈(xLSTM+SWA)로 이식하여 메모리와 속도를 혁신적으로 개선한 증류(Distillation) 수술법.*
 *   [**Jacobi Forcing: 튜닝만으로 추론 속도를 4배 끌어올리는 방법**](./Architecture/115.md)  
@@ -206,18 +193,12 @@
     *확산 모델(Diffusion Model)을 음성 인식에 도입해 병렬 처리와 추론 가속 달성.*
 *   [**STATIC: 1,000배 빠른 LLM 추천시스템**](./Architecture/111.md)  
     *구글 딥마인드가 트리 구조를 희소 행렬로 펼쳐 LLM 제약 디코딩을 1,033배 가속한 방법.*
-*   [**Text-to-LoRA & Doc-to-LoRA: 즉각적 모델 업데이트**](./Architecture/110.md)  
-    *Sakana AI: 문서 내재화에 0.5초, 새로운 스킬 장착에 1초 미만.*
 *   [**LLaDA2.0: Scaling Up Diffusion Language Models to 100B**](./Architecture/103.md)  
     *100B Diffusion 모델의 등장: 기존 AR 모델을 개조하여 효율성을 2배 높인 비결.*
-*   [**TEON vs Muon: 옵티마이저 전쟁**](./Architecture/104.md)  
-    *AdamW의 시대는 가는가? 레이어(Layer)를 넘어 텐서(Tensor) 차원의 최적화로.*
 *   [**EinFields: 아인슈타인을 위한 신경망**](./Architecture/105.md)  
     *우주의 시공간(Spacetime)을 신경망의 가중치 속에 압축하다.*
 *   [**Micro GPT: LLM의 바닥을 보다**](./Architecture/106.md)  
     *Andrej Karpathy의 선물. 오직 행렬 곱셈과 미분이 있을 뿐.*
-*   [**QED-Nano: 다윗이 골리앗을 이기는 법**](./Architecture/107.md)  
-    *수학 증명에서 4B 모델이 100B 모델을 압도한 비결.*
 *   [**Moonshine: 달빛처럼 가벼운 음성 인식**](./Architecture/108.md)  
     *OpenAI Whisper의 대항마? 엣지(Edge) 디바이스를 위한 구세주.*
 *   [**Nested Learning**](./Architecture/109.md)  
@@ -242,6 +223,8 @@
     *기억을 효율화하여 연산 낭비를 줄이는 새로운 희소성 축.*
 *   [**2026년의 통념 파괴: 90M, 600M 모델**](./Architecture/41.md)  
     *초소형 모델들의 놀라운 지시 이행 능력.*
+*   [**RoPE가 정보를 유실하고 있다?**](./Architecture/151.md)  
+    *푸단대 연구진의 충격적인 발견과 해결책(RoPE++).*
 *   [**Sakana AI: DroPE**](./Architecture/47.md)  
     *위치 정보(Positional Embeddings)는 학습할 때만 쓰고 실전에서는 버려라.*
 *   [**Sakana AI RePo**](./Architecture/38.md)  
@@ -256,24 +239,20 @@
     *아키텍처의 진화와 기술적 목표점.*
 *   [**Gemma 3 모델의 핵심 목표 및 특징**](./Architecture/98.md)  
     *구글 딥마인드의 최신 멀티모달 모델 분석.*
-*   [**Python 재귀로 시작하는 1,000만 토큰 시대**](./Architecture/60.md)  
-    *Recursive Language Models: Python 재귀로 1,000만 토큰 처리하기.*
 ## <a id="pre-training"></a>📚 Pre-Training
 
 *   [**Breaking the Token Ceiling: 256개 순수 바이트로 토큰 천장을 뚫는 사전학습 지식 증류**](./Pre_Training/100.md)  
     *어휘 사전을 버리고 256개 순수 바이트만으로 사전학습 지식 증류(End-of-Token)를 적용해 데이터 1/6, 저장 공간 1/5로 토큰 모델 대비 4.0%p 높은 성능 상한선을 뚫어낸 Meta FAIR 연구.*
 *   [**Skaling: 친칠라 법칙의 오류를 깨고 스케일링 예측 비용을 10배 줄인 Meta FAIR의 새로운 스케일링 법칙**](./Pre_Training/99.md)  
     *모델 파라미터와 데이터의 음(-)의 교차 시너지를 단일 지수 k로 결합해 외삽 오차를 줄이고 L자형 샘플링으로 사전 연산 비용을 10배 절감한 Skaling 법칙 분석.*
-
+*   [**There Will Be a Scientific Theory of Deep Learning: 연금술에서 과학으로**](./Pre_Training/101.md)  
+    *딥러닝을 예측 가능한 '학습 역학'으로 정의하고, Scaling Laws와 하이퍼파라미터 전이 등 딥러닝의 블랙박스를 여는 수학적/물리적 증거들을 제시한 리뷰.*
+*   [**TEON vs Muon: 옵티마이저 전쟁**](./Pre_Training/102.md)  
+    *AdamW의 시대는 가는가? 레이어(Layer)를 넘어 텐서(Tensor) 차원의 최적화로.*
 *   [**한국어를 잘하는 소형 모델 Mid-training**](./Pre_Training/98.md)  
     *LFM2.5-8B-A1B 모델 기반 6.5B 토큰 규모의 한국어 지식 주입(CPT) 실험 성과 및 한계점 공유.*
 *   [**LLM 학습 효율화 방안: 인간의 언어 습득 방식**](./Pre_Training/97.md)  
     *인간의 언어 습득 방식을 모방한 점진적 어휘 학습법(Vocabulary Curriculum Learning).*
-*   [**RoPE가 정보를 유실하고 있다?**](./Pre_Training/79.md)  
-    *푸단대 연구진의 충격적인 발견과 해결책.*
-
-
-
 *   [**CALM: Continuous Autoregressive Language Models**](./Pre_Training/34.md)  
     *한 글자씩 타이핑하는 LLM을 넘어, 4개씩 생성하는 연속 벡터 예측.*
 
@@ -281,6 +260,8 @@
 
 ## <a id="post-training"></a>🎯 Post-Training
 
+*   [**Reactive Optimizers: 학습 도중 에이전트가 실시간으로 옵티마이저 코드를 수정해 고정 옵티마이저를 압도한 MIT 연구**](./Post_Training/157.md)  
+    *Claude Opus 5.5 에이전트가 학습 상태를 진단(`analysis.py`)하고 가중치 업데이트 규칙(`updater.py`)을 비동기로 실시간 재작성하여, 정밀도 보정·알고리즘 전환·노이즈 배치 게이팅을 통해 Muon 등 고정 옵티마이저를 앞지른 MIT 논문.*
 *   [**RLTLDR: 17토큰 셀프 오답노트와 역전파 마스크 뒤집기로 정답률 0% 난제를 뚫어낸 Apple 연구**](./Post_Training/155.md)  
     *실패 로그에서 뽑은 17토큰 한 줄 교훈을 누적해 순차 탐색하고 프롬프트 내 힌트 구간의 역전파 마스크를 켜 SFT 손실을 동시에 걸어줌으로써, Pass@128=0인 초고난도 문제의 실전 정답률을 13%까지 끌어올린 애플 논문.*
 *   [**Terminal-RSI: 힌트 세탁 자가 SFT와 턴 단위 PPO의 2차 반복으로 터미널 에이전트 한계를 돌파한 텐센트 연구**](./Post_Training/154.md)  
@@ -317,30 +298,30 @@
     *LLM이 지식 그래프를 실시간으로 작성하며 가설을 세우도록 강제하여 할루시네이션을 방지하고 추론 능력을 극대화한 연구.*
 *   [**VibeThinker-3B: 3B 소형 모델이 T급 거대 모델을 이길 수 있었던 이유**](./Post_Training/137.md)  
     *단순 암기가 아닌 SFT의 풀이 스펙트럼과 강화학습(RL)을 통해 추론 능력을 극대화한 3B 모델 분석.*
-*   [**Liquid AI의 LFM2.5-8B-A1B을 터미널 환경에서 스스로 에러를 해결하고 작업을 수행하는 에이전트 성능을 개선하기 위해 SFT와 RLVR 실험을 진행했습니다.**](./Post_Training/136.md)  
-    *소형 모델 환경에서 SFT와 RLVR 방식의 성능 향상 비교 및 탐색 효율성에 대한 현실적인 한계 분석.*
 *   [**Microsoft Research가 말하는 터미널 환경과 에러 메시지를 월드모델로 써서, 터미널 에이전트가 똑똑해지는 법 (ECHO)**](./Post_Training/135.md)  
     *터미널 에이전트 강화학습 과정에서 무시되던 에러 로그와 디렉토리 결과를 버리지 않고 가중치 업데이트에 활용(Loss 계산)함으로써, 연산량 증가 없이 성능을 2배 높인 MS 리서치의 ECHO 방법론.*
-*   [**AI 안전은 사기일까요?: 단 하나의 뉴런으로 무력화되는 Safety Alignment (A Single Neuron Is Sufficient)**](./Post_Training/133.md)  
-    *고작 단 하나의 '거부 뉴런'만 비활성화(0으로 고정)해도 LLaMA 등 억 단위 파라미터 모델들의 안전 장벽이 100% 무너지고 성능 저하도 없는 정렬(DPO/RLHF)의 한계를 고발한 애플 연구진의 연구.*
 *   [**LLM의 할루시네이션을 없애면 안 됩니다: Faithful Uncertainty 프레임워크**](./Post_Training/132.md)  
     *할루시네이션을 강제로 억제(SFT/RLHF)하면 일반 지식과 추론 성능이 망가지는 정렬 세금(Utility Tax)을 증명하고, 환각을 억제하는 대신 스스로 확신도를 표시하도록 돕는 프레임워크.*
 *   [**NVIDIA: Speculative Decoding을 통한 RL 훈련 속도 2.5배 향상**](./Post_Training/131.md)  
     *추측 해독(Speculative Decoding) 기술을 RL 훈련 파이프라인에 통합하여, 학습 품질 저하 없이 초대형 모델의 훈련 속도를 최대 2.5배까지 끌어올린 엔비디아의 최적화 기법.*
 *   [**REASONMAXXER: 단일 GPU, 단돈 4달러로 무거운 RL 모델들을 압도하다**](./Post_Training/130.md)  
     *거대한 RL 루프를 걷어내고, 모델의 엔트로피가 급증하는 '결정 포인트'만을 타격하는 50개의 고순도 데이터와 소형 LoRA만으로 최고 수준의 성능을 달성한 연구.*
-*   [**터미널 에이전트를 위한 SFT 학습과 평가에서 느낀 3가지 한계점**](./Post_Training/129.md)  
-    *H200 8대로 LFM2, Gemma4 등 53개 모델을 튜닝하며 발견한 벤치마크 프록시 평가의 함정과 모델-데이터 포맷의 호환성 문제.*
 *   [**PivotRL: 아는 문제는 안 풉니다**](./Post_Training/128.md)  
     *NVIDIA의 PivotRL: 궤적 중 '피벗'만을 찾아 집중 훈련해 망각을 막고 훈련 시간을 5.5배 단축시키는 강화학습 전략.*
 *   [**Garbage In, Good Out: 쓰레기 데이터로 성능 올리기 (SSD)**](./Post_Training/127.md)  
     *Apple 연구팀의 Simple Self-Distillation: 외부 피드백 없이 모델 스스로의 출력으로 기초 체력을 강화하는 기술.*
 *   [**똑똑한 선생님한테 배웠는데 왜 성적은 떨어질까? TESSY 프레임워크**](./Post_Training/126.md)  
     *교사-학생 모델 간의 스타일 충돌을 해결하여 SFT 성능을 수직 상승시키는 전략.*
-*   [**Introduction to Post-Training & Beyond 강연 후기 및 향후 계획**](./Post_Training/125.md)  
-    *Maxime Labonne의 강연 자료를 기반으로 한 온라인 강연 성공 사례와 향후 디스코드 스터디 계획.*
 *   [**그 OpenClaw로 강화학습을? 프린스턴 대학교의 OpenClaw-RL**](./Post_Training/124.md)  
     *프린스턴 대학교 연구진이 제안한 OpenClaw-RL 프레임워크와 실시간 강화학습의 한계.*
+*   [**32B가 480B 모델을 이기는 데이터 엔지니어링**](./Post_Training/158.md)  
+    *NVIDIA의 터미널 에이전트 훈련의 비밀과 데이터 재활용.*
+*   [**샌드박스를 탈출해 코인을 채굴한 통제 불가능한 에이전트**](./Post_Training/159.md)  
+    *알리바바 연구진의 ALE 논문과 에이전트 훈련의 미학.*
+*   [**LoRASA: Agent Adaption**](./Post_Training/160.md)  
+    *따로 또 같이, 에이전트의 개인기.*
+*   [**QED-Nano: 다윗이 골리앗을 이기는 법**](./Post_Training/161.md)  
+    *수학 증명에서 4B 모델이 100B 모델을 압도한 비결.*
 *   [**강화학습 과정은 단 13개의 파라미터면 충분합니다.**](./Post_Training/110.md)  
     *Qwen2.5-7B-Instruct에 GRPO를 적용하여 GSM8K 수학 벤치마크 정답률 91% 달성.*
 *   [**Parameter-Efficient Fine-Tuning for Foundation Models**](./Post_Training/106.md)  
@@ -367,26 +348,37 @@
     *Self-Feedback-Driven LLM Reasoning: 모델이 스스로 만든 초안을 보고 배우는 자가 개선 강화학습.*
 ## <a id="inference--prompting"></a>⚡ Inference & Prompting
 
-*   [**Weight-Space Programming: 역전파와 훈련 없이 가중치 0.016%만 편집해 수학 성능을 6배 높인 GPT-6 Astra**](./Inference/110.md)  
-    *GPT-6 Astra 에이전트가 50번의 순전파와 파이썬 분석만으로 Qwen3.5-0.8B의 무한 추론 루프 원인을 진단하고 MLP 출력 컬럼 64개에서 루프 유발 방향을 직교 투영으로 제거해 MATH-500 6배, IFEval 3배 향상을 달성한 MIT CSAIL 연구.*
-*   [**Reasoning Models Can Control Their Chains of Thought When They Tell Themselves To: CoT 첫 줄 주입으로 추론 과정을 통제하는 법**](./Inference/109.md)  
+*   [**Reasoning Models Can Control Their Chains of Thought When They Tell Themselves To: CoT 첫 줄 주입으로 추론 과정을 통제하는 법**](./Inference/108.md)  
     *RLVR 추론 모델이 유저 프롬프트의 CoT 제약을 무시하는 현상을 `<think>` 직후 혼잣말 프리필(Prefill)이나 첫 문장 유도(Bootstrap)로 가중치 수정 없이 해결해 사고 과정 통제력을 수십 배 끌어올린 바르일란 대학교 연구.*
-*   [**Empty Shelves or Lost Keys?: 프론티어 모델의 95% 지식 저장과 인출 병목(Recall Bottleneck)의 진실**](./Inference/108.md)  
+*   [**Empty Shelves or Lost Keys?: 프론티어 모델의 95% 지식 저장과 인출 병목(Recall Bottleneck)의 진실**](./Inference/107.md)  
     *LLM이 이미 95% 이상의 지식을 내재화(인코딩)했음에도 인출(Recall) 실패로 오답을 내는 원인을 분석하고, Thinking(CoT)의 자가 점화 효과를 증명한 구글 리서치 논문.*
-*   [**Neural Procedural Memory (NPM): 모델의 행동 오류를 고치는 뇌 신호 조종**](./Inference/107.md)  
-    *에이전트의 뇌 신경을 미세한 전기 신호(Activation Steering)로 조종하여 학습 없이 행동 오류를 근본적으로 고치는 NPM 기술 소개.*
 *   [**Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs**](./Inference/106.md)  
     *LLM에게 억지로 생각할 시간을 주어 내재 지식(Parametric Knowledge) 인출 능력을 향상시키는 방법.*
-*   [**학습 없이 가중치 편집으로 모델을 제어하다: VPD(Adversarial Parameter Decomposition)**](./Inference/105.md)  
-    *적대적 파라미터 분해(VPD) 기술을 통해 거대 가중치를 독립적인 개념 조각으로 찢어내고, 재학습 없이 정밀한 가중치 조작만으로 모델의 행동을 교정한 연구.*
+*   [**Python 재귀로 시작하는 1,000만 토큰 시대**](./Inference/105.md)  
+    *Recursive Language Models: Python 재귀로 1,000만 토큰 처리하기.*
 *   [**Prompt Repetition Improves Non-Reasoning LLMs**](./Inference/104.md)  
     *70전 0패 47승, 같은 프롬프트를 반복하면 성능이 올라갑니다!*
-*   [**ASA: Training-Free Tool Calling**](./Inference/103.md)  
-    *게으른 에이전트(Lazy Agent)를 깨우는 가장 가벼운 방법. 학습 없이 단 20KB의 활성화 벡터 주입만으로 도구 호출 성능을 2배로 향상.*
-*   [**Chain-of-Draft(CoD)**](./Inference/102.md)  
+*   [**Chain-of-Draft(CoD)**](./Inference/103.md)  
     *CoT의 장점을 유지하면서 토큰 사용량과 계산 비용을 줄이는 획기적인 접근법.*
+*   [**vLLM의 승리: 압도적인 속도**](./Inference/102.md)  
+    *표준이 되기까지.*
 *   [**Detailed balance in LLM-driven agents**](./Inference/101.md)  
     *LLM이 물리학의 '최소 작용의 원리'를 따른다는 것을 증명하고 추론 시점 다수결 투표(Majority Voting)의 효과를 규명한 연구.*
+
+## <a id="steering--weight-editing"></a>🧬 Steering & Weight Editing
+
+*   [**Weight-Space Programming: 역전파와 훈련 없이 가중치 0.016%만 편집해 수학 성능을 6배 높인 GPT-6 Astra**](./Steering/106.md)  
+    *GPT-6 Astra 에이전트가 50번의 순전파와 파이썬 분석만으로 Qwen3.5-0.8B의 무한 추론 루프 원인을 진단하고 MLP 출력 컬럼 64개에서 루프 유발 방향을 직교 투영으로 제거해 MATH-500 6배, IFEval 3배 향상을 달성한 MIT CSAIL 연구.*
+*   [**Neural Procedural Memory (NPM): 모델의 행동 오류를 고치는 뇌 신호 조종**](./Steering/105.md)  
+    *에이전트의 뇌 신경을 미세한 전기 신호(Activation Steering)로 조종하여 학습 없이 행동 오류를 근본적으로 고치는 NPM 기술 소개.*
+*   [**AI 안전은 사기일까요?: 단 하나의 뉴런으로 무력화되는 Safety Alignment (A Single Neuron Is Sufficient)**](./Steering/104.md)  
+    *고작 단 하나의 '거부 뉴런'만 비활성화(0으로 고정)해도 LLaMA 등 억 단위 파라미터 모델들의 안전 장벽이 100% 무너지고 성능 저하도 없는 정렬(DPO/RLHF)의 한계를 고발한 애플 연구진의 연구.*
+*   [**학습 없이 가중치 편집으로 모델을 제어하다: VPD(Adversarial Parameter Decomposition)**](./Steering/103.md)  
+    *적대적 파라미터 분해(VPD) 기술을 통해 거대 가중치를 독립적인 개념 조각으로 찢어내고, 재학습 없이 정밀한 가중치 조작만으로 모델의 행동을 교정한 연구.*
+*   [**Text-to-LoRA & Doc-to-LoRA: 즉각적 모델 업데이트**](./Steering/102.md)  
+    *Sakana AI: 문서 내재화에 0.5초, 새로운 스킬 장착에 1초 미만.*
+*   [**ASA: Training-Free Tool Calling**](./Steering/101.md)  
+    *게으른 에이전트(Lazy Agent)를 깨우는 가장 가벼운 방법. 학습 없이 단 20KB의 활성화 벡터 주입만으로 도구 호출 성능을 2배로 향상.*
 ## <a id="evaluation"></a>⚖️ Evaluation
 
 *   [**CHEATBENCH: 10개 영역에서 드러난 최신 프론티어 AI 에이전트들의 보상 해킹(Reward Gaming) 실태**](./Evaluation/114.md)  
@@ -411,6 +403,10 @@
     *희귀 지식의 정답률과 파라미터 크기의 로그-선형 관계를 이용해 GPT-5.5, Claude Opus 4.6 등 숨겨진 블랙박스 모델의 크기를 역산한 연구.*
 *   [**Preference Leakage: A Contamination Problem in LLM-as-a-Judge**](./Evaluation/105.md)  
     *LLM 평가자가 자신의 패밀리 모델을 편애하는 '선호도 유출' 문제.*
+*   [**AgentArcEval**](./Evaluation/116.md)  
+    *에이전트 아키텍처, 점수 매겨드립니다.*
+*   [**AIRS-Bench**](./Evaluation/117.md)  
+    *Frontier AI Research Science Agents를 위한 태스크.*
 *   [**ADR-Bench 전문가 평가**](./Evaluation/55.md)  
     *DeepSeek-v3.2를 압도한 효율적인 에이전트 모델.*
 ## <a id="rag--knowledge"></a>🗂️ RAG & Knowledge
@@ -443,8 +439,6 @@
     *2만 개 데이터로 SOTA 리랭커 만들기.*
 *   [**HippoRAG 2**](./RAG/100.md)  
     *인간의 기억 메커니즘을 모방한 비모수적 연속 학습 (Bio-inspired Continual Learning).*
-*   [**vLLM의 승리: 압도적인 속도**](./RAG/29.md)  
-    *표준이 되기까지.*
 *   [**RAG & Agent Memory 4선**](./RAG/10.md)  
     *GraphSearch, S-RAG, xMemory 등 최신 논문 소개.*
 *   [**Beyond Naive RAG**](./RAG/110.md)  
@@ -478,10 +472,14 @@
 ### 🤖 Autonomous Agents
 *   [**변호사 시험 만점을 받았습니다. 제15회 변호사 시험 선택형 150문제**](./Projects/125.md)  
     *Gemini 3.1 Pro와 Codex를 활용한 법률 컨텍스트 구축 및 추론 제어로 한국 변호사 시험 만점 달성.*
+*   [**Liquid AI의 LFM2.5-8B-A1B을 터미널 환경에서 스스로 에러를 해결하고 작업을 수행하는 에이전트 성능을 개선하기 위해 SFT와 RLVR 실험을 진행했습니다.**](./Projects/127.md)  
+    *소형 모델 환경에서 SFT와 RLVR 방식의 성능 향상 비교 및 탐색 효율성에 대한 현실적인 한계 분석.*
 *   [**Terminal-Bench 에이전트 소형 모델 실험: 누적 다운로드 60,000회 돌파**](./Projects/124.md)  
     *8B 이하 소형 모델로 터미널 벤치마크에서 초대형 모델들을 뛰어넘은 SFT 및 RLVR 훈련 과정과 성과.*
 *   [**터미널 모델 다운로드 27,000회 돌파 소회: GPU Poor 환경에서의 생존 전략**](./Projects/123.md)  
     *터미널 모델 2.7만 회 다운로드 소회 및 생존 전략.*
+*   [**터미널 에이전트를 위한 SFT 학습과 평가에서 느낀 3가지 한계점**](./Projects/128.md)  
+    *H200 8대로 LFM2, Gemma4 등 53개 모델을 튜닝하며 발견한 벤치마크 프록시 평가의 함정과 모델-데이터 포맷의 호환성 문제.*
 *   [**터미널 에이전트를 위한 SFT 학습과 평가에서 느낀 3가지 한계점 (다운로드 1,000회 돌파)**](./Projects/122.md)  
     *김정수님의 H200 GPU 서버를 지원받아 개발한 모델들의 다운로드 1,000회 돌파를 기념하며 정리한 에이전트 벤치마크 오버피팅, SFT 지능 극복 한계, 평가 프레임워크의 문제 등 3가지 현실적인 한계.*
 *   [**H200 8대로 56개 터미널 에이전트 모델 전면 재평가: Qwen 3.5의 독주**](./Projects/121.md)  
@@ -513,7 +511,7 @@
     *로컬 폴더를 분석해 94초 만에 풀 패키지 생성.*
 *   [**Gemini 3 Pro + 낯선 API**](./Projects/18.md)  
     *기대 이상의 코드 퀄리티와 재미.*
-*   [**Liquid AI LFM2-2.6B-Exp 튜닝기**](./Architecture/58.md)  
+*   [**Liquid AI LFM2-2.6B-Exp 튜닝기**](./Projects/58.md)  
     *논문 Related Work 섹션을 통째로 생성하는 도구 제작.*
 ### 💻 On-Device AI
 *   [**Tiny MoA**](./Projects/32.md)  
@@ -546,9 +544,13 @@
 *   [**GPT 구조의 한계를 넘어**](./Projects/14.md)  
     *Liquid AI, TII, NVIDIA의 새로운 시도들.*
 ### 🪄 Post-Training Projects
-*   [**Introduction to Post-Training 강연 온라인 진행 안내**](./Post_Training/123.md)  
+*   [**Modern Model Architectures Overview 강연 온라인 진행 안내**](./Projects/131.md)  
+    *다양한 모델 아키텍처 소개 및 온라인 무료 강연 진행 일정 안내.*
+*   [**Introduction to Post-Training & Beyond 강연 후기 및 향후 계획**](./Projects/129.md)  
+    *Maxime Labonne의 강연 자료를 기반으로 한 온라인 강연 성공 사례와 향후 디스코드 스터디 계획.*
+*   [**Introduction to Post-Training 강연 온라인 진행 안내**](./Projects/130.md)  
     *Maxime Labonne님의 자료를 재구성한 온라인 무료 강연 일정 안내 및 디스코드 투표.*
-*   [**Introduction to Post-Training 강연 재구성**](./Post_Training/111.md)  
+*   [**Introduction to Post-Training 강연 재구성**](./Projects/111.md)  
     *Maxime Labonne님의 자료를 기반으로 한 7가지 최신 RL 논문과 비전.*
 *   [**LFM2 1.2B 기반 한국어-영어 번역기**](./Projects/89.md)  
     *LFM2 1.2B 모델로 구글과 알리바바의 4B 모델을 이긴 번역기 제작기.*
@@ -569,8 +571,6 @@
     *LLM 에이전트의 위험한 잠재력.*
 *   [**AI에 대한 두려움 vs 흥미**](./Projects/17.md)  
     *OpenClaw, 환각 인용, Vibe Coding 현상에 대한 단상.*
-*   [**Pau Labarta Bajo's Insight**](./Architecture/27.md)  
-    *멀티 에이전트 시스템에 대한 인사이트.*
 ## <a id="trends--industry"></a>🔥 Trends & Industry
 
 *   [**AAII 비공개 평가셋 개편과 구글 Gemini 4 Carbon 1위: GPT-6 Astra의 재평가와 벤치맥싱 논란**](./Trends/174.md)  
